@@ -1,6 +1,7 @@
 """AEMTN-B4 在线仪表盘（Streamlit 多页应用）。
 
-面向评审的只读展示 + 两项轻量在线交互（终测复算、安全盾演示）。
+第 0 章为在线工作台（上传数据 → 冻结核心实时漂移诊断 → 导出报告），
+其余章节为冻结结果展示 + 两项轻量在线交互（终测复算、安全盾演示）。
 不触碰任何私有证据；仅渲染随包分发的冻结图与公开派生 CSV。
 
 运行:
@@ -42,6 +43,7 @@ with st.sidebar:
     page = st.radio(
         "章节",
         [
+            "0. 漂移诊断工作台",
             "1. 项目总览",
             "2. 技术路线与 AI 框架",
             "3. 环境漂移感知与判别",
@@ -64,7 +66,11 @@ _REPO = REPO_ROOT
 
 
 def main() -> None:
-    if page.startswith("1."):
+    if page.startswith("0."):
+        from app.pages import workbench
+
+        workbench.render()
+    elif page.startswith("1."):
         from app.pages import overview
 
         overview.render()
