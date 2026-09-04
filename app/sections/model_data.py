@@ -93,9 +93,7 @@ def render() -> None:
         st.dataframe(seed_rows, width="stretch")
     else:
         st.info("未找到种子模型权重文件。")
-    st.caption(
-        "权重文件在库中随包分发；若你要在 GitHub 上发布，可用 Git LFS 或 Release 附件托管（见 DEPLOY.md）。"
-    )
+    st.caption("权重文件随仓库分发，sha256 与 `manifest/PACKAGE_FILES.csv` 一致。")
 
     st.divider()
 

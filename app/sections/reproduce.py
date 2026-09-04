@@ -27,13 +27,6 @@ def render() -> None:
         "sha256 完全一致；**L1** 允许新增的 `aemtn_b4` / `app` 包装层；**L2** 忽略 "
         "`.venv` / `__pycache__` 等工作区产物。"
     )
-    st.info(
-        "**注意：** 仓库含 3 个测试需要作者机器上的私有工件 "
-        "(`E:\\TianYan\\...\\all_endpoints_timing_grid.json`)，该路径不随包分发。"
-        "因此官方 CI 里会剔除这 3 个测试；本地如无该文件，这 3 个测试也会失败。"
-        "其余 288 个测试在所有环境都通过。"
-    )
-
     st.subheader("验证测试套件")
     st.code(
         "pip install -e .[dev]\n"
@@ -41,6 +34,7 @@ def render() -> None:
         "# 预期：288 passed",
         language="bash",
     )
+    st.caption("排除的 3 项测试依赖未随包分发的真机接口计时原始工件，CI 配置同样排除。")
 
     st.divider()
 
@@ -49,7 +43,6 @@ def render() -> None:
         "本站运行于 Streamlit Community Cloud，入口 `app/streamlit_app.py`，"
         "依赖仅 numpy / scipy / pandas / streamlit / plotly。"
         "torch / qutip / cqlib 只在离线训练与真机对接时需要，不影响在线展示、复算与漂移诊断工作台。"
-        "部署细节见仓库 `DEPLOY.md`。"
     )
 
     st.divider()

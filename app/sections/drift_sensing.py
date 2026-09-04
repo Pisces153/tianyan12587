@@ -34,7 +34,7 @@ def render() -> None:
         )
         fig.update_layout(legend_title_text="通道")
         st.plotly_chart(fig, width="stretch")
-        st.caption("阴影为各测量点的 shot-noise floor。78 个快照全部保留，无排除。")
+        st.caption("78 个快照全部保留，无排除。")
     else:
         st.info("缺少图 01 source CSV。")
 
