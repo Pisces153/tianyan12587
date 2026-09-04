@@ -1,4 +1,4 @@
-"""页面路由：5 个产品区，每个是一个可调用页函数。
+"""页面路由：3 个产品区（平台 / 工作台 / 证据），每个是一个可调用页函数。
 
 供 `streamlit_app.py` 构造 `st.navigation`，也供回归测试直接调用。
 """
@@ -14,8 +14,6 @@ PAGE_SPECS = [
     ("home", "", "平台", ":material/home:"),
     ("workbench", "workbench", "工作台", ":material/science:"),
     ("evidence", "evidence", "证据", ":material/verified:"),
-    ("method", "method", "方法", ":material/functions:"),
-    ("boundary", "boundary", "边界与复现", ":material/policy:"),
 ]
 
 PAGE_URLS = {key: "/" + url for key, url, _, _ in PAGE_SPECS}
@@ -64,36 +62,8 @@ def page_evidence() -> None:
         closed_loop_evidence.render()
 
 
-def page_method() -> None:
-    theme.page_title("方法", "物理模型、AEMTN 与数据契约", "6 比特开放边界 DM 哈密顿量、多任务硬件兼容网络、训练数据与冻结模型资产。")
-    tab_a, tab_b = st.tabs(["技术路线与 AI 框架", "模型与数据"])
-    with tab_a:
-        from app.sections import technical_route
-
-        technical_route.render()
-    with tab_b:
-        from app.sections import model_data
-
-        model_data.render()
-
-
-def page_boundary() -> None:
-    theme.page_title("边界与复现", "能说什么、不能说什么、如何复现", "结论红线、已识别瓶颈、未部署项，以及本地复现与完整性校验步骤。")
-    tab_a, tab_b = st.tabs(["边界与限制", "复现与部署"])
-    with tab_a:
-        from app.sections import boundaries
-
-        boundaries.render()
-    with tab_b:
-        from app.sections import reproduce
-
-        reproduce.render()
-
-
 PAGE_FUNCS = {
     "home": page_home,
     "workbench": page_workbench,
     "evidence": page_evidence,
-    "method": page_method,
-    "boundary": page_boundary,
 }

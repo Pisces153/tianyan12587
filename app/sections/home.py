@@ -32,12 +32,11 @@ def render(pages: dict) -> None:
     ])
 
     st.subheader("平台能力")
-    cols = st.columns(4, gap="small")
+    cols = st.columns(3, gap="small")
     cards = [
         ("01", "漂移诊断", "上传你自己的端点时序，冻结核心实时判别是否存在超 shot-noise 的漂移，给出相关时间 τ、最优重标定周期 T* 与 go/no-go 裁决，导出 JSON 报告。", "在线可用", "live", "workbench", "打开工作台"),
         ("02", "决策安全盾", "五道非学习安全门作用于真实冻结逻辑。拖动估计值、不确定性与预算，实时看到一个补偿动作被哪道门放行或拦下。", "在线可用", "live", "workbench", "进入工作台"),
         ("03", "证据复算", "在浏览器里用纯 Python 重跑三个证据层各 20,000 次配对置换，与冻结值逐项比对，验证结果可独立复现。", "在线可用", "live", "evidence", "去复算"),
-        ("04", "哈密顿量反演", "AEMTN 多任务网络由 local6 特征反演 h1、h2、Jz 并给出不确定度。需 torch 与真机 Pauli 探针，云端只展示冻结 T176 参考值。", "冻结参考", "ref", "method", "看模型"),
     ]
     for col, (n, t, b, tag, kind, target, link) in zip(cols, cards):
         with col:
@@ -66,5 +65,5 @@ def render(pages: dict) -> None:
     theme.status([
         ("项目层状态", "B4_PRESERVED_SIMULATION_ASSISTED", "只在明确的事后、模拟辅助的一致性检验中成立。"),
         ("纯真机注册状态", "INCONCLUSIVE_MISSING_HARDWARE_SESSION1", "T176 真机 Session 0 提供 20 对；缺失的 Session 1 由独立冻结的模拟应急工件补作一致性分析，不进入纯真机注册裁决。"),
-        ("结论红线", "CLAIM_BOUNDARY.md", "全部结论遵守仓库红线；能说、必须带限定、不可说三类见「边界与复现」页。"),
+        ("结论红线", "CLAIM_BOUNDARY.md", "全部结论遵守仓库红线；能说、必须带限定、不可说三类分界见仓库 `CLAIM_BOUNDARY.md` 与冻结报告 `claim_boundary` 字段。"),
     ])

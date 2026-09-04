@@ -84,13 +84,13 @@ CI 会做：Python 3.11 环境 → 冻结完整性校验（`aemtn verify`）→ 
 
 打开公网 URL，检查：
 
-- 顶部导航 5 个产品区（平台 / 工作台 / 证据 / 方法 / 边界与复现）可切换，无报错。
+- 顶部导航 3 个产品区（平台 / 工作台 / 证据）可切换，无报错。
 - 「工作台 → 漂移诊断」用内置示例点「执行漂移诊断」，出裁决与结构函数图，可导出 JSON。
 - 「工作台 → 决策安全盾」拖动滑块，五门状态条实时变化。
 - 「证据 → T176 闭环终测」能点「在线复算」按钮，3 个证据层全部
   `matches_frozen: true`。
-- 「边界与复现」如实展示 `INCONCLUSIVE_MISSING_HARDWARE_SESSION1` 与
-  T* 的 `INCONCLUSIVE` 结论，未夸大。
+- 首页如实展示 `INCONCLUSIVE_MISSING_HARDWARE_SESSION1` 与 T* 的
+  `INCONCLUSIVE` 结论，未夸大。
 
 ---
 

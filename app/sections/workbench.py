@@ -340,7 +340,7 @@ def render() -> None:
         st.markdown("**哈密顿量 / 噪声画像**（不对上传数据反演）")
         st.caption(
             "AEMTN 反演需 torch 网络 + 天衍真机 Pauli 探针，超出本云实例范围。"
-            "以下为冻结 T176 Session 0 参考值，详见「证据」与「方法」页。"
+            "以下为冻结 T176 Session 0 参考值，详见「证据」页。"
         )
         r1, r2, r3 = st.columns(3)
         r1.metric("终测 ratio", "0.3616", "fast/slow 残差比")

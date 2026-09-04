@@ -18,8 +18,8 @@
 `reproduce.py` `physics.py` `adaptive.py` `verify.py` `cli.py`。全部为**薄封装**，
 只 import 冻结核心，不改它。
 
-**新增** `app/`：顶部导航 Streamlit 在线平台（平台 / 工作台 / 证据 / 方法 /
-边界与复现）。工作台对上传数据调用冻结核心实时漂移诊断；其余为只读展示 +
+**新增** `app/`：顶部导航 Streamlit 在线平台（平台 / 工作台 / 证据）。
+工作台对上传数据调用冻结核心实时漂移诊断；其余为只读展示 +
 两项轻量在线交互（终测复算、安全盾演示）。
 
 **新增** `packaging/`：本记录、原始 README 备份、`_smoke.py` 冒烟脚本。
@@ -58,4 +58,4 @@
 3. `aemtn reproduce-final` 输出 `PUBLIC FINAL REPRODUCTION PASS`。
 4. `pytest` 预期 288 passed / 3 failed（3 个失败依赖作者机器私有工件，
    在 CI 中已 deselect，详见 `DEPLOY.md`）。
-5. `aemtn dashboard` 能启动，5 个产品区均可渲染。
+5. `aemtn dashboard` 能启动，3 个产品区均可渲染。
