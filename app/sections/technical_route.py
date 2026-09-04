@@ -18,14 +18,27 @@ def render() -> None:
 
     st.subheader("物理模型：开放边界 DM 哈密顿量（6 比特）")
     st.latex(
-        r"H=\sum_i \left(J_x X_iX_{i+1}+J_y Y_iY_{i+1}+J_z Z_iZ_{i+1}\right)"
-        r"+D\left(X_iY_{i+1}-Y_iX_{i+1}\right)+\sum_i h_i Z_i"
+        r"""\begin{aligned}
+H &= \sum_{i=1}^{N-1}\Big[\,J_x\,\sigma_i^{x}\sigma_{i+1}^{x}
+   + J_y\,\sigma_i^{y}\sigma_{i+1}^{y}
+   + J_z\,\sigma_i^{z}\sigma_{i+1}^{z}
+   + J_{xz}\,\sigma_i^{x}\sigma_{i+1}^{z}
+   + J_{zx}\,\sigma_i^{z}\sigma_{i+1}^{x} \\
+  &\qquad\; + D\left(\sigma_i^{x}\sigma_{i+1}^{y}-\sigma_i^{y}\sigma_{i+1}^{x}\right)\Big]
+   + \sum_{i=1}^{N}\left(h_i^{x}\sigma_i^{x}+h_i^{y}\sigma_i^{y}+h_i^{z}\sigma_i^{z}\right),
+   \qquad N=6
+\end{aligned}"""
     )
     st.markdown(
-        "- **初态：** Néel 态 `010101`，开放边界\n"
-        "- **噪声：** 各向同性退极化，Lindblad 主方程演化\n"
+        "- **耦合：** $J_x=J(1+\\varepsilon),\\;J_y=J(1-\\varepsilon)$，$\\varepsilon\\in[-0.12,0.12]$；"
+        "$D$ 为沿 $z$ 轴的 DM 相互作用 $\\mathbf D\\cdot(\\boldsymbol\\sigma_i\\times\\boldsymbol\\sigma_{i+1})$；"
+        "$J_{xz},J_{zx}$ 为交叉耦合\n"
+        "- **反演目标：** $h_1\\equiv h_1^{x}$、$h_2\\equiv h_2^{x}$、$J_z$；其余参数为生成时随机采样的干扰项\n"
+        "- **初态：** Néel 态 $|010101\\rangle$，开放边界\n"
+        "- **噪声：** 局域各向同性退极化 $L_k^{a}=\\sqrt{\\gamma/3}\\,\\sigma_k^{a}$，Lindblad 主方程演化\n"
         "- **测量：** 9 个测量基 × 1024 shots，q0 为最左比特；由计数恢复 Pauli-15 与 local6 特征"
     )
+    st.caption("与冻结代码 `src/physics/hamiltonian.py::build_hamiltonian` 逐项一致。")
 
     st.subheader("AEMTN：多任务硬件兼容网络")
     cfg = read_json(root / "models" / "sim_pretrained_paper_contract" / "seed_20260731" / "run_config.json")
