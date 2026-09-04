@@ -1,0 +1,109 @@
+{
+  "schema": "b4_t176_hybrid_final_handoff_v1",
+  "created_date": "2026-08-29",
+  "analysis_label": "POST_HOC_HYBRID_SIMULATION_ASSISTED",
+  "simulation_assisted_status": "B4_PRESERVED_SIMULATION_ASSISTED",
+  "registered_hardware_status": "INCONCLUSIVE_MISSING_HARDWARE_SESSION1",
+  "verification_status": "VERIFIED",
+  "overall_confidence": "CAUTION",
+  "credential_rotation_status": "ROTATION_CONFIRMATION_PENDING",
+  "pair_composition": {
+    "hardware_session0_pairs": 20,
+    "hardware_session1_pairs": 0,
+    "simulation_session1_pairs": 20,
+    "hybrid_pairs": 40
+  },
+  "primary_results": {
+    "hardware_session0_ratio": 0.36164979009594067,
+    "hardware_session0_permutation_p": 0.005249737513124344,
+    "simulation_session1_ratio": 0.3816522955927792,
+    "simulation_session1_permutation_p": 0.0023498825058747065,
+    "hybrid_ratio": 0.374481312234516,
+    "hybrid_relative_reduction": 0.625518687765484,
+    "hybrid_permutation_p": 0.0000999950002499875,
+    "hybrid_critical_ratio": 0.6357598701625898,
+    "hybrid_delta_method_interval": [
+      0.21090874382638786,
+      0.538053880642644
+    ],
+    "v4_prediction_interval": [
+      0.3260557361133296,
+      0.7884314361673062
+    ],
+    "v4_prediction_hit": true
+  },
+  "integrity": {
+    "hardware_raw_counts_read": false,
+    "hardware_npz_read": false,
+    "original_hardware_files_modified": false,
+    "hardware_journal_rows": 219,
+    "hardware_journal_chain_verified": true,
+    "simulation_journal_rows": 43,
+    "simulation_journal_chain_verified": true,
+    "fallacy_scan_coverage": "11/11 checked",
+    "fallacy_scan_red_flags": 0,
+    "focused_regression_tests_passed": 105,
+    "analysis_signature": "1fe980cff5cb2db4be7424234f3ece18424135fa322598d850a042fd79943828"
+  },
+  "sources": {
+    "hardware_manifest": {
+      "path": "E:\\TianYan\\XA-202609\\quarantine\\tianyan176\\B4_CADENCE_PAIR_V4_T176_REGISTERED_20260823\\campaign_manifest.json",
+      "sha256": "8f70afc806f311ebbfb3ddddf85c1a726791066bbf77753858866e17ba120641"
+    },
+    "hardware_plan": {
+      "path": "E:\\TianYan\\XA-202609\\quarantine\\tianyan176\\B4_CADENCE_PAIR_V4_T176_REGISTERED_20260823\\supplement_plan.json",
+      "sha256": "e604277f9ddd6daaef354e213354e4715efcafc952c09e2c8345373b6bdda231"
+    },
+    "hardware_journal": {
+      "path": "E:\\TianYan\\XA-202609\\quarantine\\tianyan176\\B4_CADENCE_PAIR_V4_T176_REGISTERED_20260823\\snapshots.jsonl",
+      "sha256": "80694168c45f3ff85f0ad7800a55e56b37c78e0c3ddb4088a2099a7ea695c4b2"
+    },
+    "simulation_plan": {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829.plan.json",
+      "sha256": "59f3eba344574346ffe42630a993f9c6931ccbeb35dd253df4de81434bdd0181"
+    },
+    "simulation_manifest": {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829\\simulation_manifest.json",
+      "sha256": "617945144840ee5e518156b7a7ec7d94a1cc46d5322215469181ce923c2dd94c"
+    },
+    "hybrid_v1_failed_plan": {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829.plan.json",
+      "sha256": "fb1f2627c18c5156541e2a1fcf18c6823f07799b6572bf79bd5b07d7a6cb718d"
+    },
+    "hybrid_v2_plan": {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829_v2.plan.json",
+      "sha256": "f2f8aeb38ec2e01561691daac4a2a5f3d0aacbda9733b8d33b94b75f2fa89c7c"
+    },
+    "hybrid_analyzer": {
+      "path": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\analyze_b4_t176_hybrid_final.py",
+      "sha256": "455ccd5399c75894cfcaa6b9f8a76eec1c14a7272975a126c3ac735f1b85a801"
+    },
+    "hybrid_test": {
+      "path": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_analyze_b4_t176_hybrid_final.py",
+      "sha256": "40cc40d02f2041680bb0ab34a89c3d0d321c57003fba296e32ec6093cc2a370e"
+    }
+  },
+  "outputs": {
+    "repository_result_note": {
+      "path": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\docs\\B4_T176_HYBRID_FINAL_RESULT_20260829.md",
+      "sha256": "e0837823e7a9b8be57108327aab84b837742708fd4f8e53fecb0340c6e4c2b38"
+    },
+    "validation_report": {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829\\B4_T176_HYBRID_FINAL_VALIDATION.md",
+      "sha256": "06e19d3ad9ec5988c65a9923906b4048ab5103bcd14c7f9dac71ae7b6c7f8c67"
+    },
+    "structured_report": {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829\\hybrid_final_report.json",
+      "sha256": "de2c4a6d255f1018363ae28b1c9779e29af4f1f6a7088845ba80c30b2d307791"
+    },
+    "pair_rows": {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829\\hybrid_pair_rows.csv",
+      "sha256": "f618e72940fc5db2cbc8fb1946b6cc48cc9c21add4500ad70214ae7fa054e5c9"
+    },
+    "reproducibility_verification": {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829\\reproducibility_verification.json",
+      "sha256": "91ac80b10ad2dd4750df3f2cb5e1ee0ab5f1d52624d4daf6df4c42891e3d3c67"
+    }
+  },
+  "claim_boundary": "Simulation-assisted project result only; not a registered all-hardware pass."
+}

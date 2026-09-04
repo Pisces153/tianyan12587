@@ -1,0 +1,9 @@
+numpy==2.3.2
+scipy==1.16.1
+pandas==2.3.2
+matplotlib==3.10.6
+torch==2.7.1+cu126
+qutip==5.2.2
+scikit-learn==1.7.1
+joblib==1.5.2
+pytest==9.0.0

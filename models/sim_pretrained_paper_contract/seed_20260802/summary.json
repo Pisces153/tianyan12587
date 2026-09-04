@@ -1,0 +1,72 @@
+{
+  "seed": 20260802,
+  "best_selection_metric": 0.9075269983743794,
+  "best_epoch": 21,
+  "best_validation": {
+    "loss": 323.64116333007814,
+    "selection_metric": 0.9075269983743794,
+    "sample_count": 200,
+    "targets": {
+      "h1": {
+        "rmse": 1.0524538340829857,
+        "mae": 0.8605583763122558,
+        "r2": 0.13334896026424647,
+        "coverage_1sigma": 0.67,
+        "coverage_2sigma": 0.97
+      },
+      "h2": {
+        "rmse": 1.1474076949083796,
+        "mae": 1.0036075592041016,
+        "r2": 0.007320830236628995,
+        "coverage_1sigma": 0.6,
+        "coverage_2sigma": 1.0
+      },
+      "Jz": {
+        "rmse": 0.5384977970910595,
+        "mae": 0.439268798828125,
+        "r2": 0.31613772337159063,
+        "coverage_1sigma": 0.665,
+        "coverage_2sigma": 0.98
+      }
+    }
+  },
+  "last_validation": {
+    "loss": 324.24640014648435,
+    "selection_metric": 0.9091572611966292,
+    "sample_count": 200,
+    "targets": {
+      "h1": {
+        "rmse": 1.0488122307338497,
+        "mae": 0.8442077827453613,
+        "r2": 0.13933599585367606,
+        "coverage_1sigma": 0.66,
+        "coverage_2sigma": 0.935
+      },
+      "h2": {
+        "rmse": 1.140789164395656,
+        "mae": 0.99156982421875,
+        "r2": 0.018739837604837883,
+        "coverage_1sigma": 0.57,
+        "coverage_2sigma": 0.99
+      },
+      "Jz": {
+        "rmse": 0.5476594018777436,
+        "mae": 0.4394619369506836,
+        "r2": 0.292670320773755,
+        "coverage_1sigma": 0.645,
+        "coverage_2sigma": 0.965
+      }
+    }
+  },
+  "effective_loss_weights": {
+    "target:h1": 0.9272803664207458,
+    "target:h2": 0.9269046187400818,
+    "target:Jz": 74.14966583251953,
+    "aux:entropies": 0.1081850528717041,
+    "aux:inter_entropies": 5.202286243438721,
+    "aux:phase_labels": 1.0471599102020264,
+    "aux:target_fidelities": 1.0807424783706665
+  },
+  "best_checkpoint": "E:\\TianYan\\XA-202609\\artifacts\\checkpoints\\sim_pretrained_paper_contract\\seed_20260802\\best.pt",
+  "last_checkpoint": "E:\\TianYan\\XA-202609\\artifacts\\checkpoints\\sim_pretrained_paper_contract\\seed_20260802\\last.pt"
+}

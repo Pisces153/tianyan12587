@@ -1,0 +1,11 @@
+{
+  "built_at_utc": "2026-08-31T14:37:51.074790+00:00",
+  "builder_python": "3.13.0 (tags/v3.13.0:60403a5, Oct  7 2024, 09:38:07) [MSC v.1941 64 bit (AMD64)]",
+  "source_repo": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609",
+  "source_git_head": "a59d24b02f041ffcc8612ca58a87b25508816ef2",
+  "source_git_branch": "master",
+  "workspace": "C:\\Users\\Mercu\\Documents\\天衍",
+  "evidence_root": "E:\\TianYan\\XA-202609",
+  "claim_status": "B4_PRESERVED_SIMULATION_ASSISTED",
+  "registered_hardware_status": "INCONCLUSIVE_MISSING_HARDWARE_SESSION1"
+}

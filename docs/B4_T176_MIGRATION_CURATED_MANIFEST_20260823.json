@@ -1,0 +1,256 @@
+{
+  "schema": "b4_t176_backend_migration_curated_manifest_v1",
+  "created_at_utc": "2026-08-23T15:44:36Z",
+  "status": "ready_for_operator_hardware_confirmation",
+  "scope": "B4/B5 registered cadence v4 T176 backend migration runtime, governance, timing-only evidence, and focused verification tests",
+  "hardware_submission_performed": false,
+  "parent_stage1_manifest": {
+    "path": "docs/B4_STAGE1_CURATED_MANIFEST_20260806.json",
+    "sha256": "7142A4D2163434075319623FE44B3ABEDB3B379E239BD25357B17EDED092C851",
+    "note": "the parent manifest remains immutable; this migration manifest pins the authorized post-Stage-1 replacements and current T176 v4 runtime instead of rewriting the parent"
+  },
+  "migration_authority": {
+    "amendment": "docs/B4_B5_T176_BACKEND_MIGRATION_AMENDMENT_20260823.md",
+    "registered_backend_id": "tianyan176",
+    "superseded_backend_id": "tianyan-287",
+    "registered_jobs_before_amendment": 0,
+    "statistics_rewritten": false,
+    "registered_fields_compared": 40,
+    "registered_field_mismatches": 0,
+    "registered_pairs_retained": 40
+  },
+  "timing_integrity": {
+    "timing_budget_model": "role_envelope_sum_task_runtime",
+    "execution_wall_seconds_per_session": 323.824,
+    "quota_seconds_per_session": 647.648,
+    "quota_seconds_total": 1295.296,
+    "daily_window_seconds": 1200.0,
+    "machine_time_ceiling_seconds": 2400.0,
+    "ledger_verifier_valid": true,
+    "ledger_verifier_issues": [],
+    "timing_artifact_recorded_loop_config_sha256_before_timing_update": "574163CA2EA8185164CCF53674829EA1B6880D9D058CF030A1BFB5108DF398FF",
+    "recorded_preimage_note": "the pre-update loop hash is provenance recorded by the non-statistical timing artifact; the preimage was not retained separately, while current config bytes and the 40-field statistical snapshot are pinned below"
+  },
+  "registered_reachability_line_ending_audit": {
+    "registered_canonical_lf_sha256": "98D4C9B923EEDB14B35882086401C21AD6ECB40E4B470FE57805E5DC39F18488",
+    "current_crlf_storage_sha256": "7FB70B8636E8B7BD66FDCFB172747F8ED8D1C08E3A55A70E3CA3D6CB7B714001",
+    "crlf_sequence_count": 175,
+    "isolated_carriage_return_count": 0,
+    "isolated_line_feed_count": 0,
+    "utf8_bom_present": false,
+    "canonical_lf_match": true,
+    "roundtrip_back_to_crlf_byte_exact": true,
+    "statistical_content_drift_detected": false,
+    "artifact_modified": false
+  },
+  "verification": {
+    "focused_pytest_result": "111 passed",
+    "manifest_policy": "runner and preflight verify every listed byte count and SHA256 before reporting ready or preparing a hardware plan",
+    "failure_policy": "any missing file, byte mismatch, hash mismatch, backend-pin mismatch, timing mismatch, or statistical-field mismatch is NOT READY FOR HARDWARE",
+    "hardware_confirmation_required": true
+  },
+  "files": [
+    {
+      "path": "config/b4_cadence_pair_loop_v1.json",
+      "bytes": 3407,
+      "sha256": "EB9EE11C2D387FDC5342744F724EA5904AC7A00A015B4A681C7B62E6714539D5"
+    },
+    {
+      "path": "config/b4_cadence_pair_loop_cycle_paired_v2.json",
+      "bytes": 4641,
+      "sha256": "E5F9A7F35A387221FFFE05045D0B0CA79A19B3051961FC66D432C85438CA0549"
+    },
+    {
+      "path": "config/b4_cadence_pair_loop_cycle_paired_v3.json",
+      "bytes": 10015,
+      "sha256": "0E2CDCC3923306CFD677E8068CEA0804135AE2943B3C5A7D4C33DB4F3E61501D"
+    },
+    {
+      "path": "config/b4_cadence_pair_loop_cycle_paired_v4.json",
+      "bytes": 24143,
+      "sha256": "EE4C4102DD406087C2EA54677599B146F8D464C2D22A1DCEC6788745BE4356E3"
+    },
+    {
+      "path": "config/b4_drift_campaign_v4_tianyan176.json",
+      "bytes": 8266,
+      "sha256": "4DC1ED7A6D7273EDDD8C12C9F58652460CA9330B1CBC4EED085CC58806510CA8"
+    },
+    {
+      "path": "config/b4_drift_campaign_v4_tianyan287.json",
+      "bytes": 6223,
+      "sha256": "FF34228CE8E4FDCD32C7EEF353AD85C26B468EC5DA4686172172E472E22A9FFA"
+    },
+    {
+      "path": "docs/B4_STAGE1_CURATED_MANIFEST_20260806.json",
+      "bytes": 10293,
+      "sha256": "7142A4D2163434075319623FE44B3ABEDB3B379E239BD25357B17EDED092C851"
+    },
+    {
+      "path": "docs/B4_B5_COLLECTION_AMENDMENT_v3_TO_v4_20260815.md",
+      "bytes": 23539,
+      "sha256": "107D4141074C2EF8E1523FE86B34AC26E7DC365B9C98D4C392CE825168A245BA"
+    },
+    {
+      "path": "docs/B4_B5_T176_MIGRATION_HANDOFF_20260823.md",
+      "bytes": 30998,
+      "sha256": "BFA281B0ADD77AAFBEE3D7516C8AFB7B92D6D9FFCCA3690CAB5305FCC0757338"
+    },
+    {
+      "path": "docs/B4_B5_T176_BACKEND_MIGRATION_AMENDMENT_20260823.md",
+      "bytes": 19492,
+      "sha256": "4425DF36340D5DB35DC2476BBBC94DB7E63E4DC4A504A537316F64DF813B4AF1"
+    },
+    {
+      "path": "docs/B4_T176_20260817_TIMING_QUERY_MANIFEST.json",
+      "bytes": 2819,
+      "sha256": "2905B875F0B54DC85CA72FB803454300C85417D2902F5BF7528C6858918AA222"
+    },
+    {
+      "path": "scripts/run_b4_cadence_pair_hardware.py",
+      "bytes": 103834,
+      "sha256": "8AC6401A008F9F89E7EFDDE68DB03760F9E2E634412051630A21264289DD8DC1"
+    },
+    {
+      "path": "scripts/analyze_b4_t287_cadence_residual_curve.py",
+      "bytes": 85942,
+      "sha256": "2724CDE4D7F50F656C934DEAE459022AF524B1698BF97558509ACDAE2EFE5DB3"
+    },
+    {
+      "path": "scripts/preflight_b4_cadence_collection_correction.py",
+      "bytes": 28198,
+      "sha256": "90BF9E7DB2A0B7AC08581570E217D0EBB9AFABE52C7BCC544C412632988BE22C"
+    },
+    {
+      "path": "scripts/freeze_b4_cadence_v4_start_only_baseline.py",
+      "bytes": 47017,
+      "sha256": "85EDF6A581AC21A5B03B260114D0EC25029433EFA027E67973DC125BCB478F54"
+    },
+    {
+      "path": "scripts/build_b4_platform_time_ledger.py",
+      "bytes": 56424,
+      "sha256": "61BA21C8A55265E4E335D45DFDECA3DA9A9DCE1F7B3E483A3490529A4D482AA4"
+    },
+    {
+      "path": "scripts/drift_campaign_v4.py",
+      "bytes": 39297,
+      "sha256": "4E8162BFA65D982BAC4FF34015FD53862356DCEAB82845D69917D4FE8FF70F04"
+    },
+    {
+      "path": "scripts/run_cadence_pair_loop.py",
+      "bytes": 38180,
+      "sha256": "9F87C2825F04B98E04F92E8C62CBA221740E13FE51531B033867CE52CD813D9F"
+    },
+    {
+      "path": "scripts/run_cadence_pair_hardware_smoke.py",
+      "bytes": 16724,
+      "sha256": "97BEC4640C5F2F307C2C6F8C5BB4791FCA6F480383F2A5C87AD6E0DD14678BD4"
+    },
+    {
+      "path": "scripts/simulate_b4_cadence_endpoint_power.py",
+      "bytes": 9669,
+      "sha256": "1E3AC6BE36777DE20BACE978B1086913FAF2ED82E77EEAA0EB37BEF2B8E5FB4D"
+    },
+    {
+      "path": "src/adaptive/sensing_economics.py",
+      "bytes": 31754,
+      "sha256": "65246859977CC8542CDB84B155E8649F13B7C1D7AD54A28AA6BB76A216AD158C"
+    },
+    {
+      "path": "src/adaptive/shared_baseline_sensing.py",
+      "bytes": 20196,
+      "sha256": "844D4B3BBC20A8403B39ED021AE49CA8F648B5304E468C758729E1AE883D53E7"
+    },
+    {
+      "path": "src/adaptive/cadence_permutation.py",
+      "bytes": 10792,
+      "sha256": "C6081F8D295158D08F46BA6A6046D4DE5511EFF1D5CC6A95145FF341B6143BE8"
+    },
+    {
+      "path": "src/adaptive/task_metric_mirror.py",
+      "bytes": 16581,
+      "sha256": "26DCFD25BAE458AD9E367E6514E0CA33043D372D21170B3B02BDCE0F4AFF07C2"
+    },
+    {
+      "path": "src/adaptive/bandit.py",
+      "bytes": 8786,
+      "sha256": "8D297AC018FA833EAC33936236383E7C8FCC78593F91DC8AC678C16E6220A1E8"
+    },
+    {
+      "path": "tests/test_run_b4_cadence_pair_hardware.py",
+      "bytes": 28561,
+      "sha256": "DDAC9DC87A9CA822619838A50D266FF48CDD6E2E400A920AD00D0ED66744CC87"
+    },
+    {
+      "path": "tests/test_preflight_b4_cadence_collection_correction.py",
+      "bytes": 5958,
+      "sha256": "D3A9BC1FC5C1F0F9B8CE395EAB042810813392C2F4963CEA18852D017303DD41"
+    },
+    {
+      "path": "tests/test_analyze_b4_t287_cadence_residual_curve.py",
+      "bytes": 19725,
+      "sha256": "B0CD457EF87F95A89F2122F46336DA23BD84D2D461CB850B578AAA8695E8150B"
+    },
+    {
+      "path": "tests/test_build_b4_platform_time_ledger.py",
+      "bytes": 15551,
+      "sha256": "04ACC96D3BA91EC66F6BA9297DB5150A4790549FBA36D56E81C027505E0AFC06"
+    },
+    {
+      "path": "tests/test_freeze_b4_cadence_v4_start_only_baseline.py",
+      "bytes": 10653,
+      "sha256": "ADBB11C749B5B44A283BE05CF0517973C60B1260A304889365AA34CB6142A0E0"
+    },
+    {
+      "path": "tests/test_b4_cadence_v4_forty_minute_design.py",
+      "bytes": 20608,
+      "sha256": "D488465DE1B6DC81F20EAC461A5B93DAA6199A19607C4D93F13B9729D920571D"
+    },
+    {
+      "path": "tests/test_audit_b4_b9_inputs.py",
+      "bytes": 3846,
+      "sha256": "92A775289BA24A888B9CBDB0FCCAA258C78565F37CDE8FC51BCF4FCB68A250DB"
+    },
+    {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_PLATFORM_TASK_TIME_LEDGER_20260823_r1\\platform_task_time_ledger.json",
+      "bytes": 49744,
+      "sha256": "D0089FE19A96DC8B0D95A07B53F4DE34A64AEE196BBBC21979005D9A7D673F10"
+    },
+    {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_PLATFORM_TASK_TIME_LEDGER_20260823_r1\\freeze_manifest.json",
+      "bytes": 1469,
+      "sha256": "8432EE328669898EA45D7958DCBD36C22C0C2B5FA2E9A96965BD4C92BE1DBEEC"
+    },
+    {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_PLATFORM_TASK_TIME_LEDGER_20260823_r1\\freeze_manifest.sha256",
+      "bytes": 66,
+      "sha256": "02552317A1DD0063CDD496720E96A0C7CF44BE02884A8F3B2B98EEA27573615E"
+    },
+    {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_PLATFORM_TASK_TIME_LEDGER_20260823_r1\\query_id_manifest.json",
+      "bytes": 2819,
+      "sha256": "2905B875F0B54DC85CA72FB803454300C85417D2902F5BF7528C6858918AA222"
+    },
+    {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_PLATFORM_TASK_TIME_LEDGER_20260823_r1\\source_pages\\page_027_B9BA6C2D7650.json",
+      "bytes": 8073,
+      "sha256": "B9BA6C2D7650CB2D8D1252EFEDCBE705B632DE3BAFD08224A7674D09ABBEB6F7"
+    },
+    {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_CADENCE_V4_T176_TIMING_MIGRATION_20260823\\backend_migration_timing_evidence.json",
+      "bytes": 7265,
+      "sha256": "F56B8B363914C7C50BA41DACC9B5DD250DDC158F98522AF554F4D6F2BC4B7F3F"
+    },
+    {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_CADENCE_V4_PREREGISTRATION_20260815\\forty_minute_prediction_start_only_baseline.json",
+      "bytes": 6661,
+      "sha256": "7FB70B8636E8B7BD66FDCFB172747F8ED8D1C08E3A55A70E3CA3D6CB7B714001",
+      "registered_canonical_lf_sha256": "98D4C9B923EEDB14B35882086401C21AD6ECB40E4B470FE57805E5DC39F18488",
+      "storage_normalization": "CRLF-to-LF only"
+    },
+    {
+      "path": "E:\\TianYan\\XA-202609\\quarantine\\tianyan176\\B4_TB5_amplified_closed_loop_20260817_run2\\amplified_closed_loop_report.json",
+      "bytes": 31946,
+      "sha256": "45C446463E6A77684A0E29342090D14462D83C9E13E136B4B43933BF870A9629"
+    }
+  ]
+}

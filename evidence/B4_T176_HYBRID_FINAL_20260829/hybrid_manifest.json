@@ -1,0 +1,39 @@
+{
+  "analysis_label": "POST_HOC_HYBRID_SIMULATION_ASSISTED",
+  "analysis_signature": "1fe980cff5cb2db4be7424234f3ece18424135fa322598d850a042fd79943828",
+  "created_at_utc": "2026-08-29T09:05:00.888389+00:00",
+  "hardware_npz_read": false,
+  "hardware_raw_counts_read": false,
+  "outputs": [
+    {
+      "bytes": 22381,
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829\\hybrid_final_report.json",
+      "sha256": "de2c4a6d255f1018363ae28b1c9779e29af4f1f6a7088845ba80c30b2d307791"
+    },
+    {
+      "bytes": 7674,
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829\\hybrid_pair_rows.csv",
+      "sha256": "f618e72940fc5db2cbc8fb1946b6cc48cc9c21add4500ad70214ae7fa054e5c9"
+    },
+    {
+      "bytes": 3991,
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829\\hardware_session0_cycle_endpoints.csv",
+      "sha256": "95103616c8e46efdcce0e9bec53ae1a628c73e8f062d610d21df75b89b5ae722"
+    },
+    {
+      "bytes": 1404,
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829\\B4_T176_HYBRID_FINAL.md",
+      "sha256": "0664b3e79a604038f1b5347ecc2d0c611d8852dbad353d3d2727b86b8bda3a3f"
+    }
+  ],
+  "plan": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829_v2.plan.json",
+  "plan_sha256": "f2f8aeb38ec2e01561691daac4a2a5f3d0aacbda9733b8d33b94b75f2fa89c7c",
+  "platform": "Windows-11-10.0.22621-SP0",
+  "python": "3.13.0 (tags/v3.13.0:60403a5, Oct  7 2024, 09:38:07) [MSC v.1941 64 bit (AMD64)]",
+  "registered_hardware_endpoint_passed": false,
+  "runner": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\analyze_b4_t176_hybrid_final.py",
+  "runner_sha256": "455ccd5399c75894cfcaa6b9f8a76eec1c14a7272975a126c3ac735f1b85a801",
+  "schema": "b4_t176_hybrid_final_manifest_v2",
+  "simulation_assisted_passed": true,
+  "success": true
+}

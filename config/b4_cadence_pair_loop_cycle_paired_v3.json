@@ -1,0 +1,160 @@
+{
+  "schema": "b4_cadence_pair_loop_v1",
+  "status": "hardware_parameters_frozen_after_tb6",
+  "evidence_scope": "controlled_injection_cadence_economics_cycle_paired_collection_correction",
+  "registered_backend_id": "tianyan-287",
+  "simulation_days": 3,
+  "daily_window_seconds": 1200.0,
+  "block_duration_seconds": 600.0,
+  "inter_day_seconds": 86400.0,
+  "block_order_by_day": [
+    ["fast", "slow"],
+    ["slow", "fast"],
+    ["fast", "slow"]
+  ],
+  "collection_correction": {
+    "status": "amended_before_collection_after_endpoint_reachability_audit_20260815",
+    "supersedes": "config/b4_cadence_pair_loop_cycle_paired_v2.json",
+    "reason": "the v2 plan fixed 3072 sensing shots per setting for both cadences, which installs a common additive estimator-noise floor inside a scale-invariant ratio gate; the frozen gate is not additive-offset invariant, so the pure-drift contrast 0.3709 was diluted to an expected ratio of 0.6699 against a 0.639 pass line, and realized power at 24 pairs was 0.462, not the 0.910 carried over from the T-B1 simulation",
+    "amendment_scope": "pre-collection only; no hardware records exist under v2 or v3; the gate module, the registered endpoint, the cadence pair (90/360 s), the OU injection and the exclusion rules are unchanged",
+    "block_definition": "fixed_cycle_count",
+    "cycles_per_cadence_per_session": 8,
+    "sessions": 12,
+    "session_block_order": [
+      ["fast", "slow"],
+      ["slow", "fast"],
+      ["fast", "slow"],
+      ["slow", "fast"],
+      ["fast", "slow"],
+      ["slow", "fast"],
+      ["fast", "slow"],
+      ["slow", "fast"],
+      ["fast", "slow"],
+      ["slow", "fast"],
+      ["fast", "slow"],
+      ["slow", "fast"]
+    ],
+    "session_block_order_note": "the frozen three-day T-B5 simulation contract in block_order_by_day is untouched; hardware sessions carry their own balanced alternation, six sessions per starting cadence, so that block order cannot confound the cadence contrast",
+    "registered_cycle_pairs_total": 96,
+    "minimum_adjudicated_cycle_pairs": 80,
+    "pair_count_note": "the frozen gate builds its interval from a delta-method standard error, which is anti-conservative on the exponential endpoint law at small pair counts; the measured boundary size is 0.0527 at 56 pairs, 0.0514 at 64, 0.0498 at 72 and 0.0486 at 80, so 80 is the smallest registered minimum that holds type-I error under 0.05 with room to spare",
+    "minimum_sessions_per_block_order": 2,
+    "adjudication_rule": "run all registered sessions; adjudicate on every session pair block that completed both cadence blocks; the endpoint is adjudicated only if the realized pair count is at least minimum_adjudicated_cycle_pairs and at least minimum_sessions_per_block_order complete sessions carry each starting cadence; otherwise INCONCLUSIVE",
+    "optional_stopping_permitted": false,
+    "optional_stopping_note": "the pair count is not inspected mid-collection and collection is never stopped early on the basis of accumulated data; the minimum is a tolerance for lost sessions, not a sequential test",
+    "pairing_rule": "same session_index and cycle_index across fast and slow cadence blocks",
+    "incomplete_session_pair_block_policy": "retain raw records but discard the entire session pair block from adjudication unless both cadence blocks complete all eight cycles",
+    "operational_inter_session_seconds": 86400.0,
+    "operational_session_programmed_span_seconds": 3600.0,
+    "operational_session_slack_seconds": 1800.0,
+    "operational_session_wallclock_seconds": 5400.0,
+    "operational_session_completion_window_seconds": 6300.0,
+    "operational_window_note": "v2 set the sensing-loop deadline exactly equal to the programmed span, which left the slow-first sessions 90 s of margin on the final fast cycle and made a single queue stall discard the whole session; the slack is wall-clock only and consumes no additional busy time, and it cannot contaminate the endpoint because the injected OU truth and the compensation are both evaluated on the nominal virtual grid, not on the realized submission clock",
+    "sensing_shots_per_setting": 14336,
+    "sensing_shots_per_setting_note": "chosen so that the empirically calibrated estimator shot floor F(S) = 4.746 / S is small against the fast-cadence drift term; F(14336) = 3.311e-4 against a pure-drift fast endpoint mean of 6.324e-4, and the modelled session busy time is 1142.7 s against the 1200 s daily cap under the conservative per-setting reading of the measured overhead",
+    "sensing_settings_per_cycle": 4,
+    "sensing_shots_per_cycle": 57344,
+    "mirror_repetitions_per_cycle": 1,
+    "mirror_settings_per_repetition": 2,
+    "mirror_qc_cycle_indices": [0, 7],
+    "mirror_qc_cycle_indices_note": "indices are per cadence block, so each session carries four mirror QC jobs: the first and last cycle of the fast block and of the slow block",
+    "mirror_shots_per_qc_cycle": 8192,
+    "mirror_subset_note": "the registered endpoint is the squared norm of mirror_fields + compensation, where mirror_fields is the known injected OU truth at the mirror instant and compensation comes from the sensing loop and shield; the matched mirror hardware job contributes no term to that endpoint, so restricting it to a pre-registered subset of cycle indices costs zero endpoint information and returns its setting overhead to sensing shots",
+    "shots_per_session": 950272,
+    "settings_per_session": 72,
+    "shots_total": 11403264,
+    "raw_mirror_role": "task-metric QC and descriptive readout only; not the cadence adjudication endpoint",
+    "registered_endpoint": "cadence_ratio_gate applied to paired per-cycle endpoint residual squared",
+    "endpoint_distribution": "two controlled field components, so the per-cycle endpoint is a sum of two squared Gaussians and is Exponential, not the scalar squared Gaussian drawn by the frozen T-B1 power simulation",
+    "gate_module_change_permitted": false,
+    "outlier_exclusion_permitted": false,
+    "reachability_evidence": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_CADENCE_ENDPOINT_REACHABILITY_20260815\\endpoint_power_size.json",
+    "reachability_evidence_sha256": "9b7d969a895e14faf7a8b05805fc8698293f226fa8a0eeaed84b53a9ad1f07e1",
+    "reachability_evidence_note": "generated by scripts/simulate_b4_cadence_endpoint_power.py at 40000 replicates before any hardware record exists under this config; the same directory retains superseded_10session_80pair_min56.json, the rejected ten-session design whose boundary size at 56 pairs was 0.0527",
+    "minimum_power": 0.8,
+    "maximum_boundary_size": 0.05
+  },
+  "cadence": {
+    "fast_seconds": 90.0,
+    "slow_seconds": 360.0,
+    "freeze_status": "frozen_after_tb6_interface_floor",
+    "hardware_lower_bound_rule": "T_fast >= 2 * measured interface latency P90",
+    "measured_interface_p90_seconds": 14.701512299997557,
+    "measured_interface_p50_seconds": 12.437252850002551,
+    "hardware_lower_bound_seconds": 29.403024599995113,
+    "source_artifact": "E:\\TianYan\\XA-202609\\artifacts\\hardware\\B4_TB6\\interface_floor.json"
+  },
+  "controlled_ou": {
+    "tau_seconds": 300.0,
+    "stationary_process_variance": 0.00061,
+    "hard_clip_absolute": 0.08,
+    "rng_seed": 2026080501,
+    "integration_step_seconds": 5.0,
+    "calibration_source": "T-B1 cadence endpoint",
+    "target_fast_increment_to_sensing_sigma_ratio": [2.0, 3.0]
+  },
+  "sensing": {
+    "estimator": "two_axis_atan2_effective_field",
+    "estimator_lineage": "B1-style local Y/Z phase inverse; no AEMTN inference",
+    "phase_time_seconds": 0.47,
+    "effective_shots_per_second": 490.0,
+    "settings_per_update": 2,
+    "minimum_shots_per_setting": 1024,
+    "rng_seed": 2026080502
+  },
+  "simulated_interface_latency": {
+    "distribution": "uniform",
+    "minimum_seconds": 0.4,
+    "maximum_seconds": 1.8,
+    "rng_seed": 2026080503,
+    "claim_role": "randomized simulation delay only; not hardware queue evidence"
+  },
+  "shield": {
+    "max_uncertainty": 0.025,
+    "h1_range": [-1.0, 1.0],
+    "h2_range": [-1.0, 1.0],
+    "max_action_amplitude": 0.1,
+    "shot_budget_cap": 100000000
+  },
+  "gate_amplitude_ladder": {
+    "amplitudes": [0.05, 0.1, 0.25],
+    "expected_behaviors": ["permit", "downscale", "abstain"],
+    "middle_gain": 0.5
+  },
+  "mirror": {
+    "depth": 2,
+    "depth_status": "frozen_after_tb6_hardware_ladder",
+    "shots_per_task": 4096,
+    "repetitions_per_block": 1,
+    "ideal_bitstring": "000000",
+    "failure_bitstring": "111111",
+    "baseline_success_probability": 0.65,
+    "residual_sensitivity": 600.0,
+    "minimum_success_probability": 0.02,
+    "rng_seed": 2026080504
+  },
+  "hardware_smoke": {
+    "status": "passed",
+    "scope": "real-queue controlled-injection closed-loop plumbing smoke only",
+    "artifact": "E:\\TianYan\\XA-202609\\artifacts\\hardware\\B4_TB5_hardware_smoke_20260805_v2\\hardware_smoke_report.json",
+    "baseline_differential_sensing": true,
+    "main_three_day_endpoint": false
+  },
+  "tb1_cadence_evidence": {
+    "path": "E:/TianYan/XA-202609/artifacts/analysis/B4_all_endpoints_timing_grid_20260804/all_endpoints_timing_grid.json",
+    "sha256": "b343c0be69ed908957cdec316f7b556709605ef9232d7928c3630adba40507e4",
+    "required_endpoint": "cadence_pair_ratio",
+    "maximum_size": 0.05,
+    "minimum_power": 0.8,
+    "transfer_status": "does_not_transfer_to_the_corrected_hardware_collection",
+    "transfer_note": "the T-B1 cell draws a scalar squared Gaussian, uses the time-average residual whose shot term scales as 1/T, and evaluates its null at fast/slow shot-variance ratio 4.0 rather than at the boundary ratio 1.0; the corrected hardware collection fixes the shots per setting, so its null sits exactly on the boundary and its size must be established separately"
+  },
+  "claim_boundary": {
+    "allowed": "controlled-injection cadence-economics validation",
+    "forbidden": [
+      "natural drift tracking",
+      "hardware queue latency",
+      "AEMTN-core necessity"
+    ]
+  }
+}

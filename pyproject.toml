@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aemtn-b4"
+version = "1.0.0"
+description = "AI 驱动的开放量子系统辨识与自校准平台（天衍超导真机 + AEMTN 多任务网络 + 闭环保真）"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [{ name = "AEMTN-B4 Team" }]
+keywords = ["quantum", "calibration", "AEMTN", "superconducting", "drift", "closed-loop"]
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "pandas>=2.1",
+]
+
+[project.optional-dependencies]
+# 完整科研复现（训练/推理/物理仿真），需要 PyTorch（GPU 或 CPU 版均可）
+ml = [
+    "torch>=2.7",
+    "scikit-learn>=1.5",
+    "matplotlib>=3.8",
+    "joblib>=1.4",
+]
+# 量子物理与天衍 SDK
+quantum = [
+    "qutip>=5.0",
+    "cqlib==1.3.11",
+]
+# 在线仪表盘
+app = [
+    "streamlit>=1.36",
+    "plotly>=5.22",
+]
+# 开发/测试
+dev = [
+    "pytest>=8.0",
+    "psutil>=5.9",
+]
+all = [
+    "torch>=2.7",
+    "scikit-learn>=1.5",
+    "matplotlib>=3.8",
+    "joblib>=1.4",
+    "qutip>=5.0",
+    "cqlib==1.3.11",
+    "streamlit>=1.36",
+    "plotly>=5.22",
+    "pytest>=8.0",
+    "psutil>=5.9",
+]
+
+[project.scripts]
+aemtn = "aemtn_b4.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["aemtn_b4*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

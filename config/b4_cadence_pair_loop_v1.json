@@ -1,0 +1,97 @@
+{
+  "schema": "b4_cadence_pair_loop_v1",
+  "status": "hardware_parameters_frozen_after_tb6",
+  "evidence_scope": "controlled_injection_cadence_economics_simulation_preflight",
+  "registered_backend_id": "tianyan-287",
+  "simulation_days": 3,
+  "daily_window_seconds": 1200.0,
+  "block_duration_seconds": 600.0,
+  "inter_day_seconds": 86400.0,
+  "block_order_by_day": [
+    ["fast", "slow"],
+    ["slow", "fast"],
+    ["fast", "slow"]
+  ],
+  "cadence": {
+    "fast_seconds": 90.0,
+    "slow_seconds": 360.0,
+    "freeze_status": "frozen_after_tb6_interface_floor",
+    "hardware_lower_bound_rule": "T_fast >= 2 * measured interface latency P90",
+    "measured_interface_p90_seconds": 14.701512299997557,
+    "measured_interface_p50_seconds": 12.437252850002551,
+    "hardware_lower_bound_seconds": 29.403024599995113,
+    "source_artifact": "E:\\TianYan\\XA-202609\\artifacts\\hardware\\B4_TB6\\interface_floor.json"
+  },
+  "controlled_ou": {
+    "tau_seconds": 300.0,
+    "stationary_process_variance": 0.00061,
+    "hard_clip_absolute": 0.08,
+    "rng_seed": 2026080501,
+    "integration_step_seconds": 5.0,
+    "calibration_source": "T-B1 cadence endpoint",
+    "target_fast_increment_to_sensing_sigma_ratio": [2.0, 3.0]
+  },
+  "sensing": {
+    "estimator": "two_axis_atan2_effective_field",
+    "estimator_lineage": "B1-style local Y/Z phase inverse; no AEMTN inference",
+    "phase_time_seconds": 0.47,
+    "effective_shots_per_second": 490.0,
+    "settings_per_update": 2,
+    "minimum_shots_per_setting": 1024,
+    "rng_seed": 2026080502
+  },
+  "simulated_interface_latency": {
+    "distribution": "uniform",
+    "minimum_seconds": 0.4,
+    "maximum_seconds": 1.8,
+    "rng_seed": 2026080503,
+    "claim_role": "randomized simulation delay only; not hardware queue evidence"
+  },
+  "shield": {
+    "max_uncertainty": 0.025,
+    "h1_range": [-1.0, 1.0],
+    "h2_range": [-1.0, 1.0],
+    "max_action_amplitude": 0.1,
+    "shot_budget_cap": 100000000
+  },
+  "gate_amplitude_ladder": {
+    "amplitudes": [0.05, 0.1, 0.25],
+    "expected_behaviors": ["permit", "downscale", "abstain"],
+    "middle_gain": 0.5
+  },
+  "mirror": {
+    "depth": 2,
+    "depth_status": "frozen_after_tb6_hardware_ladder",
+    "shots_per_task": 4096,
+    "repetitions_per_block": 8,
+    "ideal_bitstring": "000000",
+    "failure_bitstring": "111111",
+    "baseline_success_probability": 0.65,
+    "residual_sensitivity": 600.0,
+    "minimum_success_probability": 0.02,
+    "rng_seed": 2026080504
+  },
+  "hardware_smoke": {
+    "status": "passed",
+    "scope": "real-queue controlled-injection closed-loop plumbing smoke only",
+    "artifact": "E:\\TianYan\\XA-202609\\artifacts\\hardware\\B4_TB5_hardware_smoke_20260805_v2\\hardware_smoke_report.json",
+    "baseline_differential_sensing": true,
+    "main_three_day_endpoint": false
+  },
+  "tb1_cadence_evidence": {
+    "path": "E:/TianYan/XA-202609/artifacts/analysis/B4_all_endpoints_timing_grid_20260804/all_endpoints_timing_grid.json",
+    "sha256": "b343c0be69ed908957cdec316f7b556709605ef9232d7928c3630adba40507e4",
+    "required_endpoint": "cadence_pair_ratio",
+    "maximum_size": 0.05,
+    "minimum_power": 0.8
+  },
+  "claim_boundary": {
+    "allowed": "controlled-injection cadence-economics validation",
+    "forbidden": [
+      "natural drift tracking",
+      "hardware queue latency",
+      "hardware closed-loop execution",
+      "AEMTN-core necessity"
+    ]
+  }
+}

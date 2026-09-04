@@ -1,0 +1,71 @@
+{
+  "schema": "xa202609_b4_drift_campaign_v4_manifest",
+  "profile": "xa202609_b4_single_backend_drift_campaign_v4",
+  "campaign_id": "xa202609_b4_drift_campaign_v4",
+  "backend_id": "tianyan176",
+  "credential_source": {
+    "environment_variable": "B4_TIANYAN176_LOGIN_KEY",
+    "credential_stored": false
+  },
+  "config_path": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\b4_drift_campaign_v4_tianyan176.json",
+  "config_sha256": "4DC1ED7A6D7273EDDD8C12C9F58652460CA9330B1CBC4EED085CC58806510CA8",
+  "peer_config_path": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\b4_drift_campaign_v4_tianyan287.json",
+  "peer_config_sha256": "FF34228CE8E4FDCD32C7EEF353AD85C26B468EC5DA4686172172E472E22A9FFA",
+  "collector_source_sha256": "4E8162BFA65D982BAC4FF34015FD53862356DCEAB82845D69917D4FE8FF70F04",
+  "config_pair_difference_paths": [
+    "backend.backend_id",
+    "backend.cadence_supplement_timing",
+    "backend.physical_qubits[0]",
+    "backend.physical_qubits[1]",
+    "backend.physical_qubits[2]",
+    "backend.physical_qubits[3]",
+    "backend.physical_qubits[4]",
+    "backend.physical_qubits[5]",
+    "backend.tb6_measured_timing.effective_shots_per_second",
+    "backend.tb6_measured_timing.fixed_overhead_seconds_per_setting",
+    "credential_env",
+    "measurement.anchor_job.shots_per_setting"
+  ],
+  "common_protocol_sha256": "1D15F8D6AD9CB7CDCD74AE650038E1C56BEECAC7698E013E56B71B1CEEEBD95B",
+  "peer_common_protocol_sha256": "1D15F8D6AD9CB7CDCD74AE650038E1C56BEECAC7698E013E56B71B1CEEEBD95B",
+  "cadence_origin_utc": "2026-07-31T15:42:00+00:00",
+  "job_role_enum": [
+    "anchor_33",
+    "probe_burst",
+    "loop",
+    "mirror"
+  ],
+  "role_shots_per_setting": {
+    "anchor_33": 7840,
+    "probe_burst": 16384
+  },
+  "anchor_shots_per_setting_rule": "round(3072 * backend.tb6_measured_timing.effective_shots_per_second / 1486.0918995653424)",
+  "anchor_settings": 33,
+  "probe_settings_per_job": 2,
+  "anchor_program_manifest_sha256": "62DA0BD3EA211AD98C44DA4CDEDFA94A4EDFC3B4887596C6D0799011B524CD16",
+  "probe_program_manifest_sha256": "D572EED124C3A1A629E68BEB3A76F7802D4EB3DD558A33754D6791526D8604E3",
+  "reference_positions_zero_indexed": [
+    0,
+    11,
+    22,
+    32
+  ],
+  "probe_target_minutes": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "lag_axis_mapping": {
+    "anchor_33": "interleaved references only: within-job short lag plus anchor-to-anchor cross-session/cross-day long lag; actual pacing calibrated in T-B6",
+    "probe_burst": "independent readout probes: measured 1-16 minute axis; event rows excluded",
+    "in_job_probe": "supportive same-channel context-effect QC against independent probe; excluded from primary SF",
+    "anti_double_counting": "each primary pair uses one job_role and one analysis_role; never pair across roles"
+  },
+  "pairing_rule": "same backend + same regime_id + same job_role + same analysis_role; never cross role",
+  "anchor_pacing_status": "T-B6 dry-run must calibrate actual per-setting pacing; v3 lags 23/46/67 seconds are not constants",
+  "event_data_role": "supportive_only_excluded_from_primary_sf",
+  "hardware_submission": false
+}

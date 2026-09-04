@@ -1,0 +1,91 @@
+{
+  "claim_boundary": {
+    "allowed": [
+      "simulation-assisted project workflow completion",
+      "frozen-model controlled-injection mechanism validation",
+      "counterfactual Session 1 sensitivity analysis"
+    ],
+    "forbidden": [
+      "claiming that Session 1 was collected on hardware",
+      "claiming a registered hardware endpoint PASS from synthetic pairs",
+      "pooling synthetic pairs into the hardware adjudication endpoint",
+      "natural drift tracking",
+      "hardware queue latency",
+      "AEMTN-core necessity"
+    ]
+  },
+  "created_at_utc": "2026-08-29T08:40:24.943526+00:00",
+  "measurement_model": {
+    "axis_expectations": "Y=-sin(2*h*T), Z=cos(2*h*T)",
+    "baseline": "one synthetic zero-field opening measurement shared by both cadence blocks",
+    "controlled_truth": "sense_fields and mirror_fields from frozen Session 1 plan",
+    "estimator": "session_shared_baseline_differential_two_axis_atan2_effective_field",
+    "mirror_qc": "simulation-only fixed-zero/adaptive matched-pair model; descriptive and not an endpoint input",
+    "registered_endpoint_formula": "sum((mirror_fields + compensation)**2)",
+    "sampling": "independent binomial shot sampling for each controlled field and axis",
+    "shield": "the same five-gate shield and Action(1.0, 2, act) computation used by the hardware runner"
+  },
+  "monte_carlo": {
+    "endpoint_law": "independent Exponential draws at the frozen expected fast/slow means",
+    "permutation_count_for_single_trace": 20000,
+    "replicates": 40000,
+    "scope": "simulation-only Session 1 ratio envelope"
+  },
+  "project_status_on_success": "COMPLETED_WITH_SIMULATION_CONTINGENCY",
+  "purpose": "complete the B4/T176 project workflow with an isolated simulated Session 1 while the hardware backend is unavailable",
+  "record_tags": {
+    "hardware_job_submitted": false,
+    "pooling_permitted": false,
+    "record_origin": "simulation",
+    "registered_hardware_endpoint_contribution": "none",
+    "simulation_only": true
+  },
+  "registered_hardware_endpoint_status_on_success": "PENDING_HARDWARE",
+  "rng_seeds": {
+    "session1_endpoint_ensemble": 6593958552197821547,
+    "session1_trace_permutation": 5475749986943391857,
+    "session_baseline": 335073353172424093,
+    "session_mirror_qc": 6983683342229787573,
+    "session_sensing": 8789613327485931463
+  },
+  "schema": "b4_t176_session1_simulation_contingency_plan_v1",
+  "separation_contract": {
+    "hardware_directory_modified": false,
+    "hardware_journal_read": false,
+    "hardware_npz_read": false,
+    "hardware_raw_counts_read": false,
+    "hardware_scientific_result_read": false,
+    "output_dir": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829",
+    "query_ids_generated": false,
+    "registered_hardware_endpoint_contribution": "none",
+    "simulation_pooling_permitted": false
+  },
+  "session1_contract": {
+    "baseline_end_shots_per_setting": 27664,
+    "baseline_measurements": 2,
+    "baseline_start_shots_per_setting": 27664,
+    "block_order": [
+      "slow",
+      "fast"
+    ],
+    "cycles": 40,
+    "cycles_per_cadence": 20,
+    "mirror_qc_jobs": 2,
+    "mirror_shots_per_task": 4096,
+    "registered_pair_mappings": 20,
+    "sensing_shots_per_setting": 6186,
+    "session_index": 1,
+    "virtual_start_seconds": 86400.0
+  },
+  "source": {
+    "base_hardware_plan": "E:\\TianYan\\XA-202609\\quarantine\\tianyan176\\B4_CADENCE_PAIR_V4_T176_REGISTERED_20260823\\supplement_plan.json",
+    "base_hardware_plan_sha256": "e604277f9ddd6daaef354e213354e4715efcafc952c09e2c8345373b6bdda231",
+    "loop_config": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\b4_cadence_pair_loop_cycle_paired_v4.json",
+    "loop_config_sha256": "ee4c4102dd406087c2ea54677599b146f8d464c2d22a1dcec6788745be4356e3",
+    "runner": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\run_b4_session1_simulation_contingency.py",
+    "runner_sha256": "318d58290f1dc62e88e8450058d6cd0a0b2bacfb875a61bdd622422db10d5bb6",
+    "session1_payload_sha256": "dd7548a001a190420bd3f96ecafb9e7c722bb184d7f85b34f452fc699ce303b2",
+    "source_plan_runner_sha256": "8ac6401a008f9f89e7efdde68db03760f9e2e634412051630a21264289dd8dc1"
+  },
+  "status": "frozen_before_hardware_outcome_unsealing"
+}

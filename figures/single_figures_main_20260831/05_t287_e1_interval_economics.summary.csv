@@ -1,0 +1,2 @@
+intrinsic_t_star_seconds,bootstrap_ci95_lower_seconds,bootstrap_ci95_upper_seconds,verdict,upper_bound_hits_observation_window
+134.41859244351787,101.33696625715231,4000.2099028639427,INCONCLUSIVE,True

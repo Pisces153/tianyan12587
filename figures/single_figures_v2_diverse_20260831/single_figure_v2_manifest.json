@@ -1,0 +1,484 @@
+{
+  "gallery": "B4_v2_diverse_single_figures",
+  "figure_count": 12,
+  "one_chart_per_canvas": true,
+  "only_sequence_line_figure": 9,
+  "inputs": {
+    "f01": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\01_t287_readout_proxy_timeseries.source.csv",
+      "sha256": "4ba07ea33af833139df4ed37daa6306808df184cc2e0de098337d46734221d9e"
+    },
+    "f02": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\02_t287_effective_field_state.source.csv",
+      "sha256": "b9e1c6abd640123f5d579db6d73f3fd06942b422d8c0c4b58a3519593b354736"
+    },
+    "f03": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\03_t287_e0_negative_control_structure_function.source.csv",
+      "sha256": "ccd72c34e744ef7efe2793de536e05307d01a47372b63d6ca20ec55f76e872ee"
+    },
+    "f04": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\04_t287_e1_drift_structure_function.source.csv",
+      "sha256": "c0b917cb00e8b3f5c924bf82fe3e2fb8240eecab2255f38abf4668985d9db19e"
+    },
+    "f05": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\05_t287_e1_interval_economics.source.csv",
+      "sha256": "c84bb4b62a2a895b432357e8b9221360609e1e79fcd7590c6df6752e84e0675b"
+    },
+    "f05s": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\05_t287_e1_interval_economics.summary.csv",
+      "sha256": "d7081a862479e964ad9d8352bdc02483f515430955c6e69e37fa51e6f8afb91a"
+    },
+    "f06": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\06_t287_tstar_vs_control_floor.source.csv",
+      "sha256": "c0dc621a3a52a4faa865f1f84f7904c27e8b1235c8d13b86a70f81835d10ee87"
+    },
+    "f07": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\07_t176_hardware_pair_slopegraph.source.csv",
+      "sha256": "9ce51c0b37d709d4a09bee4659a580efa7b697949061f325894c9d9955acc731"
+    },
+    "f08": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\08_t176_pair_benefit_distribution.source.csv",
+      "sha256": "9ce51c0b37d709d4a09bee4659a580efa7b697949061f325894c9d9955acc731"
+    },
+    "f09": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\09_t176_cumulative_ratio.source.csv",
+      "sha256": "9ce51c0b37d709d4a09bee4659a580efa7b697949061f325894c9d9955acc731"
+    },
+    "f10": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\10_t176_hardware_permutation_null.source.csv",
+      "sha256": "8fff9aa332c37941bc3da4cac83a2b32ce5730a797dc37c6cce0e319375c2228"
+    },
+    "f10s": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\10_t176_hardware_permutation_null.summary.csv",
+      "sha256": "4c1d680821990d74c9d2b82b999af33c3d23360ff63a982fa61a65c31579c800"
+    },
+    "f11": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\11_baseline_drift_sensitivity.source.csv",
+      "sha256": "6f4cbb935c130cf2a4e3e3d82ba43de5c83aad729a70130e4abc02de91eafdfe"
+    },
+    "f12": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\12_t176_hardware_workload_flow.source.csv",
+      "sha256": "9ce443a0aae2eb13a641d89564f15aebf66871bced55ae2fb80b53679d849e48"
+    }
+  },
+  "figures": [
+    {
+      "number": 1,
+      "chart_type": "temporal heatmap",
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\01_t287_readout_state_heatmap.svg",
+          "sha256": "a00ab58bd1aa4777f140df6b702d131ed8877ae5083bb6820bf41526108ca632"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\01_t287_readout_state_heatmap.pdf",
+          "sha256": "816089458621c508e00393e3ecab197a2e05b05f1f6928e39991484801bd0040"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\01_t287_readout_state_heatmap.png",
+          "sha256": "0ccd59ba2d5ad5d15d8782aefdd08a20438da67e3cf76e50620124877a8b31ea"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\01_t287_readout_state_heatmap.tiff",
+          "sha256": "47dddff09355b3215f8e8809d015192514df55b9c793955cdc43ee883b0bc57b"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\01_t287_readout_state_heatmap.source.csv",
+          "sha256": "fc55fef4d237c0a96ae884616638f3e5f395ea451cdb99cd807174d410aa916c",
+          "rows": 78
+        }
+      ],
+      "primary_rows": 78,
+      "evidence_origin": "T287 hardware",
+      "conclusion": "两个读出通道的标准化状态在 78 个快照间呈现明显静态偏离。",
+      "claim_boundary": "展示时间变异，不单独证明环境原因或底层脉冲参数漂移。",
+      "workbook_sheet": "F01_ReadoutHeatmap"
+    },
+    {
+      "number": 2,
+      "chart_type": "uncertainty-aware phase-space scatter",
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\02_t287_effective_field_phase_space.svg",
+          "sha256": "f80a71b2ab00c24812765a37153b2a6411eeb8d19c0ce73748ea98e856bd778d"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\02_t287_effective_field_phase_space.pdf",
+          "sha256": "c427a155ac72328ffb45584ff7b41943cf55ce9ab30f604a974dda1c637b33fa"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\02_t287_effective_field_phase_space.png",
+          "sha256": "4fd154419b0cf07ddaba857d2b01e061ddd1143ec09488c0ab31a10d1bfcf35c"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\02_t287_effective_field_phase_space.tiff",
+          "sha256": "4983972a57ae44501916811e66fa3e1d98ade3ab4fbaf4d71079d440eb3da04b"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\02_t287_effective_field_phase_space.source.csv",
+          "sha256": "dbf74a41c5d473fffe98a23a089cc3626a30804770f8cdbf75f7cd98b20230e4",
+          "rows": 78
+        }
+      ],
+      "primary_rows": 78,
+      "evidence_origin": "T287 hardware",
+      "conclusion": "量子测量定义的 H1/H2 状态在观测窗内占据非单点区域。",
+      "claim_boundary": "H1/H2 是量子测量代理，不是温度计、电磁传感器或底层脉冲参数。",
+      "workbook_sheet": "F02_PhaseSpace"
+    },
+    {
+      "number": 3,
+      "chart_type": "horizontal dot-whisker / forest plot",
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\03_t287_e0_negative_control_forest.svg",
+          "sha256": "9d50cb18c1543acdae0b3f926d77aad9a0b69fa5f325bcac2b26874c1ac07d40"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\03_t287_e0_negative_control_forest.pdf",
+          "sha256": "a4865766b45524a56d42a12c1ac485a21f615fa797686ef05b2fc08a3a740e49"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\03_t287_e0_negative_control_forest.png",
+          "sha256": "759436850763667cf8d5c5b6642521740893c11cb6966f0b4c178940740590e2"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\03_t287_e0_negative_control_forest.tiff",
+          "sha256": "a8738be03ad74079cff9dfab32250589e3f8a3e7ca0636fc09cf86d9887695e4"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\03_t287_e0_negative_control_forest.source.csv",
+          "sha256": "7ac211921a0d10f79eb5310debeee51869238f53bc27e4f77d112bfed1357ef3",
+          "rows": 13
+        }
+      ],
+      "primary_rows": 13,
+      "evidence_origin": "T287 hardware",
+      "conclusion": "E0 阴性对照未通过漂移方差门，方法没有把所有波动都归为漂移。",
+      "claim_boundary": "FAIL 是对照成功，不是证明 E0 在任意尺度绝对不漂移。",
+      "workbook_sheet": "F03_E0Forest"
+    },
+    {
+      "number": 4,
+      "chart_type": "horizontal dot-whisker / forest plot",
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\04_t287_e1_drift_forest.svg",
+          "sha256": "83d514c343967a3e4deb579887f088b80562c8da4c77e86eea65b79751cd345c"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\04_t287_e1_drift_forest.pdf",
+          "sha256": "5abcbc8f278a1e427a27c84ec90a14b376ada1d516270304218aead175f48791"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\04_t287_e1_drift_forest.png",
+          "sha256": "86316617e313be2907a8e08a429efb44a1f69b6c4a43fd8790888e2a6e129e13"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\04_t287_e1_drift_forest.tiff",
+          "sha256": "c719ac1d66101208a2a1dbae92ed3e782dce9f2a045cc3acd0fe0354759babc8"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\04_t287_e1_drift_forest.source.csv",
+          "sha256": "a5a27241ae7861305698e161ea9087f2bf17d82e0b3dd1f410f495004c4644ac",
+          "rows": 13
+        }
+      ],
+      "primary_rows": 13,
+      "evidence_origin": "T287 hardware",
+      "conclusion": "E1 的过程方差超出 shot-noise floor，识别到可定量的静态之外变化。",
+      "claim_boundary": "证据限于 E1 读出代理通道，不直接定位温度或电磁扰动源。",
+      "workbook_sheet": "F04_E1Forest"
+    },
+    {
+      "number": 5,
+      "chart_type": "three-row residual heatmap",
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\05_t287_e1_interval_residual_heatmap.svg",
+          "sha256": "8d6284d0139ec96fa0b9570da0ece320f8c2c771ab9aa47dfd3e29c421c07270"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\05_t287_e1_interval_residual_heatmap.pdf",
+          "sha256": "1b0fd90f1dff58f2fa90151c8933c5e9049d05bdda8dac38f1e8113e0643e269"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\05_t287_e1_interval_residual_heatmap.png",
+          "sha256": "d7c5b2e65c8f856f9ac42c921a4d56dc6014ed91e7627f19b600d5ce2444be0e"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\05_t287_e1_interval_residual_heatmap.tiff",
+          "sha256": "23b709d4800dd420a6d73d23d32edc66cf576665294841471217dc1c745ece86"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\05_t287_e1_interval_residual_heatmap.source.csv",
+          "sha256": "3dd1ea74027942aff9a43f033130dbd45ff00a7f583ea0f0f95f3cccd0bc6367",
+          "rows": 400
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\05_t287_e1_interval_residual_heatmap.summary.csv",
+          "sha256": "457bd80fc43392a5186ea658061b2f0330cd440ae781f7e4b77ae9805294dd01",
+          "rows": 1
+        }
+      ],
+      "primary_rows": 400,
+      "evidence_origin": "T287 hardware-derived model",
+      "conclusion": "点曲线存在最优更新间隔，但 T* 的置信上界碰到观测窗。",
+      "claim_boundary": "T*=134.4 s 不能当作已精确识别的生产策略；当前裁决为 INCONCLUSIVE。",
+      "workbook_sheet": "F05_ResidualMap"
+    },
+    {
+      "number": 6,
+      "chart_type": "log-scale interval strip / calibration clock",
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\06_t287_control_floor_interval_strip.svg",
+          "sha256": "2f7e88b70d36126ef948cd0d75a0a1a7991b7abb22378000cd832ea8a78932f8"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\06_t287_control_floor_interval_strip.pdf",
+          "sha256": "3fbc755fff5c41ed8ed907b875f256c5c0837dcdd7b4531146ea9d1e6717c9e6"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\06_t287_control_floor_interval_strip.png",
+          "sha256": "24862377db8b038e3152bb4451949890655036789b0eb00758d4fc2603625d13"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\06_t287_control_floor_interval_strip.tiff",
+          "sha256": "fac0f60e24b3b51b0935aa88035cadc45073c811245161f0026139add9f6fabe"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\06_t287_control_floor_interval_strip.source.csv",
+          "sha256": "531f6a975a93d0809ed329dab4c373f34d5c820ebf4bc3b7895a2ee74200b521",
+          "rows": 4
+        }
+      ],
+      "primary_rows": 4,
+      "evidence_origin": "T287 hardware economics",
+      "conclusion": "云 API 接口延迟和协议可达底线均已量化。",
+      "claim_boundary": "T* 置信区间过宽且上界碰窗，不宣称已找到稳定的最优生产间隔。",
+      "workbook_sheet": "F06_ControlClock"
+    },
+    {
+      "number": 7,
+      "chart_type": "paired log-log scatter",
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\07_t176_hardware_paired_scatter.svg",
+          "sha256": "8b521725708b88e05c693a51d6bf1dd2a14ec97df003aa702aea2afc5a8b145c"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\07_t176_hardware_paired_scatter.pdf",
+          "sha256": "33388c4baebe030bfea6b5434e26b2bcb1cdec12a8153e0d6be3d5b46447d6c2"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\07_t176_hardware_paired_scatter.png",
+          "sha256": "8cce566fe092cd0c3cf2d354738cad3af5354c158e2a6293ab3a7c07de59439e"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\07_t176_hardware_paired_scatter.tiff",
+          "sha256": "7d21a198db864d52f33fe78219329cd7e34c0e2ad222f2b5075e58e4d8dde52e"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\07_t176_hardware_paired_scatter.source.csv",
+          "sha256": "8b173e29b2e47518462bef32d22c00ca124307f7584cef49f878380058a1aca0",
+          "rows": 20
+        }
+      ],
+      "primary_rows": 20,
+      "evidence_origin": "T176 hardware Session 0 only",
+      "conclusion": "Session 0 中 14/20 个配对的 fast cadence 端点残差更小。",
+      "claim_boundary": "Hardware Session 1 缺失；不宣称已完成注册双会话 all-hardware PASS。",
+      "workbook_sheet": "F07_PairedScatter"
+    },
+    {
+      "number": 8,
+      "chart_type": "sorted diverging lollipop",
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\08_t176_pair_benefit_lollipop.svg",
+          "sha256": "ca3a4286087f63a6ba4cca1fef43ec5bc840de2222398724c93e89c52ec429aa"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\08_t176_pair_benefit_lollipop.pdf",
+          "sha256": "310bc3dcc13d4633ba9c9d3fd9ec96dca337a5d82ae3495ad8404026b327f3e6"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\08_t176_pair_benefit_lollipop.png",
+          "sha256": "e744d84a4efa30f4aaac505422b01af294a033e6634935e11008fcc2cdf66ec3"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\08_t176_pair_benefit_lollipop.tiff",
+          "sha256": "1606231a1ba0a57cf3c3cfac8420e3d2394b58b20253a8c44d9a36d5858f6c52"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\08_t176_pair_benefit_lollipop.source.csv",
+          "sha256": "67bf5aa997efa708e7d2f3adad7d5d813e9e811d1636a0dfb7b7c765847fca46",
+          "rows": 20
+        }
+      ],
+      "primary_rows": 20,
+      "evidence_origin": "T176 hardware Session 0",
+      "conclusion": "配对效应具有明显异质性，但方向上 14/20 倾向 fast cadence。",
+      "claim_boundary": "排序图不是时序图，不用于推断效应随时间增长。",
+      "workbook_sheet": "F08_BenefitRank"
+    },
+    {
+      "number": 9,
+      "chart_type": "cumulative step diagnostic",
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\09_t176_cumulative_ratio_step.svg",
+          "sha256": "f8cae60c7dc9a34be14cafe23b7a6b829a7f2b0944ddac7d95dba60c2a477113"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\09_t176_cumulative_ratio_step.pdf",
+          "sha256": "2f3827c5a5b8b35309cbaf82ea41af4a7cda9f9f92067d6e3afdd2f57b50c97d"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\09_t176_cumulative_ratio_step.png",
+          "sha256": "3e487f1b8753980f2aa8e1989f6ce24acd3863961349a37b8ec64174b4e80025"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\09_t176_cumulative_ratio_step.tiff",
+          "sha256": "a381754e8d72b57b40d3ffd11169cd7dbb86cf0be011f0657f0c4457776966d6"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\09_t176_cumulative_ratio_step.source.csv",
+          "sha256": "673ca11b9f7e8793fcd616a87adedf563dd3ab2cda96208adce28daccc8d3129",
+          "rows": 20
+        }
+      ],
+      "primary_rows": 20,
+      "evidence_origin": "T176 hardware Session 0",
+      "conclusion": "累计比在加入 20 对后结束于 0.3616，并非仅最后单对造成。",
+      "claim_boundary": "序列诊断仍属 Session 0 描述性证据，不补足缺失的 Hardware Session 1。",
+      "workbook_sheet": "F09_Cumulative"
+    },
+    {
+      "number": 10,
+      "chart_type": "permutation histogram",
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\10_t176_permutation_histogram.svg",
+          "sha256": "c55701bfdc5c8b03dab8b5240888093cf7ba632f3023bcc7c19547ea9d2c89cc"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\10_t176_permutation_histogram.pdf",
+          "sha256": "5fbe281e3117bcb3649fe601487dac7138d39158471599058ea796b3a79181a0"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\10_t176_permutation_histogram.png",
+          "sha256": "2c72109fdf479dd3aaa1f1a36f5768f9370676396d490214038620570f75c1f4"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\10_t176_permutation_histogram.tiff",
+          "sha256": "47e5f474309075d334d9542733c33057fd856479b8c1cc583993ecf6588fd267"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\10_t176_permutation_histogram.source.csv",
+          "sha256": "c4ff7efff7e62848f4e290d971735074f9665e0348e32388f38f0b19b6c8e281",
+          "rows": 20000
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\10_t176_permutation_histogram.summary.csv",
+          "sha256": "f09402d4447af90cebf72a8ebaba464327457be371f6ff91d86d94b01ed1d21d",
+          "rows": 1
+        }
+      ],
+      "primary_rows": 20000,
+      "evidence_origin": "T176 hardware Session 0",
+      "conclusion": "在 Session 0 配对置换零假设下，观测比位于低尾，p=0.00525。",
+      "claim_boundary": "p 值只针对已冻结的 Session 0 配对置换检验；不是跨会话或跨设备复现证据。",
+      "workbook_sheet": "F10_Permutation"
+    },
+    {
+      "number": 11,
+      "chart_type": "scenario dumbbell",
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\11_baseline_sensitivity_dumbbell.svg",
+          "sha256": "781030a2a7c7ba2e9db2ef90390ff734b815599294608af070733ce0962fcbb1"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\11_baseline_sensitivity_dumbbell.pdf",
+          "sha256": "8cbad3d721c38dfe08574fc1d520ecb28a7050ab131d9c807030a2af7014427b"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\11_baseline_sensitivity_dumbbell.png",
+          "sha256": "817532c336dc37138f38f349e3a8baf3d9fb29bcc5dba1060419e6e6acf427ee"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\11_baseline_sensitivity_dumbbell.tiff",
+          "sha256": "3d72cb6b66da63098af2213a8dd68e0ebb5a643e47ed755a6e52ac63c5e4cd4e"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\11_baseline_sensitivity_dumbbell.source.csv",
+          "sha256": "42bfcca9a18f28303702b503fd34ec0e2f77a5f10a749524ba3d93c39cba4c8a",
+          "rows": 4
+        }
+      ],
+      "primary_rows": 4,
+      "evidence_origin": "simulation-assisted / post-hoc sensitivity",
+      "conclusion": "四种预设漂移形状下观测比均低于相应临界值。",
+      "claim_boundary": "这是模拟辅助、事后敏感性证据，不是缺失的真机 Hardware Session 1。",
+      "workbook_sheet": "F11_Sensitivity"
+    },
+    {
+      "number": 12,
+      "chart_type": "unit-aware process flow",
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\12_t176_hardware_workload_flow.svg",
+          "sha256": "8129609fda8ddf020824f7e3df21f6c85d5666162b468d9cc457d8fc14850baa"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\12_t176_hardware_workload_flow.pdf",
+          "sha256": "bcc0a2bb39d2fd6a338425dd6620f004823e1201230aa2db60cd3f0fc755990e"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\12_t176_hardware_workload_flow.png",
+          "sha256": "73aedc1e89923c61b877604c910d470276bcef70554bd9a8b6c7bf664ff3f513"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\12_t176_hardware_workload_flow.tiff",
+          "sha256": "c191f973c4e3d210a8cd9e0daf64e99d026b29a4fdfab995b4b8473813e87fc4"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\12_t176_hardware_workload_flow.source.csv",
+          "sha256": "f8c7916000a38814ef9031928485fb0f7532c5ff96c596b7416f451df183ca9b",
+          "rows": 5
+        }
+      ],
+      "primary_rows": 5,
+      "evidence_origin": "T176 hardware Session 0 engineering accounting",
+      "conclusion": "真机工作负载、平台任务、完成周期和分析对数已逐层对账，0 pair exclusions。",
+      "claim_boundary": "工作负载计数证明工程完整性，不等于算法效果或跨设备复现。",
+      "workbook_sheet": "F12_WorkloadFlow"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": "2.0-draft",
+  "status": "draft_until_g0",
+  "system": {
+    "num_qubits": 6,
+    "logical_qubits": [0, 1, 2, 3, 4, 5],
+    "initial_state": "neel_010101_v1",
+    "initial_state_bits_q0_to_q5": [0, 1, 0, 1, 0, 1],
+    "boundary_condition": "open",
+    "directed_edges": [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5]]
+  },
+  "hamiltonian": {
+    "dm_term": "+D*(X[i]Y[i+1]-Y[i]X[i+1])",
+    "dm_vector_direction_for_positive_D": "+z",
+    "cross_terms": ["+Jxz*X[i]Z[i+1]", "+Jzx*Z[i]X[i+1]"],
+    "primary_targets": ["h1", "h2", "Jz"]
+  },
+  "simulation": {
+    "gamma_sim_range": [0.02, 0.08],
+    "gamma_sim_upper_bound_inclusive": false,
+    "lindblad_semantics": "local isotropic depolarization L_k^a=sqrt(gamma/3)*sigma_k^a",
+    "preparation_depolarization_range": [0.0, 0.2],
+    "evolution_time": {
+      "distribution": "clip(normal(pi/(4*J_eff), 0.10), 0.05, 5.0)",
+      "J_eff": "sqrt(Jz^2+Jx^2+Jy^2+D^2)",
+      "hard_range": [0.05, 5.0]
+    }
+  },
+  "measurement": {
+    "logical_pair": [0, 1],
+    "basis_order": ["XX", "XY", "XZ", "YX", "YY", "YZ", "ZX", "ZY", "ZZ"],
+    "shots_per_basis": 1024,
+    "single_qubit_basis_change": {
+      "X": ["H"],
+      "Y": ["SDG", "H"],
+      "Z": []
+    },
+    "pauli15_qa_order": [
+      "X0", "Y0", "Z0", "X1", "Y1", "Z1",
+      "X0X1", "X0Y1", "X0Z1", "Y0X1", "Y0Y1", "Y0Z1", "Z0X1", "Z0Y1", "Z0Z1"
+    ],
+    "xobs_model_order": ["X0", "Y0", "Z0", "X0X1", "Y0Y1", "Z0Z1"],
+    "xobs_model_pauli15_indices": [0, 1, 2, 6, 10, 14],
+    "save_full_six_bit_counts": true
+  },
+  "model_data_contract": {
+    "input_keys": ["xobs_model", "t"],
+    "input_dimensions": {"xobs_model": 6, "t": 1},
+    "forbidden_legacy_input_keys": ["x", "v"],
+    "supervised_targets": ["h1", "h2", "Jz"],
+    "training_loss_weights": {"h1": 1.0, "h2": 1.0, "Jz": 80.0},
+    "expected_observability_order": "h1_h2_high_jz_low_in_dm_disordered_noisy_benchmark",
+    "allowed_simulation_auxiliary_labels": [
+      "entropies", "inter_entropies", "target_fidelities", "phase_labels"
+    ],
+    "train_split_names": ["train", "sim_train"],
+    "validation_split_names": ["validation", "sim_holdout"],
+    "hardware_test_is_training_forbidden": true
+  },
+  "simulator_hardware_correspondence": {
+    "logical_initial_state": "neel_010101_v1",
+    "logical_hamiltonian": "same parameterized OBC DM Hamiltonian",
+    "measurement_bases": "same nine bases in measurement.basis_order",
+    "shots_per_basis": 1024,
+    "bit_order_after_calibration": "q0_leftmost",
+    "model_feature_boundary": ["xobs_model", "t"],
+    "required_g1_check": "compare matched simulator and hardware Pauli15/xobs6 distributions before ADAPT",
+    "hardware_test_is_training_forbidden": true
+  },
+  "digitalization": {
+    "trotter_order_candidates": [1, 2],
+    "trotter_step_candidates": [1, 2, 4, 6, 8],
+    "selected_order": null,
+    "selected_steps": null,
+    "selection_status": "pending_ideal_reference_rehearsal"
+  },
+  "backends_config": "backends_v1.json"
+}

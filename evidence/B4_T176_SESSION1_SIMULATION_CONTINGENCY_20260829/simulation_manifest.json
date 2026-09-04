@@ -1,0 +1,58 @@
+{
+  "created_at_utc": "2026-08-29T08:40:43.905755+00:00",
+  "hardware_job_submitted": false,
+  "hardware_scientific_results_read": false,
+  "outputs": [
+    {
+      "bytes": 129923,
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829\\session1_simulated_snapshots.jsonl",
+      "sha256": "ade5736079c315aa2ed0b22ab99490e9ff554c2f6cb4665ca4590e6ad6cd7c37"
+    },
+    {
+      "bytes": 3314,
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829\\session1_simulated_pair_rows.csv",
+      "sha256": "1ff1e29bdf9174f2b5656734cd442b432a4e7a4deebf1e5e36b6c51b40c9d99e"
+    },
+    {
+      "bytes": 2236,
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829\\session1_simulated_mirror_qc.jsonl",
+      "sha256": "268ba8adde4ccc8682773ba1a61051243992441b14e74fc7397738ff4b145527"
+    },
+    {
+      "bytes": 6858,
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829\\session1_simulation_report.json",
+      "sha256": "80ec17e4166e14b71a79e6a7c895c3a9efaf8038ec7fef5866fcfbfbd47b4311"
+    },
+    {
+      "bytes": 1562,
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829\\B4_T176_SESSION1_SIMULATION_CONTINGENCY.md",
+      "sha256": "93d3f126f9a735173f1d6df90663a12b9433f0227f4d1dd3b0717738a2c80c51"
+    }
+  ],
+  "plan": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829.plan.json",
+  "plan_sha256": "59f3eba344574346ffe42630a993f9c6931ccbeb35dd253df4de81434bdd0181",
+  "platform": "Windows-11-10.0.22621-SP0",
+  "pooling_permitted": false,
+  "python": "3.13.0 (tags/v3.13.0:60403a5, Oct  7 2024, 09:38:07) [MSC v.1941 64 bit (AMD64)]",
+  "record_chain": {
+    "first_record_sha256": "cfb370e3012f3d022e4194948cb724e8326859e5ed63a16d6c0588e5ba484d07",
+    "last_record_sha256": "fa81b6980b53232ebf9d8fa244c97d1505eaa123b0bf0f5f8808b15a7c52b569",
+    "rows": 43
+  },
+  "registered_hardware_endpoint_contribution": "none",
+  "runner": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\run_b4_session1_simulation_contingency.py",
+  "runner_sha256": "318d58290f1dc62e88e8450058d6cd0a0b2bacfb875a61bdd622422db10d5bb6",
+  "schema": "b4_t176_session1_simulation_contingency_manifest_v1",
+  "simulation_only": true,
+  "source": {
+    "base_hardware_plan": "E:\\TianYan\\XA-202609\\quarantine\\tianyan176\\B4_CADENCE_PAIR_V4_T176_REGISTERED_20260823\\supplement_plan.json",
+    "base_hardware_plan_sha256": "e604277f9ddd6daaef354e213354e4715efcafc952c09e2c8345373b6bdda231",
+    "loop_config": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\b4_cadence_pair_loop_cycle_paired_v4.json",
+    "loop_config_sha256": "ee4c4102dd406087c2ea54677599b146f8d464c2d22a1dcec6788745be4356e3",
+    "runner": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\run_b4_session1_simulation_contingency.py",
+    "runner_sha256": "318d58290f1dc62e88e8450058d6cd0a0b2bacfb875a61bdd622422db10d5bb6",
+    "session1_payload_sha256": "dd7548a001a190420bd3f96ecafb9e7c722bb184d7f85b34f452fc699ce303b2",
+    "source_plan_runner_sha256": "8ac6401a008f9f89e7efdde68db03760f9e2e634412051630a21264289dd8dc1"
+  },
+  "success": true
+}

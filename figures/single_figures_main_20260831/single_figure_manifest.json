@@ -1,0 +1,449 @@
+{
+  "gallery": "B4_main_report_single_figures",
+  "figure_count": 12,
+  "one_chart_per_canvas": true,
+  "inputs": {
+    "observable": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\figures_b4_core_20260830\\source_data_03_t287_observable_state.csv",
+      "sha256": "47a5938a19bcb02a96a7c9ca38cb68237f2173ec760cc3e5e379f93ede4bcca7"
+    },
+    "sf": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\figures_b4_core_20260830\\source_data_04_t287_structure_function.csv",
+      "sha256": "72285f31360b74907e63300e1852150f95468dd022cfd456406b3593af31e5fc"
+    },
+    "curve": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\figures_b4_core_20260830\\source_data_04_t287_e1_sensing_curve.csv",
+      "sha256": "c84bb4b62a2a895b432357e8b9221360609e1e79fcd7590c6df6752e84e0675b"
+    },
+    "pairs": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\figures_b4_core_20260830\\source_data_05_t176_hardware_pairs.csv",
+      "sha256": "9ce51c0b37d709d4a09bee4659a580efa7b697949061f325894c9d9955acc731"
+    },
+    "hardware_summary": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\figures_b4_core_20260830\\source_data_05_t176_hardware_summary.csv",
+      "sha256": "6bfd8c54b902eabb14151783bc9bfcf071714a216800b5512092945804338159"
+    },
+    "nulls": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\figures_b4_core_20260830\\source_data_06_permutation_null_ratios.csv",
+      "sha256": "b1589fb5a25bb4ec817fb115aa101607e481f8bbe789fa3d83890556cd7efb3c"
+    },
+    "sensitivity": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\figures_b4_core_20260830\\source_data_06_drift_sensitivity.csv",
+      "sha256": "6f4cbb935c130cf2a4e3e3d82ba43de5c83aad729a70130e4abc02de91eafdfe"
+    },
+    "workload": {
+      "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\figures_b4_core_20260830\\source_data_08_t176_final_workload.csv",
+      "sha256": "9ce443a0aae2eb13a641d89564f15aebf66871bced55ae2fb80b53679d849e48"
+    },
+    "sf_report": {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_B9_T287_SF_20260815_r2\\t287_sf_report.json",
+      "sha256": "87c054bf31fbb48a44a3c9ede87c20afc8910d66c2a868c0d7b771dfd959a2f4"
+    },
+    "sensing_report": {
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_B9_T287_SENSING_MAP_20260815_r5\\t287_sensing_map_report.json",
+      "sha256": "c30143c3f96a5153b25ea929b2e8b3c0e39c43d29fb77d734698426242ad1b0a"
+    }
+  },
+  "figures": [
+    {
+      "number": 1,
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\01_t287_readout_proxy_timeseries.svg",
+          "sha256": "7fac3394ebb52038e2325836963d14979e77b9b1fd5c0d22a703d0f1deaa313d"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\01_t287_readout_proxy_timeseries.pdf",
+          "sha256": "5f27b2cfbe9b0eda0ae46e0c179dd26f0919a942a2c9b7e77f7409c2c00438a6"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\01_t287_readout_proxy_timeseries.png",
+          "sha256": "52fb2257aad85488321ba05ff1ca33979d2525f5e9f4bcdb40d0f694d0fe86a6"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\01_t287_readout_proxy_timeseries.tiff",
+          "sha256": "737b3b197f2f7f09ed5bd63488d2ab55ee1384e51cf963d3f66888439e2c6c7e"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\01_t287_readout_proxy_timeseries.source.csv",
+          "sha256": "4ba07ea33af833139df4ed37daa6306808df184cc2e0de098337d46734221d9e"
+        }
+      ],
+      "claim": "T287 readout-state proxies vary over time beyond a static single-value description.",
+      "origin": "T287 hardware",
+      "n": 78,
+      "exclusions": 0
+    },
+    {
+      "number": 2,
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\02_t287_effective_field_state.svg",
+          "sha256": "f9b8d11bee9a0f5b1bab544f78a3c0ee7edd74347f78dcae4b97a2af18530874"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\02_t287_effective_field_state.pdf",
+          "sha256": "b4402fdd83e55db739cc9412f6c12eb9493a67e30357d709ba4e2208185d3404"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\02_t287_effective_field_state.png",
+          "sha256": "90317d43f50eca39539c0cd9259913ad65bb7ab13266cd3fadcea3f25ad5d0fe"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\02_t287_effective_field_state.tiff",
+          "sha256": "448d4a1d2d4add22d9f39fdda18d86b812097ae20b4da964b891cb042a251217"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\02_t287_effective_field_state.source.csv",
+          "sha256": "b9e1c6abd640123f5d579db6d73f3fd06942b422d8c0c4b58a3519593b354736"
+        }
+      ],
+      "claim": "Three-time-point quantum measurements yield a time-resolved effective-field state.",
+      "origin": "T287 hardware",
+      "n": 78
+    },
+    {
+      "number": 3,
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\03_t287_e0_negative_control_structure_function.svg",
+          "sha256": "5400b1c2120f7d9ab72d64f1bca12b997950976495fa146898989bed256e0907"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\03_t287_e0_negative_control_structure_function.pdf",
+          "sha256": "2f643b2fd8bbd5c29de5f3520bd29281e7a930bf10cf679a0189d5445ca6553e"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\03_t287_e0_negative_control_structure_function.png",
+          "sha256": "db403350dfa837f93729c131da2c9b0851b4018940a56fc1dd4e46fbf53c7b77"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\03_t287_e0_negative_control_structure_function.tiff",
+          "sha256": "662ce6dfe8a8d64b8ecbdfca674b040ae25e62c2fb05f35913e09f175eb406b8"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\03_t287_e0_negative_control_structure_function.source.csv",
+          "sha256": "ccd72c34e744ef7efe2793de536e05307d01a47372b63d6ca20ec55f76e872ee"
+        }
+      ],
+      "origin": "T287 hardware",
+      "n": 30,
+      "p_value": 0.6496799297291755,
+      "gate_passed": false
+    },
+    {
+      "number": 4,
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\04_t287_e1_drift_structure_function.svg",
+          "sha256": "9bb9208d7f1ef158626c396f2c0afec6cd5022e2fdc4fa1509599265e99c4d0e"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\04_t287_e1_drift_structure_function.pdf",
+          "sha256": "a6457a71b1cb0a48b00e738758abec1d180d85ef67c0a15c0f4fdf8d4f5c6c48"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\04_t287_e1_drift_structure_function.png",
+          "sha256": "3995f172a8d1241b47c9c593316818cd3da090b4793855937ef4a6adf023cfb4"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\04_t287_e1_drift_structure_function.tiff",
+          "sha256": "e7390afdc211545016168e4db7f32eaf022c9613c854ec697b791b91461a440d"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\04_t287_e1_drift_structure_function.source.csv",
+          "sha256": "c0b917cb00e8b3f5c924bf82fe3e2fb8240eecab2255f38abf4668985d9db19e"
+        }
+      ],
+      "origin": "T287 hardware",
+      "n": 30,
+      "p_value": 2.7896884403053603e-289,
+      "gate_passed": true,
+      "claim": "E1 shows process variance beyond the shot-noise floor."
+    },
+    {
+      "number": 5,
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\05_t287_e1_interval_economics.svg",
+          "sha256": "bdd623c83801dd6f40b7d4132176200d5b835dd992671412933a7810309bfd9e"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\05_t287_e1_interval_economics.pdf",
+          "sha256": "d3832248e6bbde02d29647026e66ae079fddf75377917e700ab662d53705b075"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\05_t287_e1_interval_economics.png",
+          "sha256": "8b619eb6ff7358f561ecc5b608ccdd676865399aed81ebee4051437922079f41"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\05_t287_e1_interval_economics.tiff",
+          "sha256": "d74ef4941fd0124d84767c4e03b35cb8285676da97c5e244cd1b46d7041f4fcf"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\05_t287_e1_interval_economics.source.csv",
+          "sha256": "c84bb4b62a2a895b432357e8b9221360609e1e79fcd7590c6df6752e84e0675b"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\05_t287_e1_interval_economics.summary.csv",
+          "sha256": "d7081a862479e964ad9d8352bdc02483f515430955c6e69e37fa51e6f8afb91a"
+        }
+      ],
+      "claim": "The point curve has an optimum, but T* is not identified.",
+      "origin": "T287 hardware-derived model",
+      "grid_rows": 400,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "number": 6,
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\06_t287_tstar_vs_control_floor.svg",
+          "sha256": "92d267a7f97180cb0d05152cfb3d8825e7169421a111faeb3b7fbf09eb9750dd"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\06_t287_tstar_vs_control_floor.pdf",
+          "sha256": "eefb2d7e87af768dd0690ededbf20fd28bd60ead0ce408f1c0fa8c91e54df8f8"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\06_t287_tstar_vs_control_floor.png",
+          "sha256": "786b40a01c5b1f9447eba881cbf19c80ac072a0f9839c3311ac2f0f24221adfc"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\06_t287_tstar_vs_control_floor.tiff",
+          "sha256": "8a76ad0e81fa8d255ce8e9895b40734015824c0d7abdd28737762f6fbacb0d8f"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\06_t287_tstar_vs_control_floor.source.csv",
+          "sha256": "c0dc621a3a52a4faa865f1f84f7904c27e8b1235c8d13b86a70f81835d10ee87"
+        }
+      ],
+      "claim": "Reachable control floors are measurable, but the intrinsic optimum remains weakly identified.",
+      "origin": "T287 hardware economics",
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "number": 7,
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\07_t176_hardware_pair_slopegraph.svg",
+          "sha256": "3a46b95c24b836fd41aced585ddcd7f9867d0e10971f186c449d65871f01d8fb"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\07_t176_hardware_pair_slopegraph.pdf",
+          "sha256": "af976626167449cc6278d437e44455fec4369b553c88d3bf1569c57e6d2fe447"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\07_t176_hardware_pair_slopegraph.png",
+          "sha256": "5467d03901a670c0d3e9d6dc35236cb8299d43b66b50a1dfbb1b12bc56b623bc"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\07_t176_hardware_pair_slopegraph.tiff",
+          "sha256": "d300fa2c932e88330c0cf9dcf06f030df8381a8a06fa033d30e4430a42a54898"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\07_t176_hardware_pair_slopegraph.source.csv",
+          "sha256": "9ce51c0b37d709d4a09bee4659a580efa7b697949061f325894c9d9955acc731"
+        }
+      ],
+      "claim": "T176 hardware Session 0 shows a large pair-complete descriptive cadence benefit.",
+      "origin": "T176 hardware Session 0 only",
+      "n": 20,
+      "exclusions": 0
+    },
+    {
+      "number": 8,
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\08_t176_pair_benefit_distribution.svg",
+          "sha256": "98753a1dc625299e2f5a25b12469ec2f38405a177b7af515e0a7046829599a8c"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\08_t176_pair_benefit_distribution.pdf",
+          "sha256": "db9331c3b621647bceb61f3ddb469269ac1b28aab54e5381e927937e4b5df2eb"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\08_t176_pair_benefit_distribution.png",
+          "sha256": "b6669bc8ece1f7d2840e81a1e24ddbca08fe5c6590d3a3ef5aefe9b767087d45"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\08_t176_pair_benefit_distribution.tiff",
+          "sha256": "d75a52972e6fcca11874aede3a31d5448d45db60509d1d6271b395c5cd87bc91"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\08_t176_pair_benefit_distribution.source.csv",
+          "sha256": "9ce51c0b37d709d4a09bee4659a580efa7b697949061f325894c9d9955acc731"
+        }
+      ],
+      "claim": "Pair-level effects are heterogeneous but directionally favor fast cadence in most pairs.",
+      "origin": "T176 hardware Session 0",
+      "positive_pairs": 14,
+      "n": 20
+    },
+    {
+      "number": 9,
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\09_t176_cumulative_ratio.svg",
+          "sha256": "0df980c91ac1cf28b2ef774161f883d2fed97fe2bf77bc563f0508dfe221ec9f"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\09_t176_cumulative_ratio.pdf",
+          "sha256": "0aca10765ba7c182ac098d35fb05aef041c7e5c7ba2858d5692dee465aee6db1"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\09_t176_cumulative_ratio.png",
+          "sha256": "b573bb16533503d2ce301b1f15318a6f17963c56433763e80f76b0cdb56f4e67"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\09_t176_cumulative_ratio.tiff",
+          "sha256": "cdd6055dc89bb99c1a307a23d7ece07d7de5b30ecaff8989baf0976ae306eab1"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\09_t176_cumulative_ratio.source.csv",
+          "sha256": "9ce51c0b37d709d4a09bee4659a580efa7b697949061f325894c9d9955acc731"
+        }
+      ],
+      "claim": "The final registered pair set lies below the frozen permutation critical ratio.",
+      "origin": "T176 hardware Session 0",
+      "n": 20,
+      "p_value": 0.005249737513124344
+    },
+    {
+      "number": 10,
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\10_t176_hardware_permutation_null.svg",
+          "sha256": "aebc357fbece520ddd145844c9c73c0e2cc3b53e1005948ecd0feb34d91a0f4e"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\10_t176_hardware_permutation_null.pdf",
+          "sha256": "55fc335239732af3c5b740986ec0fea8a9aedda9efb3fa1a4c45af501ffe70e1"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\10_t176_hardware_permutation_null.png",
+          "sha256": "87ce1070c28537234c17e995662c945a495715794158cff73a343d93d239df18"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\10_t176_hardware_permutation_null.tiff",
+          "sha256": "013195b1698d28b56ea1550ca342d0e6ab1d68a76ce89b067f01f0cfc74662a2"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\10_t176_hardware_permutation_null.source.csv",
+          "sha256": "8fff9aa332c37941bc3da4cac83a2b32ce5730a797dc37c6cce0e319375c2228"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\10_t176_hardware_permutation_null.summary.csv",
+          "sha256": "4c1d680821990d74c9d2b82b999af33c3d23360ff63a982fa61a65c31579c800"
+        }
+      ],
+      "claim": "The exact frozen permutation result is reproducible from all 20 hardware pairs.",
+      "origin": "T176 hardware Session 0",
+      "permutations": 20000,
+      "seed": 20260815
+    },
+    {
+      "number": 11,
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\11_baseline_drift_sensitivity.svg",
+          "sha256": "7bfeddb271f46871a0301013584aeb62fd16a06173f60fe0c52a7310c396a2ba"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\11_baseline_drift_sensitivity.pdf",
+          "sha256": "186ede205199369231dec0836a8bc3b94745c23acb36a3e85226e595f32ce1b6"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\11_baseline_drift_sensitivity.png",
+          "sha256": "7c8b95176bfe8f7f286969c0cbebfe72f6dd40255d4296e86be9c71e4411e6ef"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\11_baseline_drift_sensitivity.tiff",
+          "sha256": "12c830b20be24d7cb975300e44a6880f2fa70bfeea0694beb62ffbed5e046133"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\11_baseline_drift_sensitivity.source.csv",
+          "sha256": "6f4cbb935c130cf2a4e3e3d82ba43de5c83aad729a70130e4abc02de91eafdfe"
+        }
+      ],
+      "claim": "All declared baseline-shape sensitivities preserve the descriptive hybrid conclusion.",
+      "origin": "post-hoc simulation-assisted sensitivity",
+      "passed": 4,
+      "total": 4,
+      "registered_all_hardware_status": "missing_hardware_session1"
+    },
+    {
+      "number": 12,
+      "files": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\12_t176_hardware_workload_flow.svg",
+          "sha256": "7fe7f05b624489fcfba8abcf6a0a824e700efd3926cc5439a1233cba9b89a266"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\12_t176_hardware_workload_flow.pdf",
+          "sha256": "91c297f409c46591ba95c6ccb4cef36328d342ee67e3d99d51a944fd94e1f5fc"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\12_t176_hardware_workload_flow.png",
+          "sha256": "f1dc7f369636b1072787897a6e7520ced0f847524fb4382e6310fefc607fbb73"
+        },
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\12_t176_hardware_workload_flow.tiff",
+          "sha256": "189d75440ed5ef9727d5afb21d895c39cf70e145537b4cd4aee952a361577dcb"
+        }
+      ],
+      "source_data": [
+        {
+          "path": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\12_t176_hardware_workload_flow.source.csv",
+          "sha256": "9ce443a0aae2eb13a641d89564f15aebf66871bced55ae2fb80b53679d849e48"
+        }
+      ],
+      "claim": "T176 Session-0 hardware workload is complete and exclusion-free.",
+      "origin": "T176 hardware Session 0",
+      "submitted_jobs": 44,
+      "unique_query_ids": 88,
+      "completed_cycles": 40,
+      "complete_pairs": 20,
+      "excluded_pairs": 0,
+      "registered_all_hardware_status": "missing_hardware_session1"
+    }
+  ],
+  "claim_boundary": {
+    "supported": [
+      "T287 observable state and E1 drift detection",
+      "update-interval point economics with an inconclusive T-star interval",
+      "T176 hardware Session-0 pair-complete descriptive benefit",
+      "exact frozen permutation reproduction",
+      "simulation-assisted baseline-shape sensitivity"
+    ],
+    "not_supported": [
+      "registered all-hardware PASS",
+      "hardware Session-1 collection",
+      "deployed online reinforcement learning",
+      "learned cross-device transfer",
+      "universal pulse-level calibration"
+    ]
+  }
+}

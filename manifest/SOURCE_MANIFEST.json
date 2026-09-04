@@ -1,0 +1,3212 @@
+[
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\__init__.py",
+    "destination": "src/__init__.py",
+    "category": "01 核心包",
+    "what": "Python包标记",
+    "purpose": "保留原工程导入布局，使src.*模块可直接导入。",
+    "source_sha256": "0831eb375b07d3b32bb760b6d826050ed3e6c6eff389b80afbee7cf897bff71d",
+    "packaged_sha256": "0831eb375b07d3b32bb760b6d826050ed3e6c6eff389b80afbee7cf897bff71d",
+    "bytes": 37
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\protocol.py",
+    "destination": "src/protocol.py",
+    "category": "01 核心包",
+    "what": "协议契约校验器",
+    "purpose": "加载并校验训练/硬件协议，阻止缺字段或越界配置进入运行链。",
+    "source_sha256": "b951a54dcc7b87c286fa6cfd923b7268b941e0e9ff55479f5fdc5404ed9fccc1",
+    "packaged_sha256": "b951a54dcc7b87c286fa6cfd923b7268b941e0e9ff55479f5fdc5404ed9fccc1",
+    "bytes": 5303
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\features\\__init__.py",
+    "destination": "src/features/__init__.py",
+    "category": "01 核心包",
+    "what": "特征子包标记",
+    "purpose": "暴露量子测量特征模块。",
+    "source_sha256": "2cd2f609f688702258fd6abda4b69a5ffee717dd808125fe7b2d6ce055e9f54e",
+    "packaged_sha256": "2cd2f609f688702258fd6abda4b69a5ffee717dd808125fe7b2d6ce055e9f54e",
+    "bytes": 45
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\features\\pauli.py",
+    "destination": "src/features/pauli.py",
+    "category": "01 核心包",
+    "what": "Pauli特征提取核心",
+    "purpose": "把九测量基counts恢复为Pauli-15与local6，锁定AEMTN输入顺序。",
+    "source_sha256": "709045cc64353ebd3f5d853909ec193eac0fbb390e2080cd1dd40fa74070dac2",
+    "packaged_sha256": "709045cc64353ebd3f5d853909ec193eac0fbb390e2080cd1dd40fa74070dac2",
+    "bytes": 5958
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\physics\\__init__.py",
+    "destination": "src/physics/__init__.py",
+    "category": "01 核心包",
+    "what": "物理子包标记",
+    "purpose": "暴露哈密顿量和仿真函数。",
+    "source_sha256": "fbe4e1c12dbd07690d8db91f18e3ff76e706ca32d2d58ace66a63128725583ae",
+    "packaged_sha256": "fbe4e1c12dbd07690d8db91f18e3ff76e706ca32d2d58ace66a63128725583ae",
+    "bytes": 76
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\physics\\hamiltonian.py",
+    "destination": "src/physics/hamiltonian.py",
+    "category": "01 核心包",
+    "what": "六比特物理仿真核心",
+    "purpose": "生成哈密顿量、Lindblad演化、初态、参数与shot采样所需物理量。",
+    "source_sha256": "45515ed11e0ca00db035cef97bdc5afc132aa59a9db0dde09a8d888d45eebcc0",
+    "packaged_sha256": "45515ed11e0ca00db035cef97bdc5afc132aa59a9db0dde09a8d888d45eebcc0",
+    "bytes": 7362
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\circuits\\__init__.py",
+    "destination": "src/circuits/__init__.py",
+    "category": "01 核心包",
+    "what": "电路子包标记",
+    "purpose": "暴露Trotter电路构建模块。",
+    "source_sha256": "69f2aa4f0a93906d3b1f68705cc5682bf82440bd952645232ab45de8eae2fe57",
+    "packaged_sha256": "69f2aa4f0a93906d3b1f68705cc5682bf82440bd952645232ab45de8eae2fe57",
+    "bytes": 79
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\circuits\\trotter.py",
+    "destination": "src/circuits/trotter.py",
+    "category": "01 核心包",
+    "what": "Trotter电路生成器",
+    "purpose": "把冻结哈密顿量协议转换为测量电路并提供电路复杂度/端序检查。",
+    "source_sha256": "4e78ac818e5c9a3f30407486d2cb00afc0155c3877765fe304d857d0136b6f4a",
+    "packaged_sha256": "4e78ac818e5c9a3f30407486d2cb00afc0155c3877765fe304d857d0136b6f4a",
+    "bytes": 10197
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\models\\__init__.py",
+    "destination": "src/models/__init__.py",
+    "category": "02 AEMTN训练",
+    "what": "模型子包标记",
+    "purpose": "暴露AEMTN硬件兼容模型。",
+    "source_sha256": "c4024ece9b5e3fcc7f32ef927583b0601159596feb3a0c2be0316ae759d722cb",
+    "packaged_sha256": "c4024ece9b5e3fcc7f32ef927583b0601159596feb3a0c2be0316ae759d722cb",
+    "bytes": 183
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\models\\aemtn_hardware.py",
+    "destination": "src/models/aemtn_hardware.py",
+    "category": "02 AEMTN训练",
+    "what": "AEMTN模型定义",
+    "purpose": "实现local6+t输入、共享表示、任务路由、不确定性与h1/h2/Jz预测头。",
+    "source_sha256": "1e82b4db4eb3d8f224900b201eaa85faf6f07c026223a2cbc609a09b981e2f63",
+    "packaged_sha256": "1e82b4db4eb3d8f224900b201eaa85faf6f07c026223a2cbc609a09b981e2f63",
+    "bytes": 11295
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\training\\__init__.py",
+    "destination": "src/training/__init__.py",
+    "category": "02 AEMTN训练",
+    "what": "训练子包标记",
+    "purpose": "暴露数据集与训练引擎。",
+    "source_sha256": "71158c5b67e4baf6deb52e7e61cd12a3b40ae4c44f26dc4b8b21896f965642f8",
+    "packaged_sha256": "71158c5b67e4baf6deb52e7e61cd12a3b40ae4c44f26dc4b8b21896f965642f8",
+    "bytes": 201
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\training\\dataset.py",
+    "destination": "src/training/dataset.py",
+    "category": "02 AEMTN训练",
+    "what": "训练数据契约",
+    "purpose": "发现NPZ、执行train/holdout隔离、拒绝遗留泄漏输入并保存归一化统计。",
+    "source_sha256": "797ba908d90f7eef6dd5a0a92ed33cabebc3d2e26b877d7c11361c7d453cedec",
+    "packaged_sha256": "797ba908d90f7eef6dd5a0a92ed33cabebc3d2e26b877d7c11361c7d453cedec",
+    "bytes": 13183
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\training\\engine.py",
+    "destination": "src/training/engine.py",
+    "category": "02 AEMTN训练",
+    "what": "训练与checkpoint引擎",
+    "purpose": "运行多任务优化、确定性种子、早停和完整checkpoint保存/加载。",
+    "source_sha256": "e810dbcafe54fe52c29fbb8fa407137b47abe692d05e17f421af357962d2e1bb",
+    "packaged_sha256": "e810dbcafe54fe52c29fbb8fa407137b47abe692d05e17f421af357962d2e1bb",
+    "bytes": 31719
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\backends\\__init__.py",
+    "destination": "src/backends/__init__.py",
+    "category": "03 天衍适配",
+    "what": "后端子包标记",
+    "purpose": "暴露天衍发现、拓扑和QCIS适配器。",
+    "source_sha256": "cbb254261bf9d83525ee3a985b4a91702e304e9bb7efeca93690bd8d77b54a4a",
+    "packaged_sha256": "cbb254261bf9d83525ee3a985b4a91702e304e9bb7efeca93690bd8d77b54a4a",
+    "bytes": 57
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\backends\\tianyan_discovery.py",
+    "destination": "src/backends/tianyan_discovery.py",
+    "category": "03 天衍适配",
+    "what": "后端发现器",
+    "purpose": "只读查询可用机器及能力，不提交量子任务。",
+    "source_sha256": "cdec9dd60353494baf80cff2bdcb641f91f0a437d5392b66ca2d5aa9354aa34e",
+    "packaged_sha256": "cdec9dd60353494baf80cff2bdcb641f91f0a437d5392b66ca2d5aa9354aa34e",
+    "bytes": 3551
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\backends\\tianyan_topology.py",
+    "destination": "src/backends/tianyan_topology.py",
+    "category": "03 天衍适配",
+    "what": "拓扑选择器",
+    "purpose": "从后端耦合图选择满足协议的六比特链。",
+    "source_sha256": "c1bb848b21c919d113c1d8355e260f8c4f27edaa2186177802d78a049514981d",
+    "packaged_sha256": "c1bb848b21c919d113c1d8355e260f8c4f27edaa2186177802d78a049514981d",
+    "bytes": 5079
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\backends\\tianyan_native.py",
+    "destination": "src/backends/tianyan_native.py",
+    "category": "03 天衍适配",
+    "what": "原生QCIS校验器",
+    "purpose": "检查原生门集合和门计数，防止不可执行电路进入平台。",
+    "source_sha256": "63c122929e877d8ca9141e9b9c791fdd46d3a8a1c5623a0ce08b884664f415a4",
+    "packaged_sha256": "63c122929e877d8ca9141e9b9c791fdd46d3a8a1c5623a0ce08b884664f415a4",
+    "bytes": 6998
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\backends\\tianyan_v8_entangling.py",
+    "destination": "src/backends/tianyan_v8_entangling.py",
+    "category": "03 天衍适配",
+    "what": "天衍纠缠电路族",
+    "purpose": "生成固定低CZ量子探针、测量旋转和Pauli期望恢复。",
+    "source_sha256": "16d555a567c11de32872a17f091bacbf92f7aec9210d76c43ae51f6264be99ee",
+    "packaged_sha256": "16d555a567c11de32872a17f091bacbf92f7aec9210d76c43ae51f6264be99ee",
+    "bytes": 4837
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\baselines\\__init__.py",
+    "destination": "src/baselines/__init__.py",
+    "category": "03 天衍适配",
+    "what": "硬件基线子包标记",
+    "purpose": "暴露冻结天衍名义基线，支持低CZ探针偏移估计。",
+    "source_sha256": "0eb817d6bddfb98b7c6f57795cb96f7a81fa7c155725d399d6b75210f1eb854c",
+    "packaged_sha256": "0eb817d6bddfb98b7c6f57795cb96f7a81fa7c155725d399d6b75210f1eb854c",
+    "bytes": 69
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\baselines\\tianyan_v8_nominal.py",
+    "destination": "src/baselines/tianyan_v8_nominal.py",
+    "category": "03 天衍适配",
+    "what": "天衍v8名义基线",
+    "purpose": "用低CZ Pauli观测拟合名义偏移，并生成local6基线预测。",
+    "source_sha256": "f87d66bd786998141331d657145c6db729e7d06561b9de8e360452d8e321d115",
+    "packaged_sha256": "f87d66bd786998141331d657145c6db729e7d06561b9de8e360452d8e321d115",
+    "bytes": 3107
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\adaptive\\__init__.py",
+    "destination": "src/adaptive/__init__.py",
+    "category": "04 漂移感知",
+    "what": "自适应子包标记",
+    "purpose": "暴露感知、判据、shield和cadence模块。",
+    "source_sha256": "17d96859e2974ed00e296755920b016d0aed75aa466d9770f590a40682b47597",
+    "packaged_sha256": "17d96859e2974ed00e296755920b016d0aed75aa466d9770f590a40682b47597",
+    "bytes": 92
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\adaptive\\environment_proxy.py",
+    "destination": "src/adaptive/environment_proxy.py",
+    "category": "04 漂移感知",
+    "what": "环境/设备状态代理",
+    "purpose": "从量子counts与平台字段提取readout、effective-field和shot-noise代理。",
+    "source_sha256": "3fa1220da8082a2f6626a560ef6bdfd4562257dabc7d8ef8362066452c57738c",
+    "packaged_sha256": "3fa1220da8082a2f6626a560ef6bdfd4562257dabc7d8ef8362066452c57738c",
+    "bytes": 25795
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\adaptive\\effective_field_diagnostics.py",
+    "destination": "src/adaptive/effective_field_diagnostics.py",
+    "category": "04 漂移感知",
+    "what": "有效场诊断",
+    "purpose": "审计H1/H2反演的可辨识性、分支和不确定性。",
+    "source_sha256": "bdc7959493f115663c8636df9b817a593a56401fc34bcfd8c6fd05d249924089",
+    "packaged_sha256": "bdc7959493f115663c8636df9b817a593a56401fc34bcfd8c6fd05d249924089",
+    "bytes": 10379
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\adaptive\\forecast.py",
+    "destination": "src/adaptive/forecast.py",
+    "category": "04 漂移感知",
+    "what": "在线滚动预测基线",
+    "purpose": "按时间顺序运行rolling-origin预测、概率评分和技能门，避免未来信息泄漏。",
+    "source_sha256": "fc4134407c2b79112bcd114a277655f13290d57d0fe362228b88435e7617232b",
+    "packaged_sha256": "fc4134407c2b79112bcd114a277655f13290d57d0fe362228b88435e7617232b",
+    "bytes": 27672
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\adaptive\\sensing_economics.py",
+    "destination": "src/adaptive/sensing_economics.py",
+    "category": "05 校准决策",
+    "what": "B4数学核心",
+    "purpose": "实现精确去偏结构函数、OU/非参残差曲线、T*、经济门与cadence ratio gate。",
+    "source_sha256": "65246859977cc8542cdb84b155e8649f13b7c1d7ad54a28aa6bb76a216ad158c",
+    "packaged_sha256": "65246859977cc8542cdb84b155e8649f13b7c1d7ad54a28aa6bb76a216ad158c",
+    "bytes": 31754
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\adaptive\\shared_baseline_sensing.py",
+    "destination": "src/adaptive/shared_baseline_sensing.py",
+    "category": "05 校准决策",
+    "what": "共享基线差分感知",
+    "purpose": "用session首尾基线控制慢漂移并生成敏感性偏移。",
+    "source_sha256": "844d4b3bbc20a8403b39ed021ae49ca8f648b5304e468c758729e1ae883d53e7",
+    "packaged_sha256": "844d4b3bbc20a8403b39ed021ae49ca8f648b5304e468c758729e1ae883d53e7",
+    "bytes": 20196
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\adaptive\\cadence_permutation.py",
+    "destination": "src/adaptive/cadence_permutation.py",
+    "category": "05 校准决策",
+    "what": "配对置换裁决",
+    "purpose": "对冻结fast/slow比值做pair内标签置换，输出临界比和p值。",
+    "source_sha256": "c6081f8d295158d08f46ba6a6046d4de5511eff1d5cc6a95145ff341b6143be8",
+    "packaged_sha256": "c6081f8d295158d08f46ba6a6046d4de5511eff1d5cc6a95145ff341b6143be8",
+    "bytes": 10792
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\adaptive\\cadence_ledger.py",
+    "destination": "src/adaptive/cadence_ledger.py",
+    "category": "05 校准决策",
+    "what": "校准时钟账本",
+    "purpose": "把观测时间、延迟、更新周期和新鲜度写成可审计ledger。",
+    "source_sha256": "73c6946f9d999e0483dc63f59ab9db60775ac6d481bdbd3e324d2ecf451f8c62",
+    "packaged_sha256": "73c6946f9d999e0483dc63f59ab9db60775ac6d481bdbd3e324d2ecf451f8c62",
+    "bytes": 3127
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\adaptive\\task_metric_mirror.py",
+    "destination": "src/adaptive/task_metric_mirror.py",
+    "category": "06 闭环控制",
+    "what": "量子任务镜像指标",
+    "purpose": "构建mirror电路并从raw counts计算success probability与配对区间。",
+    "source_sha256": "26dcfd25bae458ad9e367e6514e0ca33043d372d21170b3b02bdce0f4aff07c2",
+    "packaged_sha256": "26dcfd25bae458ad9e367e6514e0ca33043d372d21170b3b02bdce0f4aff07c2",
+    "bytes": 16581
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\adaptive\\bandit.py",
+    "destination": "src/adaptive/bandit.py",
+    "category": "06 闭环控制",
+    "what": "安全shield五门",
+    "purpose": "根据幅度、置信度、预算与物理约束决定执行、降幅或弃权。",
+    "source_sha256": "8d297ac018fa833eac33936236383e7c8fcc78593f91dc8ac678c16e6220a1e8",
+    "packaged_sha256": "8d297ac018fa833eac33936236383e7c8fcc78593f91dc8ac678c16e6220a1e8",
+    "bytes": 8786
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\adaptive\\rule_scheduler.py",
+    "destination": "src/adaptive/rule_scheduler.py",
+    "category": "06 闭环控制",
+    "what": "规则调度器",
+    "purpose": "在RL证据不足时提供可解释、可审计的安全调度回退。",
+    "source_sha256": "872d189cf08ac2282b9e63ed628cdc788b874e881ccedf15fe99a3cfc53fe692",
+    "packaged_sha256": "872d189cf08ac2282b9e63ed628cdc788b874e881ccedf15fe99a3cfc53fe692",
+    "bytes": 2320
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\generate_sim_dataset.py",
+    "destination": "scripts/generate_sim_dataset.py",
+    "category": "02 AEMTN训练",
+    "what": "主训练数据生成入口",
+    "purpose": "按论文修正版物理协议生成带shot采样的local6+t仿真训练集。",
+    "source_sha256": "590a745ecc03ab86fe384f7e15ad850fe4ca882b8048da628c74ae67ec283030",
+    "packaged_sha256": "590a745ecc03ab86fe384f7e15ad850fe4ca882b8048da628c74ae67ec283030",
+    "bytes": 8233
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\train_sim.py",
+    "destination": "scripts/train_sim.py",
+    "category": "02 AEMTN训练",
+    "what": "主训练CLI",
+    "purpose": "调用训练引擎完成三seed仿真预训练并输出best/last/history/summary。",
+    "source_sha256": "524c63851e867ab3f763ff69267bada3df65a1135b4b57761f499e1a02cc3251",
+    "packaged_sha256": "524c63851e867ab3f763ff69267bada3df65a1135b4b57761f499e1a02cc3251",
+    "bytes": 449
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\check_no_leakage.py",
+    "destination": "scripts/check_no_leakage.py",
+    "category": "02 AEMTN训练",
+    "what": "标签泄漏审计",
+    "purpose": "确认h1/h2/Jz目标没有被拼回AEMTN输入。",
+    "source_sha256": "054c934079d5b0d118ef92255dd891a042c6129bdca53ac2fbfa879a071aa2aa",
+    "packaged_sha256": "054c934079d5b0d118ef92255dd891a042c6129bdca53ac2fbfa879a071aa2aa",
+    "bytes": 2851
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\validate_protocol.py",
+    "destination": "scripts/validate_protocol.py",
+    "category": "02 AEMTN训练",
+    "what": "协议预检CLI",
+    "purpose": "在生成数据或提交硬件前验证JSON协议与阻断条件。",
+    "source_sha256": "0a2d1460abf03e4a9ff88e142d1e05d8e79193fb6422961b5841ef71b57d8c2b",
+    "packaged_sha256": "0a2d1460abf03e4a9ff88e142d1e05d8e79193fb6422961b5841ef71b57d8c2b",
+    "bytes": 1348
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\predict_hardware_aemtn.py",
+    "destination": "scripts/predict_hardware_aemtn.py",
+    "category": "02 AEMTN训练",
+    "what": "冻结checkpoint推理",
+    "purpose": "加载模型和归一化统计，对硬件counts派生特征做h1/h2/Jz推理。",
+    "source_sha256": "9d456fc8eb592ba78d17ec6206b27cf5c9c0d92371ff328e907f5585283bfe72",
+    "packaged_sha256": "9d456fc8eb592ba78d17ec6206b27cf5c9c0d92371ff328e907f5585283bfe72",
+    "bytes": 5136
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\validate_aemtn_closed_loop_v4.py",
+    "destination": "scripts/validate_aemtn_closed_loop_v4.py",
+    "category": "02 AEMTN训练",
+    "what": "仿真闭环验收",
+    "purpose": "验证注入、检测、建议、补偿和再测量恢复的离线能力链。",
+    "source_sha256": "25f998caf499fd6b605c74edc449ef8e73a2f80d48435c052834e8cc9a6ea47c",
+    "packaged_sha256": "25f998caf499fd6b605c74edc449ef8e73a2f80d48435c052834e8cc9a6ea47c",
+    "bytes": 10163
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\prepare_aemtn_two_time_data.py",
+    "destination": "scripts/prepare_aemtn_two_time_data.py",
+    "category": "02 AEMTN训练",
+    "what": "两时点数据桥",
+    "purpose": "把硬件/仿真两时点Pauli数据转换成冻结AEMTN输入格式。",
+    "source_sha256": "50dcf09056ca248ff91bafe867bbeff0fae539c9e2eb6a09f798b8d9637b6ea8",
+    "packaged_sha256": "50dcf09056ca248ff91bafe867bbeff0fae539c9e2eb6a09f798b8d9637b6ea8",
+    "bytes": 3655
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\scan_trotter_reference.py",
+    "destination": "scripts/scan_trotter_reference.py",
+    "category": "02 AEMTN训练",
+    "what": "电路参考扫描",
+    "purpose": "核对Trotter电路与理想物理演化的端序、符号和复杂度。",
+    "source_sha256": "f85e1ab4053640207f1fa3f5774df8185c6a876e02503ede9527ad015b75219a",
+    "packaged_sha256": "f85e1ab4053640207f1fa3f5774df8185c6a876e02503ede9527ad015b75219a",
+    "bytes": 4566
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\discover_backends.py",
+    "destination": "scripts/discover_backends.py",
+    "category": "03 天衍适配",
+    "what": "后端清单CLI",
+    "purpose": "读取天衍机器列表并保存只读能力清单。",
+    "source_sha256": "4c6febaddf15716a47735f05e3ea2e48ae250049152c424bbb4a1a7730ef34e3",
+    "packaged_sha256": "4c6febaddf15716a47735f05e3ea2e48ae250049152c424bbb4a1a7730ef34e3",
+    "bytes": 1402
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\poll_platform_config.py",
+    "destination": "scripts/poll_platform_config.py",
+    "category": "04 漂移感知",
+    "what": "平台元数据轮询器",
+    "purpose": "零机时记录calibrationTime与平台误差字段，形成重校事件旁证。",
+    "source_sha256": "8618c7786c7746f06a44694898ab887af3495be8542448851b0f401745788b26",
+    "packaged_sha256": "8618c7786c7746f06a44694898ab887af3495be8542448851b0f401745788b26",
+    "bytes": 9835
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\run_platform_config_poll_supervisor.bat",
+    "destination": "scripts/run_platform_config_poll_supervisor.bat",
+    "category": "04 漂移感知",
+    "what": "轮询守护脚本",
+    "purpose": "轮询异常退出后按冻结策略恢复，不提交量子电路。",
+    "source_sha256": "43fa3bab2c4c809a063509d84a4795c9a49ab2fb954205f72978792690d0ec75",
+    "packaged_sha256": "43fa3bab2c4c809a063509d84a4795c9a49ab2fb954205f72978792690d0ec75",
+    "bytes": 314
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\audit_b4_poll_acceptance.py",
+    "destination": "scripts/audit_b4_poll_acceptance.py",
+    "category": "04 漂移感知",
+    "what": "轮询验收审计",
+    "purpose": "检查24小时覆盖、空窗、双后端文件增长和重启恢复。",
+    "source_sha256": "ea34aa7cc7f8251fe0b7fb3ab70cfa34ac54964cf088b0c9d232ee72066db743",
+    "packaged_sha256": "ea34aa7cc7f8251fe0b7fb3ab70cfa34ac54964cf088b0c9d232ee72066db743",
+    "bytes": 8635
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\drift_campaign.py",
+    "destination": "scripts/drift_campaign.py",
+    "category": "03 天衍适配",
+    "what": "通用漂移采集底座",
+    "purpose": "封装登录、提交、收集、raw落盘、hash链和平台时间字段。",
+    "source_sha256": "2969491727d5e6ee7bef365506da6b80133adc436d0129fab55fea932383e633",
+    "packaged_sha256": "2969491727d5e6ee7bef365506da6b80133adc436d0129fab55fea932383e633",
+    "bytes": 41147
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\drift_campaign_v4.py",
+    "destination": "scripts/drift_campaign_v4.py",
+    "category": "03 天衍适配",
+    "what": "B4 v4采集器",
+    "purpose": "实现双后端、burst、regime、探针拆绑和真实lag记录。",
+    "source_sha256": "4e8162bfa65d982bac4ff34015fd53862356dceab82845d69917d4fe8ff70f04",
+    "packaged_sha256": "4e8162bfa65d982bac4ff34015fd53862356dceab82845d69917d4fe8ff70f04",
+    "bytes": 39297
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\b4_dry_run_common.py",
+    "destination": "scripts/b4_dry_run_common.py",
+    "category": "03 天衍适配",
+    "what": "B4 dry-run公共层",
+    "purpose": "统一接口测时、探针构建、结果校验和dry-run工件结构。",
+    "source_sha256": "d9a4524d669b9cda8760ec8633216006d6bbd5c2c39188a05950bf688b417d84",
+    "packaged_sha256": "d9a4524d669b9cda8760ec8633216006d6bbd5c2c39188a05950bf688b417d84",
+    "bytes": 6176
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\measure_b4_interface_floor.py",
+    "destination": "scripts/measure_b4_interface_floor.py",
+    "category": "03 天衍适配",
+    "what": "接口延迟测量",
+    "purpose": "测量云API往返P50/P90并确定协议时间底线。",
+    "source_sha256": "7f6b7669b41ff0e471314fe9c61b43c638bf6ebd0c565154c032c8a6166549a0",
+    "packaged_sha256": "7f6b7669b41ff0e471314fe9c61b43c638bf6ebd0c565154c032c8a6166549a0",
+    "bytes": 2643
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\measure_b4_throughput.py",
+    "destination": "scripts/measure_b4_throughput.py",
+    "category": "03 天衍适配",
+    "what": "吞吐/固定开销分解",
+    "purpose": "用不同shots任务估计每shot速率R与每setting固定开销c。",
+    "source_sha256": "f0f14ed38cd3e6c24d0465eebeb3b877fa2c8196673e86c37575823809a84928",
+    "packaged_sha256": "f0f14ed38cd3e6c24d0465eebeb3b877fa2c8196673e86c37575823809a84928",
+    "bytes": 2928
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\scan_b4_mirror_depth.py",
+    "destination": "scripts/scan_b4_mirror_depth.py",
+    "category": "03 天衍适配",
+    "what": "Mirror深度扫描",
+    "purpose": "选择success probability落在可分辨区间的任务深度。",
+    "source_sha256": "d394860e17f6ca9472f3e0121742e28ce1d7f90d53dba8c0d65948efd24e82aa",
+    "packaged_sha256": "d394860e17f6ca9472f3e0121742e28ce1d7f90d53dba8c0d65948efd24e82aa",
+    "bytes": 4928
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\verify_b4_t176_probe.py",
+    "destination": "scripts/verify_b4_t176_probe.py",
+    "category": "03 天衍适配",
+    "what": "T176探针验收",
+    "purpose": "验证账号、后端字段、物理链、shots和落盘链，不扩大结论。",
+    "source_sha256": "0ce1587cd4e90cea3900b90539d588800e6309b1a7f59eb2ddf130e2e063c8b1",
+    "packaged_sha256": "0ce1587cd4e90cea3900b90539d588800e6309b1a7f59eb2ddf130e2e063c8b1",
+    "bytes": 8821
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\analyze_crossover_feasibility.py",
+    "destination": "scripts/analyze_crossover_feasibility.py",
+    "category": "04 漂移感知",
+    "what": "漂移时标可行性分析",
+    "purpose": "从旧快照估计job内/跨snapshot方差和OU相容时标。",
+    "source_sha256": "7533de66014c51a726a0c3ea51074dca62ad60a8f56fbce055fa3bc51e218cd3",
+    "packaged_sha256": "7533de66014c51a726a0c3ea51074dca62ad60a8f56fbce055fa3bc51e218cd3",
+    "bytes": 14371
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\analyze_sensing_economics.py",
+    "destination": "scripts/analyze_sensing_economics.py",
+    "category": "05 校准决策",
+    "what": "通用感知经济分析CLI",
+    "purpose": "调用同一sensing_economics核心生成SF、残差曲线、T*与判据表。",
+    "source_sha256": "ea438b7c7f88ab48dc893975c67f365cfb45035a9c9e64dd9c810108d2a47d35",
+    "packaged_sha256": "ea438b7c7f88ab48dc893975c67f365cfb45035a9c9e64dd9c810108d2a47d35",
+    "bytes": 27516
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\simulate_t7_element3_dgp_v2.py",
+    "destination": "scripts/simulate_t7_element3_dgp_v2.py",
+    "category": "05 校准决策",
+    "what": "注入式T7 element-3仿真",
+    "purpose": "生成已知零假设与漂移信号，验证结构函数和经济门具备可达性。",
+    "source_sha256": "d11f52f50735a3df2b53cd5156cf2314150d88b5bb5e0925325119cef23695f7",
+    "packaged_sha256": "d11f52f50735a3df2b53cd5156cf2314150d88b5bb5e0925325119cef23695f7",
+    "bytes": 47288
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\simulate_b4_design_power.py",
+    "destination": "scripts/simulate_b4_design_power.py",
+    "category": "05 校准决策",
+    "what": "B4功效与size仿真",
+    "purpose": "在null/OU/pink/step DGP下检验门的假阳性、功效和T*恢复。",
+    "source_sha256": "d6f126e66fbce459f8a61351602a26f608b5d40d4df1efad136d9b59a886494d",
+    "packaged_sha256": "d6f126e66fbce459f8a61351602a26f608b5d40d4df1efad136d9b59a886494d",
+    "bytes": 41577
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\aggregate_b4_map_power.py",
+    "destination": "scripts/aggregate_b4_map_power.py",
+    "category": "05 校准决策",
+    "what": "功效网格聚合",
+    "purpose": "合并分片仿真结果并生成map power/size总表。",
+    "source_sha256": "cf63e31dc08f681da8526f4f9877d3e46b62f0a84982d3479c5e2308c2542b01",
+    "packaged_sha256": "cf63e31dc08f681da8526f4f9877d3e46b62f0a84982d3479c5e2308c2542b01",
+    "bytes": 741
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\regrid_b4_endpoints.py",
+    "destination": "scripts/regrid_b4_endpoints.py",
+    "category": "05 校准决策",
+    "what": "终点再网格化",
+    "purpose": "按冻结R与固定开销c重算真实可达端点网格。",
+    "source_sha256": "7b76471bf3e430f8c29c4bd7d13844d68e11cccb43a28fcaea1ff08a997680ce",
+    "packaged_sha256": "7b76471bf3e430f8c29c4bd7d13844d68e11cccb43a28fcaea1ff08a997680ce",
+    "bytes": 16342
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\refine_b4_map_power.py",
+    "destination": "scripts/refine_b4_map_power.py",
+    "category": "05 校准决策",
+    "what": "地图功效加密",
+    "purpose": "对边界timing cell追加重复以稳定map裁决。",
+    "source_sha256": "cd76df638325664b1c2368368d2daa8a35ba9c7c9e7f22a433611a0cd2ba2c8b",
+    "packaged_sha256": "cd76df638325664b1c2368368d2daa8a35ba9c7c9e7f22a433611a0cd2ba2c8b",
+    "bytes": 11190
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\refine_b4_4day_gap_size.py",
+    "destination": "scripts/refine_b4_4day_gap_size.py",
+    "category": "05 校准决策",
+    "what": "跨日gap size复核",
+    "purpose": "验证四日空窗和lag结构不会抬高假阳性。",
+    "source_sha256": "4c23ade4b888b9b9efc6c0493993207145051a54a0f0f586219ff3a8197b08e0",
+    "packaged_sha256": "4c23ade4b888b9b9efc6c0493993207145051a54a0f0f586219ff3a8197b08e0",
+    "bytes": 9272
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\refine_b4_tag_decision_size.py",
+    "destination": "scripts/refine_b4_tag_decision_size.py",
+    "category": "05 校准决策",
+    "what": "标签裁决size复核",
+    "purpose": "检验最终tag/branch规则在零假设下的错误率。",
+    "source_sha256": "805924b2b63cf49f8d8309813db0de5bff9bfff5269c724e5aa795e9fbe04a6b",
+    "packaged_sha256": "805924b2b63cf49f8d8309813db0de5bff9bfff5269c724e5aa795e9fbe04a6b",
+    "bytes": 4164
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\diagnose_b4_map_timing.py",
+    "destination": "scripts/diagnose_b4_map_timing.py",
+    "category": "05 校准决策",
+    "what": "map时序根因诊断",
+    "purpose": "拆解吞吐与固定开销对非单调map power的贡献。",
+    "source_sha256": "ee7d798f862cb9c0ebbf6106184d574c769eca3f60a0f21706e6662c8130d24a",
+    "packaged_sha256": "ee7d798f862cb9c0ebbf6106184d574c769eca3f60a0f21706e6662c8130d24a",
+    "bytes": 13502
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\diagnose_b4_regrid_mechanism.py",
+    "destination": "scripts/diagnose_b4_regrid_mechanism.py",
+    "category": "05 校准决策",
+    "what": "再网格机制诊断",
+    "purpose": "核对重采样、锚点和判据边界的机械原因。",
+    "source_sha256": "a83a816b40d67e69648d69a1d154cac5674844f9033ca11f44a32946e45a17e5",
+    "packaged_sha256": "a83a816b40d67e69648d69a1d154cac5674844f9033ca11f44a32946e45a17e5",
+    "bytes": 7127
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\diagnose_b4_map_root_cause_contrast.py",
+    "destination": "scripts/diagnose_b4_map_root_cause_contrast.py",
+    "category": "05 校准决策",
+    "what": "map根因对照",
+    "purpose": "用A/B对照区分模型、时序和离散网格造成的差异。",
+    "source_sha256": "00830b3f5718535c75e7c2c62ccba2ace3909d7a91fba873e2bf64488fea1e42",
+    "packaged_sha256": "00830b3f5718535c75e7c2c62ccba2ace3909d7a91fba873e2bf64488fea1e42",
+    "bytes": 9015
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\evaluate_b4_timing_endpoints.py",
+    "destination": "scripts/evaluate_b4_timing_endpoints.py",
+    "category": "05 校准决策",
+    "what": "时序终点评估",
+    "purpose": "在候选R/c组合上评估size、power和可达性。",
+    "source_sha256": "9fe16d1feda85228cb676217828f1e6928e556185656472a5c7614ef77293485",
+    "packaged_sha256": "9fe16d1feda85228cb676217828f1e6928e556185656472a5c7614ef77293485",
+    "bytes": 7648
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\finalize_b4_map_timing_lookup.py",
+    "destination": "scripts/finalize_b4_map_timing_lookup.py",
+    "category": "05 校准决策",
+    "what": "冻结时序查表",
+    "purpose": "把通过条件的timing cells固化成分析/采集查表。",
+    "source_sha256": "b7e1346154c16d4e046aece7bdd7a133495e62cb559a33c7c565119b3dd4fdcd",
+    "packaged_sha256": "b7e1346154c16d4e046aece7bdd7a133495e62cb559a33c7c565119b3dd4fdcd",
+    "bytes": 6733
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\refine_b4_borderline_timing_cells.py",
+    "destination": "scripts/refine_b4_borderline_timing_cells.py",
+    "category": "05 校准决策",
+    "what": "临界timing加密",
+    "purpose": "增加临界cells的Monte Carlo样本，避免边界随机翻转。",
+    "source_sha256": "f665a27783bc71c50fff40f032df322de1fc1401395dd5878430933c964c2c55",
+    "packaged_sha256": "f665a27783bc71c50fff40f032df322de1fc1401395dd5878430933c964c2c55",
+    "bytes": 2763
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\run_b4_exact_anchor_leverage.py",
+    "destination": "scripts/run_b4_exact_anchor_leverage.py",
+    "category": "05 校准决策",
+    "what": "精确锚点杠杆分析",
+    "purpose": "测量锚点布局对map可辨识度的贡献。",
+    "source_sha256": "55b3fcad4f5e9993536ede1c926e23dd6e21c39c70567c3012fec441787e3fff",
+    "packaged_sha256": "55b3fcad4f5e9993536ede1c926e23dd6e21c39c70567c3012fec441787e3fff",
+    "bytes": 5090
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\run_b4_map_root_cause_ab.py",
+    "destination": "scripts/run_b4_map_root_cause_ab.py",
+    "category": "05 校准决策",
+    "what": "map根因A/B实验",
+    "purpose": "冻结改变一个机制，其余保持不变，定位功效异常来源。",
+    "source_sha256": "84fc1bdc88eafcda274f99bc9a055391e5bbd046bbeb08ac5699ab941f7bd6f2",
+    "packaged_sha256": "84fc1bdc88eafcda274f99bc9a055391e5bbd046bbeb08ac5699ab941f7bd6f2",
+    "bytes": 13988
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\run_b4_map_root_cause_bisection.py",
+    "destination": "scripts/run_b4_map_root_cause_bisection.py",
+    "category": "05 校准决策",
+    "what": "map根因二分",
+    "purpose": "在机制组件间二分定位造成裁决变化的最小集合。",
+    "source_sha256": "e3073e1be9423062d61273264c61caacd091fd481f562af0820c361f4c76133d",
+    "packaged_sha256": "e3073e1be9423062d61273264c61caacd091fd481f562af0820c361f4c76133d",
+    "bytes": 6455
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\simulate_b4_cadence_endpoint_power.py",
+    "destination": "scripts/simulate_b4_cadence_endpoint_power.py",
+    "category": "06 闭环控制",
+    "what": "cadence端点功效仿真",
+    "purpose": "验证逐cycle residual²端点的size、power和配对置换可达性。",
+    "source_sha256": "1e3ac6be36777de20bace978b1086913faf2ed82e77eeaa0eb37bef2b8e5fb4d",
+    "packaged_sha256": "1e3ac6be36777de20bace978b1086913faf2ed82e77eeaa0eb37bef2b8e5fb4d",
+    "bytes": 9669
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\design_b4_cadence_from_timing.py",
+    "destination": "scripts/design_b4_cadence_from_timing.py",
+    "category": "06 闭环控制",
+    "what": "cadence计划求解",
+    "purpose": "依据实测R/c与接口底线选择fast/slow周期、pair数和预测区间。",
+    "source_sha256": "92c6b2bba53984053f3c86eca351bd9a45bb2904dc650a3a29a950e8d5f5453c",
+    "packaged_sha256": "92c6b2bba53984053f3c86eca351bd9a45bb2904dc650a3a29a950e8d5f5453c",
+    "bytes": 9037
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\build_b4_platform_time_ledger.py",
+    "destination": "scripts/build_b4_platform_time_ledger.py",
+    "category": "04 漂移感知",
+    "what": "平台时钟总账",
+    "purpose": "把提交、返回、执行和快照时间统一成可审计时标。",
+    "source_sha256": "61ba21c8a55265e4e335d45dfdeca3da9a9dce1f7b3e483a3490529a4d482aa4",
+    "packaged_sha256": "61ba21c8a55265e4e335d45dfdeca3da9a9dce1f7b3e483a3490529a4d482aa4",
+    "bytes": 56424
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\analyze_b4_t287_sf.py",
+    "destination": "scripts/analyze_b4_t287_sf.py",
+    "category": "04 漂移感知",
+    "what": "T287结构函数分析",
+    "purpose": "对冻结T287语料复算E0/E1去偏SF、阴性门与事件排除。",
+    "source_sha256": "e09ce711b8453864d3687be3e6cce8e92bdc391d32b40be25fd19e0b0f70b638",
+    "packaged_sha256": "e09ce711b8453864d3687be3e6cce8e92bdc391d32b40be25fd19e0b0f70b638",
+    "bytes": 25457
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\analyze_b4_t287_sensing_map.py",
+    "destination": "scripts/analyze_b4_t287_sensing_map.py",
+    "category": "05 校准决策",
+    "what": "T287感知值得性地图",
+    "purpose": "输出逐通道Var_proc、T*、残差、接口底线和INCONCLUSIVE边界。",
+    "source_sha256": "d640242720b35c83b8744398c44f73b1a156fdebc44a3e40e866cb5016c91d1e",
+    "packaged_sha256": "d640242720b35c83b8744398c44f73b1a156fdebc44a3e40e866cb5016c91d1e",
+    "bytes": 61469
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\audit_b4_b9_inputs.py",
+    "destination": "scripts/audit_b4_b9_inputs.py",
+    "category": "05 校准决策",
+    "what": "B4/B9输入审计",
+    "purpose": "验证来源hash、regime排除、字段白名单和分析前置条件。",
+    "source_sha256": "d466ed5b1f5abe582e990b16410897d2089af7c6b01fc0223e743c31b7d62fdb",
+    "packaged_sha256": "d466ed5b1f5abe582e990b16410897d2089af7c6b01fc0223e743c31b7d62fdb",
+    "bytes": 16760
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\analyze_natural_drift.py",
+    "destination": "scripts/analyze_natural_drift.py",
+    "category": "04 漂移感知",
+    "what": "自然漂移基础分析",
+    "purpose": "从campaign中提取环境代理并运行早期滚动预测基线。",
+    "source_sha256": "7d662183af13f03bdb1cff967832cc4f333237241f83700f24216d665df6d129",
+    "packaged_sha256": "7d662183af13f03bdb1cff967832cc4f333237241f83700f24216d665df6d129",
+    "bytes": 10983
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\refresh_natural_drift_analysis.py",
+    "destination": "scripts/refresh_natural_drift_analysis.py",
+    "category": "04 漂移感知",
+    "what": "自然漂移刷新入口",
+    "purpose": "在新增快照后重建派生结果且不覆盖raw。",
+    "source_sha256": "4dcb57b1ccb2c010c8bc0906fabfeed4795b139c2b9d42a62b4f28edb363e49c",
+    "packaged_sha256": "4dcb57b1ccb2c010c8bc0906fabfeed4795b139c2b9d42a62b4f28edb363e49c",
+    "bytes": 4516
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\write_natural_drift_cadence_ledger.py",
+    "destination": "scripts/write_natural_drift_cadence_ledger.py",
+    "category": "04 漂移感知",
+    "what": "自然漂移cadence账本",
+    "purpose": "把真实观测间隔与空窗写成独立可审计表。",
+    "source_sha256": "734c218cbb03e2f14883c6e1cb6054c40b307084741559ec8c4f9a686768727d",
+    "packaged_sha256": "734c218cbb03e2f14883c6e1cb6054c40b307084741559ec8c4f9a686768727d",
+    "bytes": 1213
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\run_mirror_metric.py",
+    "destination": "scripts/run_mirror_metric.py",
+    "category": "06 闭环控制",
+    "what": "Mirror指标CLI",
+    "purpose": "独立运行mirror任务指标与配对bootstrap。",
+    "source_sha256": "392f67abaa4be01df80b0ae2b717f28bae289b4600146a26514920c59f1296f5",
+    "packaged_sha256": "392f67abaa4be01df80b0ae2b717f28bae289b4600146a26514920c59f1296f5",
+    "bytes": 4283
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\run_cadence_pair_loop.py",
+    "destination": "scripts/run_cadence_pair_loop.py",
+    "category": "06 闭环控制",
+    "what": "闭环调度核心",
+    "purpose": "执行感知→shield→补偿→mirror循环，并维护fast/slow配对状态。",
+    "source_sha256": "9f87c2825f04b98e04f92e8c62cba221740e13fe51531b033867ce52cd813d9f",
+    "packaged_sha256": "9f87c2825f04b98e04f92e8c62cba221740e13fe51531b033867ce52cd813d9f",
+    "bytes": 38180
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\run_cadence_pair_hardware_smoke.py",
+    "destination": "scripts/run_cadence_pair_hardware_smoke.py",
+    "category": "06 闭环控制",
+    "what": "真机闭环smoke",
+    "purpose": "用最小真实任务验证闭环电路、接口、raw counts与任务指标。",
+    "source_sha256": "97bec4640c5f2f307c2c6f8c5bb4791fca6f480383f2a5c87ad6e0dd14678bd4",
+    "packaged_sha256": "97bec4640c5f2f307c2c6f8c5bb4791fca6f480383f2a5c87ad6e0dd14678bd4",
+    "bytes": 16724
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\freeze_b4_cadence_v4_start_only_baseline.py",
+    "destination": "scripts/freeze_b4_cadence_v4_start_only_baseline.py",
+    "category": "06 闭环控制",
+    "what": "v4计划冻结器",
+    "purpose": "构建start-only baseline与完整pair计划并锁定hash。",
+    "source_sha256": "85edf6a581ac21a5b03b260114d0ec25029433efa027e67973dc125bcb478f54",
+    "packaged_sha256": "85edf6a581ac21a5b03b260114d0ec25029433efa027e67973dc125bcb478f54",
+    "bytes": 47017
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\preflight_b4_cadence_collection_correction.py",
+    "destination": "scripts/preflight_b4_cadence_collection_correction.py",
+    "category": "06 闭环控制",
+    "what": "修正采集预飞",
+    "purpose": "离线回放全部周期、预算、同session配对和停止规则。",
+    "source_sha256": "90bf9e7db2a0b7ac08581570e217d0ebb9afabe52c7bcc544c412632988be22c",
+    "packaged_sha256": "90bf9e7db2a0b7ac08581570e217d0ebb9afabe52c7bcc544c412632988be22c",
+    "bytes": 28198
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\run_b4_cadence_pair_hardware.py",
+    "destination": "scripts/run_b4_cadence_pair_hardware.py",
+    "category": "06 闭环控制",
+    "what": "T176正式硬件runner",
+    "purpose": "按冻结计划提交baseline/loop/mirror任务，追加journal并执行at-most-once保护。",
+    "source_sha256": "8ac6401a008f9f89e7efdde68db03760f9e2e634412051630a21264289dd8dc1",
+    "packaged_sha256": "8ac6401a008f9f89e7efdde68db03760f9e2e634412051630a21264289dd8dc1",
+    "bytes": 103834
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\build_b4_cadence_continuation_plan.py",
+    "destination": "scripts/build_b4_cadence_continuation_plan.py",
+    "category": "06 闭环控制",
+    "what": "Session 1续采计划构建器",
+    "purpose": "在不改原plan的前提下验证Session 0并冻结独立续采计划。",
+    "source_sha256": "8685afdd7b48057a7119b6f8ebb417b736aec2994b72f6d5b373c8b37da3cfe2",
+    "packaged_sha256": "8685afdd7b48057a7119b6f8ebb417b736aec2994b72f6d5b373c8b37da3cfe2",
+    "bytes": 18582
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\run_b4_cadence_continuation.py",
+    "destination": "scripts/run_b4_cadence_continuation.py",
+    "category": "06 闭环控制",
+    "what": "Session 1续采监督器",
+    "purpose": "等待后端连续running后再启动续采，并保留安全失败分类。",
+    "source_sha256": "9d9c539267a6add1bc17fba7a965bc5b0e9aaebc6178aa014ffc2d4f91aaa09c",
+    "packaged_sha256": "9d9c539267a6add1bc17fba7a965bc5b0e9aaebc6178aa014ffc2d4f91aaa09c",
+    "bytes": 14901
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\analyze_b4_t287_cadence_residual_curve.py",
+    "destination": "scripts/analyze_b4_t287_cadence_residual_curve.py",
+    "category": "07 结果分析",
+    "what": "T287 cadence残差分析",
+    "purpose": "用逐cycle residual²重算fast/slow曲线、置换门和诊断图。",
+    "source_sha256": "2724cde4d7f50f656c934deae459022af524b1698bf97558509acdae2efe5db3",
+    "packaged_sha256": "2724cde4d7f50f656c934deae459022af524b1698bf97558509acdae2efe5db3",
+    "bytes": 85942
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\run_b4_session1_simulation_contingency.py",
+    "destination": "scripts/run_b4_session1_simulation_contingency.py",
+    "category": "07 结果分析",
+    "what": "独立模拟Session 1",
+    "purpose": "按冻结相反顺序生成20对模拟应急数据，明确不写入硬件journal。",
+    "source_sha256": "318d58290f1dc62e88e8450058d6cd0a0b2bacfb875a61bdd622422db10d5bb6",
+    "packaged_sha256": "318d58290f1dc62e88e8450058d6cd0a0b2bacfb875a61bdd622422db10d5bb6",
+    "bytes": 42327
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\analyze_b4_t176_hybrid_final.py",
+    "destination": "scripts/analyze_b4_t176_hybrid_final.py",
+    "category": "07 结果分析",
+    "what": "B4 hybrid终测分析器",
+    "purpose": "验证hash链、提取20+20 pairs、运行置换/敏感性/谬误审计并生成最终报告。",
+    "source_sha256": "455ccd5399c75894cfcaa6b9f8a76eec1c14a7272975a126c3ac735f1b85a801",
+    "packaged_sha256": "455ccd5399c75894cfcaa6b9f8a76eec1c14a7272975a126c3ac735f1b85a801",
+    "bytes": 66348
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\protocol_v2.json",
+    "destination": "config/protocol_v2.json",
+    "category": "08 配置",
+    "what": "训练/测量主协议",
+    "purpose": "冻结local6+t、shots、物理初态和数据隔离契约。",
+    "source_sha256": "9467b7b71acdfdca2c5a4613227ef3766099bb8d730545ea55e67da88f97ac76",
+    "packaged_sha256": "9467b7b71acdfdca2c5a4613227ef3766099bb8d730545ea55e67da88f97ac76",
+    "bytes": 2991
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\backends_v1.json",
+    "destination": "config/backends_v1.json",
+    "category": "08 配置",
+    "what": "后端角色配置",
+    "purpose": "定义仿真、参考和天衍硬件角色；不含登录凭据。",
+    "source_sha256": "632c99c13f8dd0a57197eca3b79f0268b7f28e5a20844c09bbaf186c573adf58",
+    "packaged_sha256": "632c99c13f8dd0a57197eca3b79f0268b7f28e5a20844c09bbaf186c573adf58",
+    "bytes": 2254
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\b4_mirror_metric_v1.json",
+    "destination": "config/b4_mirror_metric_v1.json",
+    "category": "08 配置",
+    "what": "Mirror指标配置",
+    "purpose": "冻结mirror电路族、深度、shots、seed和主指标。",
+    "source_sha256": "f0792660cef1b98877c860f185ecafe96e303e69b2f73ebfebae3f3e39ee402d",
+    "packaged_sha256": "f0792660cef1b98877c860f185ecafe96e303e69b2f73ebfebae3f3e39ee402d",
+    "bytes": 1967
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\b4_drift_campaign_v4_tianyan287.json",
+    "destination": "config/b4_drift_campaign_v4_tianyan287.json",
+    "category": "08 配置",
+    "what": "T287 B4采集配置",
+    "purpose": "冻结T287 burst、anchors、shots、regime和调度。",
+    "source_sha256": "ff34228ce8e4fdcd32c7eef353ad85c26b468ec5da4686172172e472e22a9ffa",
+    "packaged_sha256": "ff34228ce8e4fdcd32c7eef353ad85c26b468ec5da4686172172e472e22a9ffa",
+    "bytes": 6223
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\b4_drift_campaign_v4_tianyan176.json",
+    "destination": "config/b4_drift_campaign_v4_tianyan176.json",
+    "category": "08 配置",
+    "what": "T176 B4采集配置",
+    "purpose": "冻结T176同构采集参数和后端差异。",
+    "source_sha256": "4dc1ed7a6d7273eddd8c12c9f58652460ca9330b1cbc4eed085cc58806510ca8",
+    "packaged_sha256": "4dc1ed7a6d7273eddd8c12c9f58652460ca9330b1cbc4eed085cc58806510ca8",
+    "bytes": 8266
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\b4_cadence_pair_loop_v1.json",
+    "destination": "config/b4_cadence_pair_loop_v1.json",
+    "category": "08 配置",
+    "what": "原始cadence仿真配置",
+    "purpose": "保留早期OU漂移与三档注入幅度设计；供cadence单元测试和方法谱系审计。",
+    "source_sha256": "eb9ee11c2d387fdc5342744f724ea5904ac7a00a015b4a681c7b62e6714539d5",
+    "packaged_sha256": "eb9ee11c2d387fdc5342744f724ea5904ac7a00a015b4a681c7b62e6714539d5",
+    "bytes": 3407
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\b4_cadence_pair_loop_cycle_paired_v2.json",
+    "destination": "config/b4_cadence_pair_loop_cycle_paired_v2.json",
+    "category": "08 配置",
+    "what": "cycle-paired v2配置",
+    "purpose": "保留三session、每session八对的修正版设计；验证硬件runner历史行为。",
+    "source_sha256": "e5f9a7f35a387221fffe05045d0b0ca79a19b3051961fc66d432c85438ca0549",
+    "packaged_sha256": "e5f9a7f35a387221fffe05045d0b0ca79a19b3051961fc66d432c85438ca0549",
+    "bytes": 4641
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\b4_cadence_pair_loop_cycle_paired_v3.json",
+    "destination": "config/b4_cadence_pair_loop_cycle_paired_v3.json",
+    "category": "08 配置",
+    "what": "cycle-paired v3配置",
+    "purpose": "保留deadline slack修订版；审计平台延迟约束修正。",
+    "source_sha256": "0e2cdcc3923306cfd677e8068cea0804135ae2943b3c5a7d4c33db4f3e61501d",
+    "packaged_sha256": "0e2cdcc3923306cfd677e8068cea0804135ae2943b3c5a7d4c33db4f3e61501d",
+    "bytes": 10015
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\b4_cadence_pair_loop_cycle_paired_v4.json",
+    "destination": "config/b4_cadence_pair_loop_cycle_paired_v4.json",
+    "category": "08 配置",
+    "what": "最终cadence配对配置",
+    "purpose": "冻结90/360秒、逐cycle residual²、pair数、置换seed和门。",
+    "source_sha256": "ee4c4102dd406087c2ea54677599b146f8d464c2d22a1dcec6788745be4356e3",
+    "packaged_sha256": "ee4c4102dd406087c2ea54677599b146f8d464c2d22a1dcec6788745be4356e3",
+    "bytes": 24143
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\tianyan_h1h2_dual_backend_drift_campaign_v1.json",
+    "destination": "config/tianyan_h1h2_dual_backend_drift_campaign_v1.json",
+    "category": "08 配置",
+    "what": "双后端漂移v1配置",
+    "purpose": "保留33-setting原始交错协议、预算门和断点续采行为；供漂移采集谱系测试。",
+    "source_sha256": "2f594ca6630d48dd5e2857159d3741c2a74d4120920ac6dbce52e0b9ead21b29",
+    "packaged_sha256": "2f594ca6630d48dd5e2857159d3741c2a74d4120920ac6dbce52e0b9ead21b29",
+    "bytes": 2240
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\tianyan_h1h2_dual_backend_drift_campaign_v2.json",
+    "destination": "config/tianyan_h1h2_dual_backend_drift_campaign_v2.json",
+    "category": "08 配置",
+    "what": "双后端漂移历史配置",
+    "purpose": "复现T287旧快照与双后端采集字段契约。",
+    "source_sha256": "3f68da14b9fe37e637add3b8771334c2c6e5b8bb6fba12814c7f4908a0a27aae",
+    "packaged_sha256": "3f68da14b9fe37e637add3b8771334c2c6e5b8bb6fba12814c7f4908a0a27aae",
+    "bytes": 2334
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\trajectory_reproduction_v1.json",
+    "destination": "config/trajectory_reproduction_v1.json",
+    "category": "08 配置",
+    "what": "轨迹复现配置",
+    "purpose": "冻结两时点硬件/仿真对齐实验设置。",
+    "source_sha256": "ab0dfd320cd451e18cdfb49b9ad333e5b41bcae7f87af7a6b903a6b810cbdedb",
+    "packaged_sha256": "ab0dfd320cd451e18cdfb49b9ad333e5b41bcae7f87af7a6b903a6b810cbdedb",
+    "bytes": 829
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\requirements-platform.txt",
+    "destination": "requirements-platform.txt",
+    "category": "08 配置",
+    "what": "平台依赖声明",
+    "purpose": "记录原工程天衍SDK依赖入口。",
+    "source_sha256": "5343fcfe454c3ac9a2a8296d6b379c96f8dd36595e6ea1e8d15cada5cfc8f064",
+    "packaged_sha256": "5343fcfe454c3ac9a2a8296d6b379c96f8dd36595e6ea1e8d15cada5cfc8f064",
+    "bytes": 88
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\__init__.py",
+    "destination": "tests/__init__.py",
+    "category": "09 测试",
+    "what": "测试包标记",
+    "purpose": "支持pytest导入测试辅助模块。",
+    "source_sha256": "70769ce734be5a2382e6c7ed802ac1643251b0a39ce00a9a519c8f943d4cf79a",
+    "packaged_sha256": "70769ce734be5a2382e6c7ed802ac1643251b0a39ce00a9a519c8f943d4cf79a",
+    "bytes": 51
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_counts_features.py",
+    "destination": "tests/test_counts_features.py",
+    "category": "09 测试",
+    "what": "test_counts_features.py回归测试",
+    "purpose": "验证counts端序、九测量基、Pauli-15与local6恢复。",
+    "source_sha256": "da86a27f5085dea60f752336551fba005d7edd8e114a9fa1c25ed0eb96d21995",
+    "packaged_sha256": "da86a27f5085dea60f752336551fba005d7edd8e114a9fa1c25ed0eb96d21995",
+    "bytes": 2332
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_physics_contract.py",
+    "destination": "tests/test_physics_contract.py",
+    "category": "09 测试",
+    "what": "test_physics_contract.py回归测试",
+    "purpose": "验证哈密顿量、初态、噪声和采样物理契约。",
+    "source_sha256": "288bd6014393a7b305dd0e297507fb828434bf3d7c5061d818954c280d6717be",
+    "packaged_sha256": "288bd6014393a7b305dd0e297507fb828434bf3d7c5061d818954c280d6717be",
+    "bytes": 1560
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_training_pipeline.py",
+    "destination": "tests/test_training_pipeline.py",
+    "category": "09 测试",
+    "what": "test_training_pipeline.py回归测试",
+    "purpose": "验证数据隔离、训练、checkpoint与确定性恢复。",
+    "source_sha256": "9fd4734977701f2f15d06a565466025eda775015891309d9be2ed235ecbad1cc",
+    "packaged_sha256": "9fd4734977701f2f15d06a565466025eda775015891309d9be2ed235ecbad1cc",
+    "bytes": 6406
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_protocol_contract.py",
+    "destination": "tests/test_protocol_contract.py",
+    "category": "09 测试",
+    "what": "test_protocol_contract.py回归测试",
+    "purpose": "验证协议缺字段、泄漏字段和阻断规则。",
+    "source_sha256": "66b050d8ff1df9f4f3da75156cdfbd1044d0fda65419de6d6c3cafaed8b8f40c",
+    "packaged_sha256": "66b050d8ff1df9f4f3da75156cdfbd1044d0fda65419de6d6c3cafaed8b8f40c",
+    "bytes": 1795
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_trotter_circuits.py",
+    "destination": "tests/test_trotter_circuits.py",
+    "category": "09 测试",
+    "what": "test_trotter_circuits.py回归测试",
+    "purpose": "验证Trotter电路结构、测量旋转和复杂度。",
+    "source_sha256": "ad2884cb6c32e78a398920c0bf89fe453df9196a33cf92585a96ba2fecf983c6",
+    "packaged_sha256": "ad2884cb6c32e78a398920c0bf89fe453df9196a33cf92585a96ba2fecf983c6",
+    "bytes": 3203
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_tianyan_discovery.py",
+    "destination": "tests/test_tianyan_discovery.py",
+    "category": "09 测试",
+    "what": "test_tianyan_discovery.py回归测试",
+    "purpose": "验证只读机器发现与字段解析。",
+    "source_sha256": "6d1065035a610870f4c27dfce1ef4360bde7ffac574e47d221c4c8840b0c8d1f",
+    "packaged_sha256": "6d1065035a610870f4c27dfce1ef4360bde7ffac574e47d221c4c8840b0c8d1f",
+    "bytes": 1267
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_tianyan_topology.py",
+    "destination": "tests/test_tianyan_topology.py",
+    "category": "09 测试",
+    "what": "test_tianyan_topology.py回归测试",
+    "purpose": "验证六比特链选择和拓扑拒绝。",
+    "source_sha256": "1e4e71f5ed4f9b2ddc3122e163de45c2455df4ec9378f96d969cc4345871d0bc",
+    "packaged_sha256": "1e4e71f5ed4f9b2ddc3122e163de45c2455df4ec9378f96d969cc4345871d0bc",
+    "bytes": 2039
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_tianyan_v8_entangling_contract.py",
+    "destination": "tests/test_tianyan_v8_entangling_contract.py",
+    "category": "09 测试",
+    "what": "test_tianyan_v8_entangling_contract.py回归测试",
+    "purpose": "验证天衍低CZ电路和Pauli期望契约。",
+    "source_sha256": "ba6ae5a98384c11029abe10cba98dbea060c9547c10637763cdfc59c7638ae35",
+    "packaged_sha256": "ba6ae5a98384c11029abe10cba98dbea060c9547c10637763cdfc59c7638ae35",
+    "bytes": 1511
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_adaptive_bandit.py",
+    "destination": "tests/test_adaptive_bandit.py",
+    "category": "09 测试",
+    "what": "test_adaptive_bandit.py回归测试",
+    "purpose": "验证安全shield允许、降幅和弃权分支。",
+    "source_sha256": "d14cc1cdcc74cbe563e8c3bb0577f9ed2f35c346688c11d85a3ab4c9001d1684",
+    "packaged_sha256": "d14cc1cdcc74cbe563e8c3bb0577f9ed2f35c346688c11d85a3ab4c9001d1684",
+    "bytes": 1957
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_adaptive_environment_proxy.py",
+    "destination": "tests/test_adaptive_environment_proxy.py",
+    "category": "09 测试",
+    "what": "test_adaptive_environment_proxy.py回归测试",
+    "purpose": "验证readout/effective-field代理和shot噪声。",
+    "source_sha256": "82dabdc2ce36fa96a9ede4d0cf5fd2291fb14071b68e219937bcd4e7dc1bbf1b",
+    "packaged_sha256": "82dabdc2ce36fa96a9ede4d0cf5fd2291fb14071b68e219937bcd4e7dc1bbf1b",
+    "bytes": 5804
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_adaptive_rule_scheduler.py",
+    "destination": "tests/test_adaptive_rule_scheduler.py",
+    "category": "09 测试",
+    "what": "test_adaptive_rule_scheduler.py回归测试",
+    "purpose": "验证可解释规则调度及安全回退。",
+    "source_sha256": "f8912e63dbff71aadbe1c9b6d24fdb7990a306ec5605983f26a2a1a371ff93fc",
+    "packaged_sha256": "f8912e63dbff71aadbe1c9b6d24fdb7990a306ec5605983f26a2a1a371ff93fc",
+    "bytes": 1214
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_effective_field_diagnostics.py",
+    "destination": "tests/test_effective_field_diagnostics.py",
+    "category": "09 测试",
+    "what": "test_effective_field_diagnostics.py回归测试",
+    "purpose": "验证H1/H2诊断与不确定性输出。",
+    "source_sha256": "aea6894073fbe4333c529f5fc9a4b4b99b6ad4d4c21e5bc689a566731a1c2ed1",
+    "packaged_sha256": "aea6894073fbe4333c529f5fc9a4b4b99b6ad4d4c21e5bc689a566731a1c2ed1",
+    "bytes": 2110
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_sensing_economics.py",
+    "destination": "tests/test_sensing_economics.py",
+    "category": "09 测试",
+    "what": "test_sensing_economics.py回归测试",
+    "purpose": "验证去偏SF、OU/非参积分、T*和经济门。",
+    "source_sha256": "c73174f14ecf63905472c373e0d80f5089984bf887bbbe014ba50a280dda1f0b",
+    "packaged_sha256": "c73174f14ecf63905472c373e0d80f5089984bf887bbbe014ba50a280dda1f0b",
+    "bytes": 5021
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_shared_baseline_sensing.py",
+    "destination": "tests/test_shared_baseline_sensing.py",
+    "category": "09 测试",
+    "what": "test_shared_baseline_sensing.py回归测试",
+    "purpose": "验证共享基线差分和漂移敏感性偏移。",
+    "source_sha256": "8431e9e9a86dc82e2d35e7745ac781615ce263735f8ca94781b9f0f1cee7ce1a",
+    "packaged_sha256": "8431e9e9a86dc82e2d35e7745ac781615ce263735f8ca94781b9f0f1cee7ce1a",
+    "bytes": 10555
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_cadence_permutation.py",
+    "destination": "tests/test_cadence_permutation.py",
+    "category": "09 测试",
+    "what": "test_cadence_permutation.py回归测试",
+    "purpose": "验证配对置换ratio、p值、临界值与seed复现。",
+    "source_sha256": "f0aa2f1d79c2e5c19cdda829fbf0cee63035c015fd9deede81cf9ac94121e540",
+    "packaged_sha256": "f0aa2f1d79c2e5c19cdda829fbf0cee63035c015fd9deede81cf9ac94121e540",
+    "bytes": 3286
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_task_metric_mirror.py",
+    "destination": "tests/test_task_metric_mirror.py",
+    "category": "09 测试",
+    "what": "test_task_metric_mirror.py回归测试",
+    "purpose": "验证mirror构建、success probability和bootstrap。",
+    "source_sha256": "619e5adb6d53400ed7b9c0f895196c552c8c469eb19fb26d6664e174b3dd7387",
+    "packaged_sha256": "619e5adb6d53400ed7b9c0f895196c552c8c469eb19fb26d6664e174b3dd7387",
+    "bytes": 4802
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_drift_campaign.py",
+    "destination": "tests/test_drift_campaign.py",
+    "category": "09 测试",
+    "what": "test_drift_campaign.py回归测试",
+    "purpose": "验证通用采集、hash链、raw落盘和失败恢复。",
+    "source_sha256": "7981aaa6a7cde1b9bc59f039b1ed1a3a0785938a7763f750b7a26791f2c86a0f",
+    "packaged_sha256": "7981aaa6a7cde1b9bc59f039b1ed1a3a0785938a7763f750b7a26791f2c86a0f",
+    "bytes": 6687
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_drift_campaign_v4.py",
+    "destination": "tests/test_drift_campaign_v4.py",
+    "category": "09 测试",
+    "what": "test_drift_campaign_v4.py回归测试",
+    "purpose": "验证v4 burst、regime、角色和非T287/非1024配置。",
+    "source_sha256": "9cb9abcf5fd742d4b651bc0a48bc42fb9e671046728b101b7a5c8674b3fe7dc1",
+    "packaged_sha256": "9cb9abcf5fd742d4b651bc0a48bc42fb9e671046728b101b7a5c8674b3fe7dc1",
+    "bytes": 10435
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_poll_platform_config.py",
+    "destination": "tests/test_poll_platform_config.py",
+    "category": "09 测试",
+    "what": "test_poll_platform_config.py回归测试",
+    "purpose": "验证零机时轮询和断线重试。",
+    "source_sha256": "ebd605ce8df4bc605cc108682023976073c6224812ac7055c3b00e3b484277fb",
+    "packaged_sha256": "ebd605ce8df4bc605cc108682023976073c6224812ac7055c3b00e3b484277fb",
+    "bytes": 5720
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_gate_reachability.py",
+    "destination": "tests/test_gate_reachability.py",
+    "category": "09 测试",
+    "what": "test_gate_reachability.py回归测试",
+    "purpose": "验证注入已知信号时统计门能够通过。",
+    "source_sha256": "4c15f96272febb4b2984158457bcef67ff81fd67343694a34b6706e804459308",
+    "packaged_sha256": "4c15f96272febb4b2984158457bcef67ff81fd67343694a34b6706e804459308",
+    "bytes": 5854
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_gate_feasibility.py",
+    "destination": "tests/test_gate_feasibility.py",
+    "category": "09 测试",
+    "what": "test_gate_feasibility.py回归测试",
+    "purpose": "验证闭环任务预算与平台时间约束。",
+    "source_sha256": "05d4b37649c150cc08f6149fc55fd47d13cfd590723fae566badf0927782cfc3",
+    "packaged_sha256": "05d4b37649c150cc08f6149fc55fd47d13cfd590723fae566badf0927782cfc3",
+    "bytes": 1541
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_simulate_b4_design_power.py",
+    "destination": "tests/test_simulate_b4_design_power.py",
+    "category": "09 测试",
+    "what": "test_simulate_b4_design_power.py回归测试",
+    "purpose": "验证B4 DGP、size/power字段和无oracle泄漏。",
+    "source_sha256": "7521f0a10c2f80c7f4526e5159f34a4c1611cc07fb6785950575c132f20950a4",
+    "packaged_sha256": "7521f0a10c2f80c7f4526e5159f34a4c1611cc07fb6785950575c132f20950a4",
+    "bytes": 7030
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_b4_dry_run.py",
+    "destination": "tests/test_b4_dry_run.py",
+    "category": "09 测试",
+    "what": "test_b4_dry_run.py回归测试",
+    "purpose": "验证接口底线、吞吐和镜像深度dry-run公共逻辑。",
+    "source_sha256": "5c9a17d68dee5d856d7d16cc4dbf88469620ce2a81bd781500b0859795f53690",
+    "packaged_sha256": "5c9a17d68dee5d856d7d16cc4dbf88469620ce2a81bd781500b0859795f53690",
+    "bytes": 5822
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_build_b4_platform_time_ledger.py",
+    "destination": "tests/test_build_b4_platform_time_ledger.py",
+    "category": "09 测试",
+    "what": "test_build_b4_platform_time_ledger.py回归测试",
+    "purpose": "验证平台时间字段、时区、匿名化和总账。",
+    "source_sha256": "04acc96d3ba91ec66f6ba9297db5150a4790549fba36d56e81c027505e0afc06",
+    "packaged_sha256": "04acc96d3ba91ec66f6ba9297db5150a4790549fba36d56e81c027505e0afc06",
+    "bytes": 15551
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_analyze_b4_t287_sf.py",
+    "destination": "tests/test_analyze_b4_t287_sf.py",
+    "category": "09 测试",
+    "what": "test_analyze_b4_t287_sf.py回归测试",
+    "purpose": "验证T287 SF样本筛选、事件排除与E0/E1门。",
+    "source_sha256": "f2816d90ecbf415ca80701e665b104b1ffa6514ecd8331079298967b41d33313",
+    "packaged_sha256": "f2816d90ecbf415ca80701e665b104b1ffa6514ecd8331079298967b41d33313",
+    "bytes": 4692
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_analyze_b4_t287_sensing_map.py",
+    "destination": "tests/test_analyze_b4_t287_sensing_map.py",
+    "category": "09 测试",
+    "what": "test_analyze_b4_t287_sensing_map.py回归测试",
+    "purpose": "验证T*、CI碰窗和INCONCLUSIVE地图口径。",
+    "source_sha256": "8f35001c60ba31ba5a55883a09a0f5f43148f1f6a5d73571ce188c4f56bdcc65",
+    "packaged_sha256": "8f35001c60ba31ba5a55883a09a0f5f43148f1f6a5d73571ce188c4f56bdcc65",
+    "bytes": 6041
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_audit_b4_b9_inputs.py",
+    "destination": "tests/test_audit_b4_b9_inputs.py",
+    "category": "09 测试",
+    "what": "test_audit_b4_b9_inputs.py回归测试",
+    "purpose": "验证B4/B9输入hash、字段和regime完整性。",
+    "source_sha256": "92a775289ba24a888b9cbdb0fccaa258c78565f37cde8fc51bcf4fcb68a250db",
+    "packaged_sha256": "92a775289ba24a888b9cbdb0fccaa258c78565f37cde8fc51bcf4fcb68a250db",
+    "bytes": 3846
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_cadence_pair_loop.py",
+    "destination": "tests/test_cadence_pair_loop.py",
+    "category": "09 测试",
+    "what": "test_cadence_pair_loop.py回归测试",
+    "purpose": "验证感知→shield→补偿→mirror状态机。",
+    "source_sha256": "7aecf04ef8f72a1d3e46486faa5452de0a135c04f027142f0ace0e752b765bfb",
+    "packaged_sha256": "7aecf04ef8f72a1d3e46486faa5452de0a135c04f027142f0ace0e752b765bfb",
+    "bytes": 4656
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_cadence_pair_hardware_smoke.py",
+    "destination": "tests/test_cadence_pair_hardware_smoke.py",
+    "category": "09 测试",
+    "what": "test_cadence_pair_hardware_smoke.py回归测试",
+    "purpose": "验证真机smoke的任务角色与counts处理。",
+    "source_sha256": "95476525eff5e21fe97178f0a7877c87dca28fd4f67f2af5a5ffe4e506e3935e",
+    "packaged_sha256": "95476525eff5e21fe97178f0a7877c87dca28fd4f67f2af5a5ffe4e506e3935e",
+    "bytes": 2662
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_b4_cadence_endpoint_reachability.py",
+    "destination": "tests/test_b4_cadence_endpoint_reachability.py",
+    "category": "09 测试",
+    "what": "test_b4_cadence_endpoint_reachability.py回归测试",
+    "purpose": "验证逐cycle residual²端点的可达性。",
+    "source_sha256": "6be6919f470fc4dcadd6bec0d00dc48be9f3b17762a3a70363a0d9ba5fb6a4fc",
+    "packaged_sha256": "6be6919f470fc4dcadd6bec0d00dc48be9f3b17762a3a70363a0d9ba5fb6a4fc",
+    "bytes": 3717
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_b4_cadence_v4_forty_minute_design.py",
+    "destination": "tests/test_b4_cadence_v4_forty_minute_design.py",
+    "category": "09 测试",
+    "what": "test_b4_cadence_v4_forty_minute_design.py回归测试",
+    "purpose": "验证v4 40-cycle/20-pair冻结设计。",
+    "source_sha256": "d488465de1b6dc81f20eac461a5b93daa6199a19607c4d93f13b9729d920571d",
+    "packaged_sha256": "d488465de1b6dc81f20eac461a5b93daa6199a19607c4d93f13b9729d920571d",
+    "bytes": 20608
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_freeze_b4_cadence_v4_start_only_baseline.py",
+    "destination": "tests/test_freeze_b4_cadence_v4_start_only_baseline.py",
+    "category": "09 测试",
+    "what": "test_freeze_b4_cadence_v4_start_only_baseline.py回归测试",
+    "purpose": "验证计划冻结、baseline和hash不变性。",
+    "source_sha256": "adbb11c749b5b44a283be05cf0517973c60b1260a304889365aa34cb6142a0e0",
+    "packaged_sha256": "adbb11c749b5b44a283be05cf0517973c60b1260a304889365aa34cb6142a0e0",
+    "bytes": 10653
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_preflight_b4_cadence_collection_correction.py",
+    "destination": "tests/test_preflight_b4_cadence_collection_correction.py",
+    "category": "09 测试",
+    "what": "test_preflight_b4_cadence_collection_correction.py回归测试",
+    "purpose": "验证修正采集的完整离线回放。",
+    "source_sha256": "d3a9bc1fc5c1f0f9b8ce395eab042810813392c2f4963cea18852d017303dd41",
+    "packaged_sha256": "d3a9bc1fc5c1f0f9b8ce395eab042810813392c2f4963cea18852d017303dd41",
+    "bytes": 5958
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_run_b4_cadence_pair_hardware.py",
+    "destination": "tests/test_run_b4_cadence_pair_hardware.py",
+    "category": "09 测试",
+    "what": "test_run_b4_cadence_pair_hardware.py回归测试",
+    "purpose": "验证正式runner的at-most-once、journal和失败分类。",
+    "source_sha256": "ddac9dc87a9ca822619838a50d266ff48cdd6e2e400a920ad00d0ed66744cc87",
+    "packaged_sha256": "ddac9dc87a9ca822619838a50d266ff48cdd6e2e400a920ad00d0ed66744cc87",
+    "bytes": 28561
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_b4_cadence_continuation.py",
+    "destination": "tests/test_b4_cadence_continuation.py",
+    "category": "09 测试",
+    "what": "test_b4_cadence_continuation.py回归测试",
+    "purpose": "验证独立Session 1计划和恢复监督器。",
+    "source_sha256": "2dea2fc5d18d4102dd768829f6d9975d9b1c7044a897d0330678ce4539289d73",
+    "packaged_sha256": "2dea2fc5d18d4102dd768829f6d9975d9b1c7044a897d0330678ce4539289d73",
+    "bytes": 8544
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_b4_session1_simulation_contingency.py",
+    "destination": "tests/test_b4_session1_simulation_contingency.py",
+    "category": "09 测试",
+    "what": "test_b4_session1_simulation_contingency.py回归测试",
+    "purpose": "验证模拟Session 1不提交硬件且来源隔离。",
+    "source_sha256": "060ae58717ae4af1ab11315e60ea0aa7a40a1dce4d972cad9e182c251ee121a6",
+    "packaged_sha256": "060ae58717ae4af1ab11315e60ea0aa7a40a1dce4d972cad9e182c251ee121a6",
+    "bytes": 10275
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_analyze_b4_t176_hybrid_final.py",
+    "destination": "tests/test_analyze_b4_t176_hybrid_final.py",
+    "category": "09 测试",
+    "what": "test_analyze_b4_t176_hybrid_final.py回归测试",
+    "purpose": "验证终测hash链、pair提取、置换、边界和确定性签名。",
+    "source_sha256": "40cc40d02f2041680bb0ab34a89c3d0d321c57003fba296e32ec6093cc2a370e",
+    "packaged_sha256": "40cc40d02f2041680bb0ab34a89c3d0d321c57003fba296e32ec6093cc2a370e",
+    "bytes": 12313
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_analyze_b4_t287_cadence_residual_curve.py",
+    "destination": "tests/test_analyze_b4_t287_cadence_residual_curve.py",
+    "category": "09 测试",
+    "what": "test_analyze_b4_t287_cadence_residual_curve.py回归测试",
+    "purpose": "验证T287逐cycle残差曲线与置换诊断。",
+    "source_sha256": "b0cd457ef87f95a89f2122f46336da23bd84d2d461cb850b578aaa8695e8150b",
+    "packaged_sha256": "b0cd457ef87f95a89f2122f46336da23bd84d2d461cb850b578aaa8695e8150b",
+    "bytes": 19725
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_natural_drift_cadence_ledger.py",
+    "destination": "tests/test_natural_drift_cadence_ledger.py",
+    "category": "09 测试",
+    "what": "test_natural_drift_cadence_ledger.py回归测试",
+    "purpose": "验证自然漂移观测间隔和空窗账本。",
+    "source_sha256": "fb6b4afb8b778fc3b1a47be06d13ba88b87abe6cbf9a76fc25423777fa157df6",
+    "packaged_sha256": "fb6b4afb8b778fc3b1a47be06d13ba88b87abe6cbf9a76fc25423777fa157df6",
+    "bytes": 1291
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_analyze_natural_drift.py",
+    "destination": "tests/test_analyze_natural_drift.py",
+    "category": "09 测试",
+    "what": "test_analyze_natural_drift.py回归测试",
+    "purpose": "验证早期自然漂移代理分析不会混入标签。",
+    "source_sha256": "d232e7e44c7df56e95fc8ca17cd9b1ed7976c9cb16fcf305c5bde40e465d872b",
+    "packaged_sha256": "d232e7e44c7df56e95fc8ca17cd9b1ed7976c9cb16fcf305c5bde40e465d872b",
+    "bytes": 8012
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_refresh_natural_drift_analysis.py",
+    "destination": "tests/test_refresh_natural_drift_analysis.py",
+    "category": "09 测试",
+    "what": "test_refresh_natural_drift_analysis.py回归测试",
+    "purpose": "验证刷新分析不覆盖raw数据。",
+    "source_sha256": "eb12414280dafbd6d6e2ef2b29895da8d63957ff00d32b42490681882dcff1ab",
+    "packaged_sha256": "eb12414280dafbd6d6e2ef2b29895da8d63957ff00d32b42490681882dcff1ab",
+    "bytes": 1505
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_diagnose_b4_map_root_cause_contrast.py",
+    "destination": "tests/test_diagnose_b4_map_root_cause_contrast.py",
+    "category": "09 测试",
+    "what": "test_diagnose_b4_map_root_cause_contrast.py回归测试",
+    "purpose": "验证map根因A/B对照机械一致性。",
+    "source_sha256": "1a62d1f9b35c83bc3c2b1763ee898fc2efbf587c4ceecfe82850d124d9e519f2",
+    "packaged_sha256": "1a62d1f9b35c83bc3c2b1763ee898fc2efbf587c4ceecfe82850d124d9e519f2",
+    "bytes": 1352
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_diagnose_b4_regrid_mechanism.py",
+    "destination": "tests/test_diagnose_b4_regrid_mechanism.py",
+    "category": "09 测试",
+    "what": "test_diagnose_b4_regrid_mechanism.py回归测试",
+    "purpose": "验证再网格机制诊断。",
+    "source_sha256": "954dd84245da565ce97fe6b610f210a9c02766a56dec1f9086aedbc3b3f3065c",
+    "packaged_sha256": "954dd84245da565ce97fe6b610f210a9c02766a56dec1f9086aedbc3b3f3065c",
+    "bytes": 1050
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_refine_b4_4day_gap_size.py",
+    "destination": "tests/test_refine_b4_4day_gap_size.py",
+    "category": "09 测试",
+    "what": "test_refine_b4_4day_gap_size.py回归测试",
+    "purpose": "验证四日gap size加密。",
+    "source_sha256": "747283b9914570fb2a2b593dd507617e14c58937217ae8fc35b4a2d2ec5ddb67",
+    "packaged_sha256": "747283b9914570fb2a2b593dd507617e14c58937217ae8fc35b4a2d2ec5ddb67",
+    "bytes": 2099
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_refine_b4_tag_decision_size.py",
+    "destination": "tests/test_refine_b4_tag_decision_size.py",
+    "category": "09 测试",
+    "what": "test_refine_b4_tag_decision_size.py回归测试",
+    "purpose": "验证最终tag裁决size。",
+    "source_sha256": "981e60296af4466861d082b86bf377c6ca40d5e48b792d4ac9945bdc2fd582ae",
+    "packaged_sha256": "981e60296af4466861d082b86bf377c6ca40d5e48b792d4ac9945bdc2fd582ae",
+    "bytes": 1415
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_regrid_b4_endpoints.py",
+    "destination": "tests/test_regrid_b4_endpoints.py",
+    "category": "09 测试",
+    "what": "test_regrid_b4_endpoints.py回归测试",
+    "purpose": "验证R/c再网格端点。",
+    "source_sha256": "345bd828e9b5a9ff887293955c326a4be0d0d54f9bb66b37d608a43503443b8c",
+    "packaged_sha256": "345bd828e9b5a9ff887293955c326a4be0d0d54f9bb66b37d608a43503443b8c",
+    "bytes": 2298
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_run_b4_exact_anchor_leverage.py",
+    "destination": "tests/test_run_b4_exact_anchor_leverage.py",
+    "category": "09 测试",
+    "what": "test_run_b4_exact_anchor_leverage.py回归测试",
+    "purpose": "验证精确锚点杠杆分析。",
+    "source_sha256": "e43213ea1cd1da0b532d23bdb2d23dc317a881035ad9a72875fb54740ba3b82f",
+    "packaged_sha256": "e43213ea1cd1da0b532d23bdb2d23dc317a881035ad9a72875fb54740ba3b82f",
+    "bytes": 1418
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_run_b4_map_root_cause_ab.py",
+    "destination": "tests/test_run_b4_map_root_cause_ab.py",
+    "category": "09 测试",
+    "what": "test_run_b4_map_root_cause_ab.py回归测试",
+    "purpose": "验证map根因A/B实验。",
+    "source_sha256": "3c806e9f77a9468a7bf6eb64298559c5139ba51c5441cc9f07a217df912bc31d",
+    "packaged_sha256": "3c806e9f77a9468a7bf6eb64298559c5139ba51c5441cc9f07a217df912bc31d",
+    "bytes": 1385
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\tests\\test_run_b4_map_root_cause_bisection.py",
+    "destination": "tests/test_run_b4_map_root_cause_bisection.py",
+    "category": "09 测试",
+    "what": "test_run_b4_map_root_cause_bisection.py回归测试",
+    "purpose": "验证map根因二分。",
+    "source_sha256": "4d64f05f4f0c64ecceff8fae04ea263e22607dea8bcae0e462803ce90ffad4f1",
+    "packaged_sha256": "4d64f05f4f0c64ecceff8fae04ea263e22607dea8bcae0e462803ce90ffad4f1",
+    "bytes": 675
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\README.md",
+    "destination": "README.md",
+    "category": "10 文档",
+    "what": "原工程README",
+    "purpose": "说明AEMTN主训练输入、命令、数据边界与硬件角色。",
+    "source_sha256": "3de044be4870aac105bb7fb8ee18356c728c3f854b796b7bb8eb2f8c16db66f0",
+    "packaged_sha256": "3de044be4870aac105bb7fb8ee18356c728c3f854b796b7bb8eb2f8c16db66f0",
+    "bytes": 5128
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\PROJECT_NOTES.md",
+    "destination": "PROJECT_NOTES.md",
+    "category": "10 文档",
+    "what": "项目事实与红线",
+    "purpose": "记录模型谱系、历史审计、结论边界和最终停点。",
+    "source_sha256": "346193a6c584b17003069e3ade9466c5012370737a45bcb5b05ae31edd98ef3c",
+    "packaged_sha256": "346193a6c584b17003069e3ade9466c5012370737a45bcb5b05ae31edd98ef3c",
+    "bytes": 13013
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\docs\\aemtn_model_lineage.md",
+    "destination": "docs/aemtn_model_lineage.md",
+    "category": "10 文档",
+    "what": "模型谱系表",
+    "purpose": "防止不同checkpoint和硬件任务被错误混用。",
+    "source_sha256": "f8519b0e3a2b34e3a74eb484a826a2b5a13ef314b1b8061d441ea0f43807690f",
+    "packaged_sha256": "f8519b0e3a2b34e3a74eb484a826a2b5a13ef314b1b8061d441ea0f43807690f",
+    "bytes": 1027
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\docs\\B4_WORK_ORDER_20260804.md",
+    "destination": "docs/B4_WORK_ORDER_20260804.md",
+    "category": "10 文档",
+    "what": "B4原始工单",
+    "purpose": "保存B0-B9设计、验收标准、统计纪律和措辞红线。",
+    "source_sha256": "ef0bfd3105a837ad748856889ee406dd90b96e02280c5fd14da768ae57f28d64",
+    "packaged_sha256": "ef0bfd3105a837ad748856889ee406dd90b96e02280c5fd14da768ae57f28d64",
+    "bytes": 24006
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\docs\\B4_T176_HYBRID_FINAL_RESULT_20260829.md",
+    "destination": "docs/B4_T176_HYBRID_FINAL_RESULT_20260829.md",
+    "category": "10 文档",
+    "what": "B4最终结果说明",
+    "purpose": "给出simulation-assisted终测结果、完整性和严格边界。",
+    "source_sha256": "e0837823e7a9b8be57108327aab84b837742708fd4f8e53fecb0340c6e4c2b38",
+    "packaged_sha256": "e0837823e7a9b8be57108327aab84b837742708fd4f8e53fecb0340c6e4c2b38",
+    "bytes": 5263
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\docs\\B4_T176_HYBRID_FINAL_MANIFEST_20260829.json",
+    "destination": "docs/B4_T176_HYBRID_FINAL_MANIFEST_20260829.json",
+    "category": "10 文档",
+    "what": "B4最终机器清单",
+    "purpose": "记录最终数值、工件路径、SHA256和验证状态。",
+    "source_sha256": "e49d90e55c05f2db39511cc4461d429263b8e59e40127c04c140b06575cf51bf",
+    "packaged_sha256": "e49d90e55c05f2db39511cc4461d429263b8e59e40127c04c140b06575cf51bf",
+    "bytes": 5224
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\docs\\B4_T176_MIGRATION_CURATED_MANIFEST_20260823.json",
+    "destination": "docs/B4_T176_MIGRATION_CURATED_MANIFEST_20260823.json",
+    "category": "10 文档",
+    "what": "T176迁移精选清单",
+    "purpose": "记录迁移到T176时允许使用的runner/config/manifest。",
+    "source_sha256": "efdc124c9bc727356340b0e3514ad453c1c944fe7fdf9599714146b062a37092",
+    "packaged_sha256": "efdc124c9bc727356340b0e3514ad453c1c944fe7fdf9599714146b062a37092",
+    "bytes": 10783
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\docs\\B4_B5_T176_BACKEND_MIGRATION_AMENDMENT_20260823.md",
+    "destination": "docs/B4_B5_T176_BACKEND_MIGRATION_AMENDMENT_20260823.md",
+    "category": "10 文档",
+    "what": "后端迁移修正案",
+    "purpose": "说明T176后端差异与不能改变的冻结端点。",
+    "source_sha256": "4425df36340d5db35dc2476bbbc94db7e63e4dc4a504a537316f64df813b4af1",
+    "packaged_sha256": "4425df36340d5db35dc2476bbbc94db7e63e4dc4a504a537316f64df813b4af1",
+    "bytes": 19492
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\docs\\B4_B5_T176_MIGRATION_HANDOFF_20260823.md",
+    "destination": "docs/B4_B5_T176_MIGRATION_HANDOFF_20260823.md",
+    "category": "10 文档",
+    "what": "T176迁移交接",
+    "purpose": "记录真机采集前置、输出目录和安全操作。",
+    "source_sha256": "bfa281b0add77aafbee3d7516c8afb7b92d6d9ffcca3690cab5305fcc0757338",
+    "packaged_sha256": "bfa281b0add77aafbee3d7516c8afb7b92d6d9ffcca3690cab5305fcc0757338",
+    "bytes": 30998
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\docs\\B4_T176_20260817_TIMING_QUERY_MANIFEST.json",
+    "destination": "docs/B4_T176_20260817_TIMING_QUERY_MANIFEST.json",
+    "category": "10 文档",
+    "what": "接口测时来源清单",
+    "purpose": "追溯P50/P90、R和c的原始查询证据。",
+    "source_sha256": "2905b875f0b54dc85ca72fb803454300c85417d2902f5bf7528c6858918aa222",
+    "packaged_sha256": "2905b875f0b54dc85ca72fb803454300c85417d2902f5bf7528c6858918aa222",
+    "bytes": 2819
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\docs\\NATURAL_DRIFT_CAMPAIGN_PREREGISTRATION_v1.md",
+    "destination": "docs/NATURAL_DRIFT_CAMPAIGN_PREREGISTRATION_v1.md",
+    "category": "10 文档",
+    "what": "自然漂移预注册",
+    "purpose": "冻结33-setting交错采集、预算、停止规则和来源哈希；通用漂移runner运行时校验此文件。",
+    "source_sha256": "c4101cc320f043af00ca8448ea5d4b7693c0330f63d6ed8c482743d66a6db129",
+    "packaged_sha256": "c4101cc320f043af00ca8448ea5d4b7693c0330f63d6ed8c482743d66a6db129",
+    "bytes": 6745
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\docs\\NATURAL_DRIFT_P1_IMPLEMENTATION_v1.md",
+    "destination": "docs/NATURAL_DRIFT_P1_IMPLEMENTATION_v1.md",
+    "category": "10 文档",
+    "what": "自然漂移实现说明",
+    "purpose": "解释environment proxy、预测与边界。",
+    "source_sha256": "d94c19d71a941d9cf330adf129db04f4917c73d3c7cc066e0a53dbc7b1082665",
+    "packaged_sha256": "d94c19d71a941d9cf330adf129db04f4917c73d3c7cc066e0a53dbc7b1082665",
+    "bytes": 5839
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\HANDOFF.md",
+    "destination": "docs/HANDOFF_20260829.md",
+    "category": "10 文档",
+    "what": "最终交接主档",
+    "purpose": "保存2026-08-29状态覆盖、权威入口和禁止扩张的结论。",
+    "source_sha256": "3e63c0854c834bf647e4fc9e80ec0c6549de71c87986c0d2d6adc033c7df6a9c",
+    "packaged_sha256": "3e63c0854c834bf647e4fc9e80ec0c6549de71c87986c0d2d6adc033c7df6a9c",
+    "bytes": 35211
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\天衍_全项目流程与聊天迁移总档.md",
+    "destination": "docs/天衍_全项目流程与聊天迁移总档.md",
+    "category": "10 文档",
+    "what": "全工程时间线",
+    "purpose": "把训练、IBM、天衍、自然漂移、B4旧端点和终测串成一条谱系。",
+    "source_sha256": "83862c5cfc4efec23b9a5aaace51000e35bdb413bdee768641ef7f2ef32a7123",
+    "packaged_sha256": "83862c5cfc4efec23b9a5aaace51000e35bdb413bdee768641ef7f2ef32a7123",
+    "bytes": 31670
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\dataset_manifest.json",
+    "destination": "data/sim_v3_paper_contract/dataset_manifest.json",
+    "source_sha256": "9357e8cb4aa86703271abcf62aa50ca27ffc3f3c316da1649175ea32a808dde1",
+    "packaged_sha256": "9357e8cb4aa86703271abcf62aa50ca27ffc3f3c316da1649175ea32a808dde1",
+    "bytes": 5628,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0000.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0000.npz",
+    "source_sha256": "76541704f976a836c8e167eb5a5120f5ddb6a812294b1d9d9ccc74af8caa0008",
+    "packaged_sha256": "76541704f976a836c8e167eb5a5120f5ddb6a812294b1d9d9ccc74af8caa0008",
+    "bytes": 78668,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0001.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0001.npz",
+    "source_sha256": "3fef40e364437c838e024eb99bb8606323495135bd9231f64640e8bf43d8a5e6",
+    "packaged_sha256": "3fef40e364437c838e024eb99bb8606323495135bd9231f64640e8bf43d8a5e6",
+    "bytes": 78617,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0002.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0002.npz",
+    "source_sha256": "f7ac6afcadc854bb6736381449c73b313292674db61cafb030c67d888ab344af",
+    "packaged_sha256": "f7ac6afcadc854bb6736381449c73b313292674db61cafb030c67d888ab344af",
+    "bytes": 78666,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0003.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0003.npz",
+    "source_sha256": "1113631252aab763f0fdd0d35037db6c1f313b324bd838623cf1eb4cd01621c1",
+    "packaged_sha256": "1113631252aab763f0fdd0d35037db6c1f313b324bd838623cf1eb4cd01621c1",
+    "bytes": 78442,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0004.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0004.npz",
+    "source_sha256": "6491ad432207a56f778317a01f284bc25f2965775214ecdb9bf377831158ed8d",
+    "packaged_sha256": "6491ad432207a56f778317a01f284bc25f2965775214ecdb9bf377831158ed8d",
+    "bytes": 78509,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0005.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0005.npz",
+    "source_sha256": "04194d7e3a5af32363b3731d80e2dfd04eb2c16543a5d0457035458cfb480e66",
+    "packaged_sha256": "04194d7e3a5af32363b3731d80e2dfd04eb2c16543a5d0457035458cfb480e66",
+    "bytes": 78469,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0006.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0006.npz",
+    "source_sha256": "b9bc2e45a1ec465d944c2332eae7bcfd4e0bee6963404ec651c85ef9062c32db",
+    "packaged_sha256": "b9bc2e45a1ec465d944c2332eae7bcfd4e0bee6963404ec651c85ef9062c32db",
+    "bytes": 78561,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0007.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0007.npz",
+    "source_sha256": "f9188be0fc8cc7e45a1053ea618d6664b40f9e51b85cfdf681936822537542e3",
+    "packaged_sha256": "f9188be0fc8cc7e45a1053ea618d6664b40f9e51b85cfdf681936822537542e3",
+    "bytes": 78648,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0008.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0008.npz",
+    "source_sha256": "30c648894f380e6426039bd433587b78e49dba4e69e472b60a8d1937e6283a7a",
+    "packaged_sha256": "30c648894f380e6426039bd433587b78e49dba4e69e472b60a8d1937e6283a7a",
+    "bytes": 78497,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0009.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0009.npz",
+    "source_sha256": "380f665a1b5e057b1398a27f7b0c2ad7b3d374e0e6d862d4d820e01ccc708b3f",
+    "packaged_sha256": "380f665a1b5e057b1398a27f7b0c2ad7b3d374e0e6d862d4d820e01ccc708b3f",
+    "bytes": 78507,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0010.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0010.npz",
+    "source_sha256": "90dd7150952f233a4f420d99f1fad47f21b0c2b761dd72e9a4ae504b7a8e40db",
+    "packaged_sha256": "90dd7150952f233a4f420d99f1fad47f21b0c2b761dd72e9a4ae504b7a8e40db",
+    "bytes": 78569,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0011.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0011.npz",
+    "source_sha256": "094a6a6dcc88b21f66b443ca687ead657b2e8b25db63bd787b46a7f011b80455",
+    "packaged_sha256": "094a6a6dcc88b21f66b443ca687ead657b2e8b25db63bd787b46a7f011b80455",
+    "bytes": 78485,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0012.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0012.npz",
+    "source_sha256": "811edc27e63007ecb4196a3082715a22393e8a920a59785daa240ef5c39a93c1",
+    "packaged_sha256": "811edc27e63007ecb4196a3082715a22393e8a920a59785daa240ef5c39a93c1",
+    "bytes": 78330,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0013.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0013.npz",
+    "source_sha256": "58a1f446e403511ce717ff5d0e6ef51a5f4205e67081896d54b85958cf276717",
+    "packaged_sha256": "58a1f446e403511ce717ff5d0e6ef51a5f4205e67081896d54b85958cf276717",
+    "bytes": 78680,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0014.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0014.npz",
+    "source_sha256": "74ce87f7c7d6049662576b79676736fa3a93fbad82837443e1714406fbeaeb06",
+    "packaged_sha256": "74ce87f7c7d6049662576b79676736fa3a93fbad82837443e1714406fbeaeb06",
+    "bytes": 78524,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0015.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0015.npz",
+    "source_sha256": "8d6ad548ed6ed132b061afab218bc9cbc8ebafb379fc8ca874d6ba94db659490",
+    "packaged_sha256": "8d6ad548ed6ed132b061afab218bc9cbc8ebafb379fc8ca874d6ba94db659490",
+    "bytes": 78510,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0016.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0016.npz",
+    "source_sha256": "9d38f22a76fa3ed55db0703a50a36f7ea6c2cd0392c68076f46449326800c4e5",
+    "packaged_sha256": "9d38f22a76fa3ed55db0703a50a36f7ea6c2cd0392c68076f46449326800c4e5",
+    "bytes": 78483,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0017.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0017.npz",
+    "source_sha256": "1a94bf22a4b90b109908f9c6bc321cd2a66a0085c00a5e87761ad4a8298876ec",
+    "packaged_sha256": "1a94bf22a4b90b109908f9c6bc321cd2a66a0085c00a5e87761ad4a8298876ec",
+    "bytes": 78440,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0018.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0018.npz",
+    "source_sha256": "fa57b3f1cdde9af77510028ebfa3f1304085db15b98383ad343368da03938ceb",
+    "packaged_sha256": "fa57b3f1cdde9af77510028ebfa3f1304085db15b98383ad343368da03938ceb",
+    "bytes": 78602,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\data\\interim\\sim_v3_paper_contract\\sim_0019.npz",
+    "destination": "data/sim_v3_paper_contract/sim_0019.npz",
+    "source_sha256": "07c51227ab7acb299c91250d86ef49bd5350a3434c734e409ab4addfde513c61",
+    "packaged_sha256": "07c51227ab7acb299c91250d86ef49bd5350a3434c734e409ab4addfde513c61",
+    "bytes": 78665,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\checkpoints\\sim_pretrained_paper_contract\\training_summary.json",
+    "destination": "models/sim_pretrained_paper_contract/training_summary.json",
+    "source_sha256": "2c35c1933e3470f1ba9429485a817d6e2823ab2165fc2c816fd8e704855fb5ec",
+    "packaged_sha256": "2c35c1933e3470f1ba9429485a817d6e2823ab2165fc2c816fd8e704855fb5ec",
+    "bytes": 9285,
+    "category": "11 数据/证据",
+    "what": "冻结AEMTN模型或训练记录",
+    "purpose": "供后续推理封装、模型核验和训练谱系追溯。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\checkpoints\\sim_pretrained_paper_contract\\seed_20260731\\best.pt",
+    "destination": "models/sim_pretrained_paper_contract/seed_20260731/best.pt",
+    "source_sha256": "101d8e87ebc935ab7ac6c94b241311b8fc21c9c2295a90271f6475606276770b",
+    "packaged_sha256": "101d8e87ebc935ab7ac6c94b241311b8fc21c9c2295a90271f6475606276770b",
+    "bytes": 17284753,
+    "category": "11 数据/证据",
+    "what": "冻结AEMTN模型或训练记录",
+    "purpose": "供后续推理封装、模型核验和训练谱系追溯。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\checkpoints\\sim_pretrained_paper_contract\\seed_20260731\\history.csv",
+    "destination": "models/sim_pretrained_paper_contract/seed_20260731/history.csv",
+    "source_sha256": "64a1765a3ef4fa47a157432c3ff56649ddf8e014ee1f6419dd9278731c9817ee",
+    "packaged_sha256": "64a1765a3ef4fa47a157432c3ff56649ddf8e014ee1f6419dd9278731c9817ee",
+    "bytes": 10063,
+    "category": "11 数据/证据",
+    "what": "冻结AEMTN模型或训练记录",
+    "purpose": "供后续推理封装、模型核验和训练谱系追溯。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\checkpoints\\sim_pretrained_paper_contract\\seed_20260731\\run_config.json",
+    "destination": "models/sim_pretrained_paper_contract/seed_20260731/run_config.json",
+    "source_sha256": "062302eea85718dffe7cc4ebe4cf6e27b29ec49677b5901fe0d49b489dbad5cc",
+    "packaged_sha256": "062302eea85718dffe7cc4ebe4cf6e27b29ec49677b5901fe0d49b489dbad5cc",
+    "bytes": 1408,
+    "category": "11 数据/证据",
+    "what": "冻结AEMTN模型或训练记录",
+    "purpose": "供后续推理封装、模型核验和训练谱系追溯。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\checkpoints\\sim_pretrained_paper_contract\\seed_20260731\\summary.json",
+    "destination": "models/sim_pretrained_paper_contract/seed_20260731/summary.json",
+    "source_sha256": "5ceea5d5bdc0345ed5cc3b75525ab31609c95bc8bf3aaecd9d1cb8aafaa051f3",
+    "packaged_sha256": "5ceea5d5bdc0345ed5cc3b75525ab31609c95bc8bf3aaecd9d1cb8aafaa051f3",
+    "bytes": 2212,
+    "category": "11 数据/证据",
+    "what": "冻结AEMTN模型或训练记录",
+    "purpose": "供后续推理封装、模型核验和训练谱系追溯。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\checkpoints\\sim_pretrained_paper_contract\\seed_20260801\\best.pt",
+    "destination": "models/sim_pretrained_paper_contract/seed_20260801/best.pt",
+    "source_sha256": "a7f9bde64d4ccb9827c57517b4395aada01516265ec42a6b18c21069350e6466",
+    "packaged_sha256": "a7f9bde64d4ccb9827c57517b4395aada01516265ec42a6b18c21069350e6466",
+    "bytes": 17284753,
+    "category": "11 数据/证据",
+    "what": "冻结AEMTN模型或训练记录",
+    "purpose": "供后续推理封装、模型核验和训练谱系追溯。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\checkpoints\\sim_pretrained_paper_contract\\seed_20260801\\history.csv",
+    "destination": "models/sim_pretrained_paper_contract/seed_20260801/history.csv",
+    "source_sha256": "f4263fb2873f8143bc5363b2c91d59c4bee7689fc97cdfcb9c8ebd8d93e81ce0",
+    "packaged_sha256": "f4263fb2873f8143bc5363b2c91d59c4bee7689fc97cdfcb9c8ebd8d93e81ce0",
+    "bytes": 7914,
+    "category": "11 数据/证据",
+    "what": "冻结AEMTN模型或训练记录",
+    "purpose": "供后续推理封装、模型核验和训练谱系追溯。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\checkpoints\\sim_pretrained_paper_contract\\seed_20260801\\run_config.json",
+    "destination": "models/sim_pretrained_paper_contract/seed_20260801/run_config.json",
+    "source_sha256": "f1ed634fcc5bbae2844be921cdf90d7a20955c2863c0eb1d18dd2e79ab1f566f",
+    "packaged_sha256": "f1ed634fcc5bbae2844be921cdf90d7a20955c2863c0eb1d18dd2e79ab1f566f",
+    "bytes": 1408,
+    "category": "11 数据/证据",
+    "what": "冻结AEMTN模型或训练记录",
+    "purpose": "供后续推理封装、模型核验和训练谱系追溯。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\checkpoints\\sim_pretrained_paper_contract\\seed_20260801\\summary.json",
+    "destination": "models/sim_pretrained_paper_contract/seed_20260801/summary.json",
+    "source_sha256": "7ce06059ce2907228592a43f8ea71b9eaa4c3e07b492e0fb9469aaf8f3930af5",
+    "packaged_sha256": "7ce06059ce2907228592a43f8ea71b9eaa4c3e07b492e0fb9469aaf8f3930af5",
+    "bytes": 2208,
+    "category": "11 数据/证据",
+    "what": "冻结AEMTN模型或训练记录",
+    "purpose": "供后续推理封装、模型核验和训练谱系追溯。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\checkpoints\\sim_pretrained_paper_contract\\seed_20260802\\best.pt",
+    "destination": "models/sim_pretrained_paper_contract/seed_20260802/best.pt",
+    "source_sha256": "8785130a2188892be3d9e501da40f95250b3135266a6c4d69ea37003c9339f15",
+    "packaged_sha256": "8785130a2188892be3d9e501da40f95250b3135266a6c4d69ea37003c9339f15",
+    "bytes": 17284817,
+    "category": "11 数据/证据",
+    "what": "冻结AEMTN模型或训练记录",
+    "purpose": "供后续推理封装、模型核验和训练谱系追溯。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\checkpoints\\sim_pretrained_paper_contract\\seed_20260802\\history.csv",
+    "destination": "models/sim_pretrained_paper_contract/seed_20260802/history.csv",
+    "source_sha256": "261c9c2179c47397c1924420f15c0f74eb533814170208b245c8c61f84545360",
+    "packaged_sha256": "261c9c2179c47397c1924420f15c0f74eb533814170208b245c8c61f84545360",
+    "bytes": 9715,
+    "category": "11 数据/证据",
+    "what": "冻结AEMTN模型或训练记录",
+    "purpose": "供后续推理封装、模型核验和训练谱系追溯。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\checkpoints\\sim_pretrained_paper_contract\\seed_20260802\\run_config.json",
+    "destination": "models/sim_pretrained_paper_contract/seed_20260802/run_config.json",
+    "source_sha256": "d084e76335ede48aef1876d539f61aecc1989004a962844cf2e9334d227b5cd0",
+    "packaged_sha256": "d084e76335ede48aef1876d539f61aecc1989004a962844cf2e9334d227b5cd0",
+    "bytes": 1408,
+    "category": "11 数据/证据",
+    "what": "冻结AEMTN模型或训练记录",
+    "purpose": "供后续推理封装、模型核验和训练谱系追溯。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\checkpoints\\sim_pretrained_paper_contract\\seed_20260802\\summary.json",
+    "destination": "models/sim_pretrained_paper_contract/seed_20260802/summary.json",
+    "source_sha256": "5510cde31d87a734cdfd38f4829a68bffa3cb70bda391d307a2cbc2094b50336",
+    "packaged_sha256": "5510cde31d87a734cdfd38f4829a68bffa3cb70bda391d307a2cbc2094b50336",
+    "bytes": 2200,
+    "category": "11 数据/证据",
+    "what": "冻结AEMTN模型或训练记录",
+    "purpose": "供后续推理封装、模型核验和训练谱系追溯。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829\\B4_T176_HYBRID_FINAL.md",
+    "destination": "evidence/B4_T176_HYBRID_FINAL_20260829/B4_T176_HYBRID_FINAL.md",
+    "source_sha256": "0664b3e79a604038f1b5347ecc2d0c611d8852dbad353d3d2727b86b8bda3a3f",
+    "packaged_sha256": "0664b3e79a604038f1b5347ecc2d0c611d8852dbad353d3d2727b86b8bda3a3f",
+    "bytes": 1404,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829\\B4_T176_HYBRID_FINAL_VALIDATION.md",
+    "destination": "evidence/B4_T176_HYBRID_FINAL_20260829/B4_T176_HYBRID_FINAL_VALIDATION.md",
+    "source_sha256": "06e19d3ad9ec5988c65a9923906b4048ab5103bcd14c7f9dac71ae7b6c7f8c67",
+    "packaged_sha256": "06e19d3ad9ec5988c65a9923906b4048ab5103bcd14c7f9dac71ae7b6c7f8c67",
+    "bytes": 4286,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829\\hardware_session0_cycle_endpoints.csv",
+    "destination": "evidence/B4_T176_HYBRID_FINAL_20260829/hardware_session0_cycle_endpoints.csv",
+    "source_sha256": "95103616c8e46efdcce0e9bec53ae1a628c73e8f062d610d21df75b89b5ae722",
+    "packaged_sha256": "95103616c8e46efdcce0e9bec53ae1a628c73e8f062d610d21df75b89b5ae722",
+    "bytes": 3991,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829\\hybrid_final_report.json",
+    "destination": "evidence/B4_T176_HYBRID_FINAL_20260829/hybrid_final_report.json",
+    "source_sha256": "de2c4a6d255f1018363ae28b1c9779e29af4f1f6a7088845ba80c30b2d307791",
+    "packaged_sha256": "de2c4a6d255f1018363ae28b1c9779e29af4f1f6a7088845ba80c30b2d307791",
+    "bytes": 22381,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829\\hybrid_manifest.json",
+    "destination": "evidence/B4_T176_HYBRID_FINAL_20260829/hybrid_manifest.json",
+    "source_sha256": "da9738d051402535ebfd10f4a5fc227945f711fd129163732432317a8f270910",
+    "packaged_sha256": "da9738d051402535ebfd10f4a5fc227945f711fd129163732432317a8f270910",
+    "bytes": 1961,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829\\hybrid_pair_rows.csv",
+    "destination": "evidence/B4_T176_HYBRID_FINAL_20260829/hybrid_pair_rows.csv",
+    "source_sha256": "f618e72940fc5db2cbc8fb1946b6cc48cc9c21add4500ad70214ae7fa054e5c9",
+    "packaged_sha256": "f618e72940fc5db2cbc8fb1946b6cc48cc9c21add4500ad70214ae7fa054e5c9",
+    "bytes": 7674,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829\\reproducibility_verification.json",
+    "destination": "evidence/B4_T176_HYBRID_FINAL_20260829/reproducibility_verification.json",
+    "source_sha256": "91ac80b10ad2dd4750df3f2cb5e1ee0ab5f1d52624d4daf6df4c42891e3d3c67",
+    "packaged_sha256": "91ac80b10ad2dd4750df3f2cb5e1ee0ab5f1d52624d4daf6df4c42891e3d3c67",
+    "bytes": 614,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829\\B4_T176_SESSION1_SIMULATION_CONTINGENCY.md",
+    "destination": "evidence/B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829/B4_T176_SESSION1_SIMULATION_CONTINGENCY.md",
+    "source_sha256": "93d3f126f9a735173f1d6df90663a12b9433f0227f4d1dd3b0717738a2c80c51",
+    "packaged_sha256": "93d3f126f9a735173f1d6df90663a12b9433f0227f4d1dd3b0717738a2c80c51",
+    "bytes": 1562,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829\\session1_simulated_mirror_qc.jsonl",
+    "destination": "evidence/B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829/session1_simulated_mirror_qc.jsonl",
+    "source_sha256": "268ba8adde4ccc8682773ba1a61051243992441b14e74fc7397738ff4b145527",
+    "packaged_sha256": "268ba8adde4ccc8682773ba1a61051243992441b14e74fc7397738ff4b145527",
+    "bytes": 2236,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829\\session1_simulated_pair_rows.csv",
+    "destination": "evidence/B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829/session1_simulated_pair_rows.csv",
+    "source_sha256": "1ff1e29bdf9174f2b5656734cd442b432a4e7a4deebf1e5e36b6c51b40c9d99e",
+    "packaged_sha256": "1ff1e29bdf9174f2b5656734cd442b432a4e7a4deebf1e5e36b6c51b40c9d99e",
+    "bytes": 3314,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829\\session1_simulated_snapshots.jsonl",
+    "destination": "evidence/B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829/session1_simulated_snapshots.jsonl",
+    "source_sha256": "ade5736079c315aa2ed0b22ab99490e9ff554c2f6cb4665ca4590e6ad6cd7c37",
+    "packaged_sha256": "ade5736079c315aa2ed0b22ab99490e9ff554c2f6cb4665ca4590e6ad6cd7c37",
+    "bytes": 129923,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829\\session1_simulation_report.json",
+    "destination": "evidence/B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829/session1_simulation_report.json",
+    "source_sha256": "80ec17e4166e14b71a79e6a7c895c3a9efaf8038ec7fef5866fcfbfbd47b4311",
+    "packaged_sha256": "80ec17e4166e14b71a79e6a7c895c3a9efaf8038ec7fef5866fcfbfbd47b4311",
+    "bytes": 6858,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829\\simulation_manifest.json",
+    "destination": "evidence/B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829/simulation_manifest.json",
+    "source_sha256": "617945144840ee5e518156b7a7ec7d94a1cc46d5322215469181ce923c2dd94c",
+    "packaged_sha256": "617945144840ee5e518156b7a7ec7d94a1cc46d5322215469181ce923c2dd94c",
+    "bytes": 3415,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829.plan.json",
+    "destination": "evidence/plans_and_manifests/B4_T176_HYBRID_FINAL_20260829.plan.json",
+    "source_sha256": "fb1f2627c18c5156541e2a1fcf18c6823f07799b6572bf79bd5b07d7a6cb718d",
+    "packaged_sha256": "fb1f2627c18c5156541e2a1fcf18c6823f07799b6572bf79bd5b07d7a6cb718d",
+    "bytes": 8529,
+    "category": "11 数据/证据",
+    "what": "冻结计划或manifest",
+    "purpose": "追溯预注册、模拟应急、失败v1与修正v2分析谱系。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829_v2.plan.json",
+    "destination": "evidence/plans_and_manifests/B4_T176_HYBRID_FINAL_20260829_v2.plan.json",
+    "source_sha256": "f2f8aeb38ec2e01561691daac4a2a5f3d0aacbda9733b8d33b94b75f2fa89c7c",
+    "packaged_sha256": "f2f8aeb38ec2e01561691daac4a2a5f3d0aacbda9733b8d33b94b75f2fa89c7c",
+    "bytes": 9641,
+    "category": "11 数据/证据",
+    "what": "冻结计划或manifest",
+    "purpose": "追溯预注册、模拟应急、失败v1与修正v2分析谱系。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829.plan.json",
+    "destination": "evidence/plans_and_manifests/B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829.plan.json",
+    "source_sha256": "59f3eba344574346ffe42630a993f9c6931ccbeb35dd253df4de81434bdd0181",
+    "packaged_sha256": "59f3eba344574346ffe42630a993f9c6931ccbeb35dd253df4de81434bdd0181",
+    "bytes": 4385,
+    "category": "11 数据/证据",
+    "what": "冻结计划或manifest",
+    "purpose": "追溯预注册、模拟应急、失败v1与修正v2分析谱系。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\quarantine\\tianyan176\\B4_CADENCE_PAIR_V4_T176_REGISTERED_20260823\\campaign_manifest.json",
+    "destination": "evidence/plans_and_manifests/campaign_manifest.json",
+    "source_sha256": "8f70afc806f311ebbfb3ddddf85c1a726791066bbf77753858866e17ba120641",
+    "packaged_sha256": "8f70afc806f311ebbfb3ddddf85c1a726791066bbf77753858866e17ba120641",
+    "bytes": 3227,
+    "category": "11 数据/证据",
+    "what": "冻结计划或manifest",
+    "purpose": "追溯预注册、模拟应急、失败v1与修正v2分析谱系。"
+  },
+  {
+    "source": "E:\\TianYan\\XA-202609\\quarantine\\tianyan176\\B4_CADENCE_PAIR_V4_T176_REGISTERED_20260823\\supplement_plan.json",
+    "destination": "evidence/plans_and_manifests/supplement_plan.json",
+    "source_sha256": "e604277f9ddd6daaef354e213354e4715efcafc952c09e2c8345373b6bdda231",
+    "packaged_sha256": "e604277f9ddd6daaef354e213354e4715efcafc952c09e2c8345373b6bdda231",
+    "bytes": 215871,
+    "category": "11 数据/证据",
+    "what": "冻结计划或manifest",
+    "purpose": "追溯预注册、模拟应急、失败v1与修正v2分析谱系。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\01_t287_readout_state_heatmap.collision.json",
+    "destination": "figures/single_figures_v2_diverse_20260831/01_t287_readout_state_heatmap.collision.json",
+    "source_sha256": "d1aa1499b9cdabda4b2869ca65bee75d6315b77332af8d45922b0737c93978e2",
+    "packaged_sha256": "d1aa1499b9cdabda4b2869ca65bee75d6315b77332af8d45922b0737c93978e2",
+    "bytes": 619,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\01_t287_readout_state_heatmap.pdf",
+    "destination": "figures/single_figures_v2_diverse_20260831/01_t287_readout_state_heatmap.pdf",
+    "source_sha256": "816089458621c508e00393e3ecab197a2e05b05f1f6928e39991484801bd0040",
+    "packaged_sha256": "816089458621c508e00393e3ecab197a2e05b05f1f6928e39991484801bd0040",
+    "bytes": 70442,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\01_t287_readout_state_heatmap.png",
+    "destination": "figures/single_figures_v2_diverse_20260831/01_t287_readout_state_heatmap.png",
+    "source_sha256": "0ccd59ba2d5ad5d15d8782aefdd08a20438da67e3cf76e50620124877a8b31ea",
+    "packaged_sha256": "0ccd59ba2d5ad5d15d8782aefdd08a20438da67e3cf76e50620124877a8b31ea",
+    "bytes": 240261,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\01_t287_readout_state_heatmap.source.csv",
+    "destination": "figures/single_figures_v2_diverse_20260831/01_t287_readout_state_heatmap.source.csv",
+    "source_sha256": "fc55fef4d237c0a96ae884616638f3e5f395ea451cdb99cd807174d410aa916c",
+    "packaged_sha256": "fc55fef4d237c0a96ae884616638f3e5f395ea451cdb99cd807174d410aa916c",
+    "bytes": 12037,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\01_t287_readout_state_heatmap.svg",
+    "destination": "figures/single_figures_v2_diverse_20260831/01_t287_readout_state_heatmap.svg",
+    "source_sha256": "a00ab58bd1aa4777f140df6b702d131ed8877ae5083bb6820bf41526108ca632",
+    "packaged_sha256": "a00ab58bd1aa4777f140df6b702d131ed8877ae5083bb6820bf41526108ca632",
+    "bytes": 36142,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\01_t287_readout_state_heatmap.tiff",
+    "destination": "figures/single_figures_v2_diverse_20260831/01_t287_readout_state_heatmap.tiff",
+    "source_sha256": "47dddff09355b3215f8e8809d015192514df55b9c793955cdc43ee883b0bc57b",
+    "packaged_sha256": "47dddff09355b3215f8e8809d015192514df55b9c793955cdc43ee883b0bc57b",
+    "bytes": 2358608,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\02_t287_effective_field_phase_space.collision.json",
+    "destination": "figures/single_figures_v2_diverse_20260831/02_t287_effective_field_phase_space.collision.json",
+    "source_sha256": "2332149f742f9bbbb87b78e00d0e3947a4ccc2a751f3323821719748bf135560",
+    "packaged_sha256": "2332149f742f9bbbb87b78e00d0e3947a4ccc2a751f3323821719748bf135560",
+    "bytes": 627,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\02_t287_effective_field_phase_space.pdf",
+    "destination": "figures/single_figures_v2_diverse_20260831/02_t287_effective_field_phase_space.pdf",
+    "source_sha256": "c427a155ac72328ffb45584ff7b41943cf55ce9ab30f604a974dda1c637b33fa",
+    "packaged_sha256": "c427a155ac72328ffb45584ff7b41943cf55ce9ab30f604a974dda1c637b33fa",
+    "bytes": 51742,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\02_t287_effective_field_phase_space.png",
+    "destination": "figures/single_figures_v2_diverse_20260831/02_t287_effective_field_phase_space.png",
+    "source_sha256": "4fd154419b0cf07ddaba857d2b01e061ddd1143ec09488c0ab31a10d1bfcf35c",
+    "packaged_sha256": "4fd154419b0cf07ddaba857d2b01e061ddd1143ec09488c0ab31a10d1bfcf35c",
+    "bytes": 405421,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\02_t287_effective_field_phase_space.source.csv",
+    "destination": "figures/single_figures_v2_diverse_20260831/02_t287_effective_field_phase_space.source.csv",
+    "source_sha256": "dbf74a41c5d473fffe98a23a089cc3626a30804770f8cdbf75f7cd98b20230e4",
+    "packaged_sha256": "dbf74a41c5d473fffe98a23a089cc3626a30804770f8cdbf75f7cd98b20230e4",
+    "bytes": 11331,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\02_t287_effective_field_phase_space.svg",
+    "destination": "figures/single_figures_v2_diverse_20260831/02_t287_effective_field_phase_space.svg",
+    "source_sha256": "f80a71b2ab00c24812765a37153b2a6411eeb8d19c0ce73748ea98e856bd778d",
+    "packaged_sha256": "f80a71b2ab00c24812765a37153b2a6411eeb8d19c0ce73748ea98e856bd778d",
+    "bytes": 71333,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\02_t287_effective_field_phase_space.tiff",
+    "destination": "figures/single_figures_v2_diverse_20260831/02_t287_effective_field_phase_space.tiff",
+    "source_sha256": "4983972a57ae44501916811e66fa3e1d98ade3ab4fbaf4d71079d440eb3da04b",
+    "packaged_sha256": "4983972a57ae44501916811e66fa3e1d98ade3ab4fbaf4d71079d440eb3da04b",
+    "bytes": 1097930,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\03_t287_e0_negative_control_forest.collision.json",
+    "destination": "figures/single_figures_v2_diverse_20260831/03_t287_e0_negative_control_forest.collision.json",
+    "source_sha256": "89eba9590106a6fa34fddf64af0114022c79407c287ea4fbc09d5c67f069f599",
+    "packaged_sha256": "89eba9590106a6fa34fddf64af0114022c79407c287ea4fbc09d5c67f069f599",
+    "bytes": 625,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\03_t287_e0_negative_control_forest.pdf",
+    "destination": "figures/single_figures_v2_diverse_20260831/03_t287_e0_negative_control_forest.pdf",
+    "source_sha256": "a4865766b45524a56d42a12c1ac485a21f615fa797686ef05b2fc08a3a740e49",
+    "packaged_sha256": "a4865766b45524a56d42a12c1ac485a21f615fa797686ef05b2fc08a3a740e49",
+    "bytes": 46852,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\03_t287_e0_negative_control_forest.png",
+    "destination": "figures/single_figures_v2_diverse_20260831/03_t287_e0_negative_control_forest.png",
+    "source_sha256": "759436850763667cf8d5c5b6642521740893c11cb6966f0b4c178940740590e2",
+    "packaged_sha256": "759436850763667cf8d5c5b6642521740893c11cb6966f0b4c178940740590e2",
+    "bytes": 334968,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\03_t287_e0_negative_control_forest.source.csv",
+    "destination": "figures/single_figures_v2_diverse_20260831/03_t287_e0_negative_control_forest.source.csv",
+    "source_sha256": "7ac211921a0d10f79eb5310debeee51869238f53bc27e4f77d112bfed1357ef3",
+    "packaged_sha256": "7ac211921a0d10f79eb5310debeee51869238f53bc27e4f77d112bfed1357ef3",
+    "bytes": 3397,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\03_t287_e0_negative_control_forest.svg",
+    "destination": "figures/single_figures_v2_diverse_20260831/03_t287_e0_negative_control_forest.svg",
+    "source_sha256": "9d50cb18c1543acdae0b3f926d77aad9a0b69fa5f325bcac2b26874c1ac07d40",
+    "packaged_sha256": "9d50cb18c1543acdae0b3f926d77aad9a0b69fa5f325bcac2b26874c1ac07d40",
+    "bytes": 26953,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\03_t287_e0_negative_control_forest.tiff",
+    "destination": "figures/single_figures_v2_diverse_20260831/03_t287_e0_negative_control_forest.tiff",
+    "source_sha256": "a8738be03ad74079cff9dfab32250589e3f8a3e7ca0636fc09cf86d9887695e4",
+    "packaged_sha256": "a8738be03ad74079cff9dfab32250589e3f8a3e7ca0636fc09cf86d9887695e4",
+    "bytes": 1040666,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\04_t287_e1_drift_forest.collision.json",
+    "destination": "figures/single_figures_v2_diverse_20260831/04_t287_e1_drift_forest.collision.json",
+    "source_sha256": "908a9ed5faabfa3862c79f8d895006951c7535780f13286d3bb423d7dc12627d",
+    "packaged_sha256": "908a9ed5faabfa3862c79f8d895006951c7535780f13286d3bb423d7dc12627d",
+    "bytes": 614,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\04_t287_e1_drift_forest.pdf",
+    "destination": "figures/single_figures_v2_diverse_20260831/04_t287_e1_drift_forest.pdf",
+    "source_sha256": "5abcbc8f278a1e427a27c84ec90a14b376ada1d516270304218aead175f48791",
+    "packaged_sha256": "5abcbc8f278a1e427a27c84ec90a14b376ada1d516270304218aead175f48791",
+    "bytes": 44088,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\04_t287_e1_drift_forest.png",
+    "destination": "figures/single_figures_v2_diverse_20260831/04_t287_e1_drift_forest.png",
+    "source_sha256": "86316617e313be2907a8e08a429efb44a1f69b6c4a43fd8790888e2a6e129e13",
+    "packaged_sha256": "86316617e313be2907a8e08a429efb44a1f69b6c4a43fd8790888e2a6e129e13",
+    "bytes": 343077,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\04_t287_e1_drift_forest.source.csv",
+    "destination": "figures/single_figures_v2_diverse_20260831/04_t287_e1_drift_forest.source.csv",
+    "source_sha256": "a5a27241ae7861305698e161ea9087f2bf17d82e0b3dd1f410f495004c4644ac",
+    "packaged_sha256": "a5a27241ae7861305698e161ea9087f2bf17d82e0b3dd1f410f495004c4644ac",
+    "bytes": 3388,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\04_t287_e1_drift_forest.svg",
+    "destination": "figures/single_figures_v2_diverse_20260831/04_t287_e1_drift_forest.svg",
+    "source_sha256": "83d514c343967a3e4deb579887f088b80562c8da4c77e86eea65b79751cd345c",
+    "packaged_sha256": "83d514c343967a3e4deb579887f088b80562c8da4c77e86eea65b79751cd345c",
+    "bytes": 30200,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\04_t287_e1_drift_forest.tiff",
+    "destination": "figures/single_figures_v2_diverse_20260831/04_t287_e1_drift_forest.tiff",
+    "source_sha256": "c719ac1d66101208a2a1dbae92ed3e782dce9f2a045cc3acd0fe0354759babc8",
+    "packaged_sha256": "c719ac1d66101208a2a1dbae92ed3e782dce9f2a045cc3acd0fe0354759babc8",
+    "bytes": 1075524,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\05_t287_e1_interval_residual_heatmap.collision.json",
+    "destination": "figures/single_figures_v2_diverse_20260831/05_t287_e1_interval_residual_heatmap.collision.json",
+    "source_sha256": "aacd57c9013c98cc7bc0509d275056436bf76961cd06b76c41654b98ddc0c655",
+    "packaged_sha256": "aacd57c9013c98cc7bc0509d275056436bf76961cd06b76c41654b98ddc0c655",
+    "bytes": 628,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\05_t287_e1_interval_residual_heatmap.pdf",
+    "destination": "figures/single_figures_v2_diverse_20260831/05_t287_e1_interval_residual_heatmap.pdf",
+    "source_sha256": "1b0fd90f1dff58f2fa90151c8933c5e9049d05bdda8dac38f1e8113e0643e269",
+    "packaged_sha256": "1b0fd90f1dff58f2fa90151c8933c5e9049d05bdda8dac38f1e8113e0643e269",
+    "bytes": 79553,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\05_t287_e1_interval_residual_heatmap.png",
+    "destination": "figures/single_figures_v2_diverse_20260831/05_t287_e1_interval_residual_heatmap.png",
+    "source_sha256": "d7c5b2e65c8f856f9ac42c921a4d56dc6014ed91e7627f19b600d5ce2444be0e",
+    "packaged_sha256": "d7c5b2e65c8f856f9ac42c921a4d56dc6014ed91e7627f19b600d5ce2444be0e",
+    "bytes": 314793,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\05_t287_e1_interval_residual_heatmap.source.csv",
+    "destination": "figures/single_figures_v2_diverse_20260831/05_t287_e1_interval_residual_heatmap.source.csv",
+    "source_sha256": "3dd1ea74027942aff9a43f033130dbd45ff00a7f583ea0f0f95f3cccd0bc6367",
+    "packaged_sha256": "3dd1ea74027942aff9a43f033130dbd45ff00a7f583ea0f0f95f3cccd0bc6367",
+    "bytes": 105202,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\05_t287_e1_interval_residual_heatmap.summary.csv",
+    "destination": "figures/single_figures_v2_diverse_20260831/05_t287_e1_interval_residual_heatmap.summary.csv",
+    "source_sha256": "457bd80fc43392a5186ea658061b2f0330cd440ae781f7e4b77ae9805294dd01",
+    "packaged_sha256": "457bd80fc43392a5186ea658061b2f0330cd440ae781f7e4b77ae9805294dd01",
+    "bytes": 207,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\05_t287_e1_interval_residual_heatmap.svg",
+    "destination": "figures/single_figures_v2_diverse_20260831/05_t287_e1_interval_residual_heatmap.svg",
+    "source_sha256": "8d6284d0139ec96fa0b9570da0ece320f8c2c771ab9aa47dfd3e29c421c07270",
+    "packaged_sha256": "8d6284d0139ec96fa0b9570da0ece320f8c2c771ab9aa47dfd3e29c421c07270",
+    "bytes": 237852,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\05_t287_e1_interval_residual_heatmap.tiff",
+    "destination": "figures/single_figures_v2_diverse_20260831/05_t287_e1_interval_residual_heatmap.tiff",
+    "source_sha256": "23b709d4800dd420a6d73d23d32edc66cf576665294841471217dc1c745ece86",
+    "packaged_sha256": "23b709d4800dd420a6d73d23d32edc66cf576665294841471217dc1c745ece86",
+    "bytes": 5118004,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\06_t287_control_floor_interval_strip.collision.json",
+    "destination": "figures/single_figures_v2_diverse_20260831/06_t287_control_floor_interval_strip.collision.json",
+    "source_sha256": "11dd3e4649d9d7263a9876905712ea1839e38b90a934ceff3a8f4ba2bec3414d",
+    "packaged_sha256": "11dd3e4649d9d7263a9876905712ea1839e38b90a934ceff3a8f4ba2bec3414d",
+    "bytes": 626,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\06_t287_control_floor_interval_strip.collision_overlay.pdf",
+    "destination": "figures/single_figures_v2_diverse_20260831/06_t287_control_floor_interval_strip.collision_overlay.pdf",
+    "source_sha256": "424b75c7bd7b23328f7c5d4027ee09fdf2151efc132765a2ff958c90c92131f9",
+    "packaged_sha256": "424b75c7bd7b23328f7c5d4027ee09fdf2151efc132765a2ff958c90c92131f9",
+    "bytes": 40325,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\06_t287_control_floor_interval_strip.pdf",
+    "destination": "figures/single_figures_v2_diverse_20260831/06_t287_control_floor_interval_strip.pdf",
+    "source_sha256": "3fbc755fff5c41ed8ed907b875f256c5c0837dcdd7b4531146ea9d1e6717c9e6",
+    "packaged_sha256": "3fbc755fff5c41ed8ed907b875f256c5c0837dcdd7b4531146ea9d1e6717c9e6",
+    "bytes": 40303,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\06_t287_control_floor_interval_strip.png",
+    "destination": "figures/single_figures_v2_diverse_20260831/06_t287_control_floor_interval_strip.png",
+    "source_sha256": "24862377db8b038e3152bb4451949890655036789b0eb00758d4fc2603625d13",
+    "packaged_sha256": "24862377db8b038e3152bb4451949890655036789b0eb00758d4fc2603625d13",
+    "bytes": 239352,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\06_t287_control_floor_interval_strip.source.csv",
+    "destination": "figures/single_figures_v2_diverse_20260831/06_t287_control_floor_interval_strip.source.csv",
+    "source_sha256": "531f6a975a93d0809ed329dab4c373f34d5c820ebf4bc3b7895a2ee74200b521",
+    "packaged_sha256": "531f6a975a93d0809ed329dab4c373f34d5c820ebf4bc3b7895a2ee74200b521",
+    "bytes": 358,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\06_t287_control_floor_interval_strip.svg",
+    "destination": "figures/single_figures_v2_diverse_20260831/06_t287_control_floor_interval_strip.svg",
+    "source_sha256": "2f7e88b70d36126ef948cd0d75a0a1a7991b7abb22378000cd832ea8a78932f8",
+    "packaged_sha256": "2f7e88b70d36126ef948cd0d75a0a1a7991b7abb22378000cd832ea8a78932f8",
+    "bytes": 22045,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\06_t287_control_floor_interval_strip.tiff",
+    "destination": "figures/single_figures_v2_diverse_20260831/06_t287_control_floor_interval_strip.tiff",
+    "source_sha256": "fac0f60e24b3b51b0935aa88035cadc45073c811245161f0026139add9f6fabe",
+    "packaged_sha256": "fac0f60e24b3b51b0935aa88035cadc45073c811245161f0026139add9f6fabe",
+    "bytes": 827752,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\07_t176_hardware_paired_scatter.collision.json",
+    "destination": "figures/single_figures_v2_diverse_20260831/07_t176_hardware_paired_scatter.collision.json",
+    "source_sha256": "17f263b87304690fe0fff438ef08128f1ca49c80e3efc3d4abb58a2b73b535cb",
+    "packaged_sha256": "17f263b87304690fe0fff438ef08128f1ca49c80e3efc3d4abb58a2b73b535cb",
+    "bytes": 622,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\07_t176_hardware_paired_scatter.pdf",
+    "destination": "figures/single_figures_v2_diverse_20260831/07_t176_hardware_paired_scatter.pdf",
+    "source_sha256": "33388c4baebe030bfea6b5434e26b2bcb1cdec12a8153e0d6be3d5b46447d6c2",
+    "packaged_sha256": "33388c4baebe030bfea6b5434e26b2bcb1cdec12a8153e0d6be3d5b46447d6c2",
+    "bytes": 39241,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\07_t176_hardware_paired_scatter.png",
+    "destination": "figures/single_figures_v2_diverse_20260831/07_t176_hardware_paired_scatter.png",
+    "source_sha256": "8cce566fe092cd0c3cf2d354738cad3af5354c158e2a6293ab3a7c07de59439e",
+    "packaged_sha256": "8cce566fe092cd0c3cf2d354738cad3af5354c158e2a6293ab3a7c07de59439e",
+    "bytes": 320734,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\07_t176_hardware_paired_scatter.source.csv",
+    "destination": "figures/single_figures_v2_diverse_20260831/07_t176_hardware_paired_scatter.source.csv",
+    "source_sha256": "8b173e29b2e47518462bef32d22c00ca124307f7584cef49f878380058a1aca0",
+    "packaged_sha256": "8b173e29b2e47518462bef32d22c00ca124307f7584cef49f878380058a1aca0",
+    "bytes": 3905,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\07_t176_hardware_paired_scatter.svg",
+    "destination": "figures/single_figures_v2_diverse_20260831/07_t176_hardware_paired_scatter.svg",
+    "source_sha256": "8b521725708b88e05c693a51d6bf1dd2a14ec97df003aa702aea2afc5a8b145c",
+    "packaged_sha256": "8b521725708b88e05c693a51d6bf1dd2a14ec97df003aa702aea2afc5a8b145c",
+    "bytes": 29835,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\07_t176_hardware_paired_scatter.tiff",
+    "destination": "figures/single_figures_v2_diverse_20260831/07_t176_hardware_paired_scatter.tiff",
+    "source_sha256": "7d21a198db864d52f33fe78219329cd7e34c0e2ad222f2b5075e58e4d8dde52e",
+    "packaged_sha256": "7d21a198db864d52f33fe78219329cd7e34c0e2ad222f2b5075e58e4d8dde52e",
+    "bytes": 723716,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\08_t176_pair_benefit_lollipop.collision.json",
+    "destination": "figures/single_figures_v2_diverse_20260831/08_t176_pair_benefit_lollipop.collision.json",
+    "source_sha256": "83863ff8ac8988ec06973a3971cd387248f995938f5cee68423ceed9b8ab96be",
+    "packaged_sha256": "83863ff8ac8988ec06973a3971cd387248f995938f5cee68423ceed9b8ab96be",
+    "bytes": 619,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\08_t176_pair_benefit_lollipop.pdf",
+    "destination": "figures/single_figures_v2_diverse_20260831/08_t176_pair_benefit_lollipop.pdf",
+    "source_sha256": "310bc3dcc13d4633ba9c9d3fd9ec96dca337a5d82ae3495ad8404026b327f3e6",
+    "packaged_sha256": "310bc3dcc13d4633ba9c9d3fd9ec96dca337a5d82ae3495ad8404026b327f3e6",
+    "bytes": 47185,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\08_t176_pair_benefit_lollipop.png",
+    "destination": "figures/single_figures_v2_diverse_20260831/08_t176_pair_benefit_lollipop.png",
+    "source_sha256": "e744d84a4efa30f4aaac505422b01af294a033e6634935e11008fcc2cdf66ec3",
+    "packaged_sha256": "e744d84a4efa30f4aaac505422b01af294a033e6634935e11008fcc2cdf66ec3",
+    "bytes": 380173,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\08_t176_pair_benefit_lollipop.source.csv",
+    "destination": "figures/single_figures_v2_diverse_20260831/08_t176_pair_benefit_lollipop.source.csv",
+    "source_sha256": "67bf5aa997efa708e7d2f3adad7d5d813e9e811d1636a0dfb7b7c765847fca46",
+    "packaged_sha256": "67bf5aa997efa708e7d2f3adad7d5d813e9e811d1636a0dfb7b7c765847fca46",
+    "bytes": 3670,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\08_t176_pair_benefit_lollipop.svg",
+    "destination": "figures/single_figures_v2_diverse_20260831/08_t176_pair_benefit_lollipop.svg",
+    "source_sha256": "ca3a4286087f63a6ba4cca1fef43ec5bc840de2222398724c93e89c52ec429aa",
+    "packaged_sha256": "ca3a4286087f63a6ba4cca1fef43ec5bc840de2222398724c93e89c52ec429aa",
+    "bytes": 27652,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\08_t176_pair_benefit_lollipop.tiff",
+    "destination": "figures/single_figures_v2_diverse_20260831/08_t176_pair_benefit_lollipop.tiff",
+    "source_sha256": "1606231a1ba0a57cf3c3cfac8420e3d2394b58b20253a8c44d9a36d5858f6c52",
+    "packaged_sha256": "1606231a1ba0a57cf3c3cfac8420e3d2394b58b20253a8c44d9a36d5858f6c52",
+    "bytes": 903542,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\09_t176_cumulative_ratio_step.collision.json",
+    "destination": "figures/single_figures_v2_diverse_20260831/09_t176_cumulative_ratio_step.collision.json",
+    "source_sha256": "34df9b3b7c30e3b3dfff81683abdbac6faa5d829ea78a305b3254558130a4b05",
+    "packaged_sha256": "34df9b3b7c30e3b3dfff81683abdbac6faa5d829ea78a305b3254558130a4b05",
+    "bytes": 619,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\09_t176_cumulative_ratio_step.pdf",
+    "destination": "figures/single_figures_v2_diverse_20260831/09_t176_cumulative_ratio_step.pdf",
+    "source_sha256": "2f3827c5a5b8b35309cbaf82ea41af4a7cda9f9f92067d6e3afdd2f57b50c97d",
+    "packaged_sha256": "2f3827c5a5b8b35309cbaf82ea41af4a7cda9f9f92067d6e3afdd2f57b50c97d",
+    "bytes": 50443,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\09_t176_cumulative_ratio_step.png",
+    "destination": "figures/single_figures_v2_diverse_20260831/09_t176_cumulative_ratio_step.png",
+    "source_sha256": "3e487f1b8753980f2aa8e1989f6ce24acd3863961349a37b8ec64174b4e80025",
+    "packaged_sha256": "3e487f1b8753980f2aa8e1989f6ce24acd3863961349a37b8ec64174b4e80025",
+    "bytes": 345744,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\09_t176_cumulative_ratio_step.source.csv",
+    "destination": "figures/single_figures_v2_diverse_20260831/09_t176_cumulative_ratio_step.source.csv",
+    "source_sha256": "673ca11b9f7e8793fcd616a87adedf563dd3ab2cda96208adce28daccc8d3129",
+    "packaged_sha256": "673ca11b9f7e8793fcd616a87adedf563dd3ab2cda96208adce28daccc8d3129",
+    "bytes": 3350,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\09_t176_cumulative_ratio_step.svg",
+    "destination": "figures/single_figures_v2_diverse_20260831/09_t176_cumulative_ratio_step.svg",
+    "source_sha256": "f8cae60c7dc9a34be14cafe23b7a6b829a7f2b0944ddac7d95dba60c2a477113",
+    "packaged_sha256": "f8cae60c7dc9a34be14cafe23b7a6b829a7f2b0944ddac7d95dba60c2a477113",
+    "bytes": 19935,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\09_t176_cumulative_ratio_step.tiff",
+    "destination": "figures/single_figures_v2_diverse_20260831/09_t176_cumulative_ratio_step.tiff",
+    "source_sha256": "a381754e8d72b57b40d3ffd11169cd7dbb86cf0be011f0657f0c4457776966d6",
+    "packaged_sha256": "a381754e8d72b57b40d3ffd11169cd7dbb86cf0be011f0657f0c4457776966d6",
+    "bytes": 794782,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\10_t176_permutation_histogram.collision.json",
+    "destination": "figures/single_figures_v2_diverse_20260831/10_t176_permutation_histogram.collision.json",
+    "source_sha256": "f4d7144994dfb445dd57fffce945ec25a0b3893a87558adf3bf9ecfe7d998e32",
+    "packaged_sha256": "f4d7144994dfb445dd57fffce945ec25a0b3893a87558adf3bf9ecfe7d998e32",
+    "bytes": 619,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\10_t176_permutation_histogram.pdf",
+    "destination": "figures/single_figures_v2_diverse_20260831/10_t176_permutation_histogram.pdf",
+    "source_sha256": "5fbe281e3117bcb3649fe601487dac7138d39158471599058ea796b3a79181a0",
+    "packaged_sha256": "5fbe281e3117bcb3649fe601487dac7138d39158471599058ea796b3a79181a0",
+    "bytes": 40101,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\10_t176_permutation_histogram.png",
+    "destination": "figures/single_figures_v2_diverse_20260831/10_t176_permutation_histogram.png",
+    "source_sha256": "2c72109fdf479dd3aaa1f1a36f5768f9370676396d490214038620570f75c1f4",
+    "packaged_sha256": "2c72109fdf479dd3aaa1f1a36f5768f9370676396d490214038620570f75c1f4",
+    "bytes": 274240,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\10_t176_permutation_histogram.source.csv",
+    "destination": "figures/single_figures_v2_diverse_20260831/10_t176_permutation_histogram.source.csv",
+    "source_sha256": "c4ff7efff7e62848f4e290d971735074f9665e0348e32388f38f0b19b6c8e281",
+    "packaged_sha256": "c4ff7efff7e62848f4e290d971735074f9665e0348e32388f38f0b19b6c8e281",
+    "bytes": 865509,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\10_t176_permutation_histogram.summary.csv",
+    "destination": "figures/single_figures_v2_diverse_20260831/10_t176_permutation_histogram.summary.csv",
+    "source_sha256": "f09402d4447af90cebf72a8ebaba464327457be371f6ff91d86d94b01ed1d21d",
+    "packaged_sha256": "f09402d4447af90cebf72a8ebaba464327457be371f6ff91d86d94b01ed1d21d",
+    "bytes": 153,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\10_t176_permutation_histogram.svg",
+    "destination": "figures/single_figures_v2_diverse_20260831/10_t176_permutation_histogram.svg",
+    "source_sha256": "c55701bfdc5c8b03dab8b5240888093cf7ba632f3023bcc7c19547ea9d2c89cc",
+    "packaged_sha256": "c55701bfdc5c8b03dab8b5240888093cf7ba632f3023bcc7c19547ea9d2c89cc",
+    "bytes": 30397,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\10_t176_permutation_histogram.tiff",
+    "destination": "figures/single_figures_v2_diverse_20260831/10_t176_permutation_histogram.tiff",
+    "source_sha256": "47e5f474309075d334d9542733c33057fd856479b8c1cc583993ecf6588fd267",
+    "packaged_sha256": "47e5f474309075d334d9542733c33057fd856479b8c1cc583993ecf6588fd267",
+    "bytes": 890546,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\11_baseline_sensitivity_dumbbell.collision.json",
+    "destination": "figures/single_figures_v2_diverse_20260831/11_baseline_sensitivity_dumbbell.collision.json",
+    "source_sha256": "e053fab21d2cc472f5f2121a985b85242a2d72fc60e5dc3630f897552c16e3fc",
+    "packaged_sha256": "e053fab21d2cc472f5f2121a985b85242a2d72fc60e5dc3630f897552c16e3fc",
+    "bytes": 622,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\11_baseline_sensitivity_dumbbell.collision_overlay.pdf",
+    "destination": "figures/single_figures_v2_diverse_20260831/11_baseline_sensitivity_dumbbell.collision_overlay.pdf",
+    "source_sha256": "ecb7e64d36f277f4d34d0847de026222b0be631b19f5427e0b11e5b8b66a4cb8",
+    "packaged_sha256": "ecb7e64d36f277f4d34d0847de026222b0be631b19f5427e0b11e5b8b66a4cb8",
+    "bytes": 46243,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\11_baseline_sensitivity_dumbbell.pdf",
+    "destination": "figures/single_figures_v2_diverse_20260831/11_baseline_sensitivity_dumbbell.pdf",
+    "source_sha256": "8cbad3d721c38dfe08574fc1d520ecb28a7050ab131d9c807030a2af7014427b",
+    "packaged_sha256": "8cbad3d721c38dfe08574fc1d520ecb28a7050ab131d9c807030a2af7014427b",
+    "bytes": 45433,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\11_baseline_sensitivity_dumbbell.png",
+    "destination": "figures/single_figures_v2_diverse_20260831/11_baseline_sensitivity_dumbbell.png",
+    "source_sha256": "817532c336dc37138f38f349e3a8baf3d9fb29bcc5dba1060419e6e6acf427ee",
+    "packaged_sha256": "817532c336dc37138f38f349e3a8baf3d9fb29bcc5dba1060419e6e6acf427ee",
+    "bytes": 315506,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\11_baseline_sensitivity_dumbbell.source.csv",
+    "destination": "figures/single_figures_v2_diverse_20260831/11_baseline_sensitivity_dumbbell.source.csv",
+    "source_sha256": "42bfcca9a18f28303702b503fd34ec0e2f77a5f10a749524ba3d93c39cba4c8a",
+    "packaged_sha256": "42bfcca9a18f28303702b503fd34ec0e2f77a5f10a749524ba3d93c39cba4c8a",
+    "bytes": 754,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\11_baseline_sensitivity_dumbbell.svg",
+    "destination": "figures/single_figures_v2_diverse_20260831/11_baseline_sensitivity_dumbbell.svg",
+    "source_sha256": "781030a2a7c7ba2e9db2ef90390ff734b815599294608af070733ce0962fcbb1",
+    "packaged_sha256": "781030a2a7c7ba2e9db2ef90390ff734b815599294608af070733ce0962fcbb1",
+    "bytes": 15313,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\11_baseline_sensitivity_dumbbell.tiff",
+    "destination": "figures/single_figures_v2_diverse_20260831/11_baseline_sensitivity_dumbbell.tiff",
+    "source_sha256": "3d72cb6b66da63098af2213a8dd68e0ebb5a643e47ed755a6e52ac63c5e4cd4e",
+    "packaged_sha256": "3d72cb6b66da63098af2213a8dd68e0ebb5a643e47ed755a6e52ac63c5e4cd4e",
+    "bytes": 620166,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\12_t176_hardware_workload_flow.collision.json",
+    "destination": "figures/single_figures_v2_diverse_20260831/12_t176_hardware_workload_flow.collision.json",
+    "source_sha256": "6df5cf9e48cafaed5f441fb8b1ad2e563448d9cb7add27b8e7e2a1b95f4d233a",
+    "packaged_sha256": "6df5cf9e48cafaed5f441fb8b1ad2e563448d9cb7add27b8e7e2a1b95f4d233a",
+    "bytes": 621,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\12_t176_hardware_workload_flow.pdf",
+    "destination": "figures/single_figures_v2_diverse_20260831/12_t176_hardware_workload_flow.pdf",
+    "source_sha256": "bcc0a2bb39d2fd6a338425dd6620f004823e1201230aa2db60cd3f0fc755990e",
+    "packaged_sha256": "bcc0a2bb39d2fd6a338425dd6620f004823e1201230aa2db60cd3f0fc755990e",
+    "bytes": 47867,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\12_t176_hardware_workload_flow.png",
+    "destination": "figures/single_figures_v2_diverse_20260831/12_t176_hardware_workload_flow.png",
+    "source_sha256": "73aedc1e89923c61b877604c910d470276bcef70554bd9a8b6c7bf664ff3f513",
+    "packaged_sha256": "73aedc1e89923c61b877604c910d470276bcef70554bd9a8b6c7bf664ff3f513",
+    "bytes": 332140,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\12_t176_hardware_workload_flow.source.csv",
+    "destination": "figures/single_figures_v2_diverse_20260831/12_t176_hardware_workload_flow.source.csv",
+    "source_sha256": "f8c7916000a38814ef9031928485fb0f7532c5ff96c596b7416f451df183ca9b",
+    "packaged_sha256": "f8c7916000a38814ef9031928485fb0f7532c5ff96c596b7416f451df183ca9b",
+    "bytes": 158,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\12_t176_hardware_workload_flow.svg",
+    "destination": "figures/single_figures_v2_diverse_20260831/12_t176_hardware_workload_flow.svg",
+    "source_sha256": "8129609fda8ddf020824f7e3df21f6c85d5666162b468d9cc457d8fc14850baa",
+    "packaged_sha256": "8129609fda8ddf020824f7e3df21f6c85d5666162b468d9cc457d8fc14850baa",
+    "bytes": 9176,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\12_t176_hardware_workload_flow.tiff",
+    "destination": "figures/single_figures_v2_diverse_20260831/12_t176_hardware_workload_flow.tiff",
+    "source_sha256": "c191f973c4e3d210a8cd9e0daf64e99d026b29a4fdfab995b4b8473813e87fc4",
+    "packaged_sha256": "c191f973c4e3d210a8cd9e0daf64e99d026b29a4fdfab995b4b8473813e87fc4",
+    "bytes": 883596,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\make_b4_single_figures_v2.py",
+    "destination": "figures/single_figures_v2_diverse_20260831/make_b4_single_figures_v2.py",
+    "source_sha256": "bec318225b98955161b07168fe8a8a777e11bcf7436d822dc28473d3191f7e10",
+    "packaged_sha256": "bec318225b98955161b07168fe8a8a777e11bcf7436d822dc28473d3191f7e10",
+    "bytes": 35076,
+    "category": "12 包装与展示工具",
+    "what": "多样化主图v2生成器",
+    "purpose": "用热图、森林图、雨云/分布、区间图等多种图型重建最终12图。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\QA_REPORT.md",
+    "destination": "figures/single_figures_v2_diverse_20260831/QA_REPORT.md",
+    "source_sha256": "d541c73dfdb17f93d0d6fe5a2fbb82c9bd094de5b0ed0567576e6736bcf13fe4",
+    "packaged_sha256": "d541c73dfdb17f93d0d6fe5a2fbb82c9bd094de5b0ed0567576e6736bcf13fe4",
+    "bytes": 2199,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\README_v2_逐图数据索引.md",
+    "destination": "figures/single_figures_v2_diverse_20260831/README_v2_逐图数据索引.md",
+    "source_sha256": "dc04e65fe3e975623111743eeab3dd1181d7bc0a46bc3d452c931c8604dd5ec8",
+    "packaged_sha256": "dc04e65fe3e975623111743eeab3dd1181d7bc0a46bc3d452c931c8604dd5ec8",
+    "bytes": 2388,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_v2_diverse_20260831\\single_figure_v2_manifest.json",
+    "destination": "figures/single_figures_v2_diverse_20260831/single_figure_v2_manifest.json",
+    "source_sha256": "8146895b69d757d1028e860943b622c574a1f96a7b868c281dbb191734183ce6",
+    "packaged_sha256": "8146895b69d757d1028e860943b622c574a1f96a7b868c281dbb191734183ce6",
+    "bytes": 26490,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\01_t287_readout_proxy_timeseries.source.csv",
+    "destination": "figures/single_figures_main_20260831/01_t287_readout_proxy_timeseries.source.csv",
+    "source_sha256": "4ba07ea33af833139df4ed37daa6306808df184cc2e0de098337d46734221d9e",
+    "packaged_sha256": "4ba07ea33af833139df4ed37daa6306808df184cc2e0de098337d46734221d9e",
+    "bytes": 8679,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\02_t287_effective_field_state.source.csv",
+    "destination": "figures/single_figures_main_20260831/02_t287_effective_field_state.source.csv",
+    "source_sha256": "b9e1c6abd640123f5d579db6d73f3fd06942b422d8c0c4b58a3519593b354736",
+    "packaged_sha256": "b9e1c6abd640123f5d579db6d73f3fd06942b422d8c0c4b58a3519593b354736",
+    "bytes": 9536,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\03_t287_e0_negative_control_structure_function.source.csv",
+    "destination": "figures/single_figures_main_20260831/03_t287_e0_negative_control_structure_function.source.csv",
+    "source_sha256": "ccd72c34e744ef7efe2793de536e05307d01a47372b63d6ca20ec55f76e872ee",
+    "packaged_sha256": "ccd72c34e744ef7efe2793de536e05307d01a47372b63d6ca20ec55f76e872ee",
+    "bytes": 3394,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\04_t287_e1_drift_structure_function.source.csv",
+    "destination": "figures/single_figures_main_20260831/04_t287_e1_drift_structure_function.source.csv",
+    "source_sha256": "c0b917cb00e8b3f5c924bf82fe3e2fb8240eecab2255f38abf4668985d9db19e",
+    "packaged_sha256": "c0b917cb00e8b3f5c924bf82fe3e2fb8240eecab2255f38abf4668985d9db19e",
+    "bytes": 3385,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\05_t287_e1_interval_economics.source.csv",
+    "destination": "figures/single_figures_main_20260831/05_t287_e1_interval_economics.source.csv",
+    "source_sha256": "c84bb4b62a2a895b432357e8b9221360609e1e79fcd7590c6df6752e84e0675b",
+    "packaged_sha256": "c84bb4b62a2a895b432357e8b9221360609e1e79fcd7590c6df6752e84e0675b",
+    "bytes": 75600,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\05_t287_e1_interval_economics.summary.csv",
+    "destination": "figures/single_figures_main_20260831/05_t287_e1_interval_economics.summary.csv",
+    "source_sha256": "d7081a862479e964ad9d8352bdc02483f515430955c6e69e37fa51e6f8afb91a",
+    "packaged_sha256": "d7081a862479e964ad9d8352bdc02483f515430955c6e69e37fa51e6f8afb91a",
+    "bytes": 204,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\06_t287_tstar_vs_control_floor.source.csv",
+    "destination": "figures/single_figures_main_20260831/06_t287_tstar_vs_control_floor.source.csv",
+    "source_sha256": "c0dc621a3a52a4faa865f1f84f7904c27e8b1235c8d13b86a70f81835d10ee87",
+    "packaged_sha256": "c0dc621a3a52a4faa865f1f84f7904c27e8b1235c8d13b86a70f81835d10ee87",
+    "bytes": 355,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\07_t176_hardware_pair_slopegraph.source.csv",
+    "destination": "figures/single_figures_main_20260831/07_t176_hardware_pair_slopegraph.source.csv",
+    "source_sha256": "9ce51c0b37d709d4a09bee4659a580efa7b697949061f325894c9d9955acc731",
+    "packaged_sha256": "9ce51c0b37d709d4a09bee4659a580efa7b697949061f325894c9d9955acc731",
+    "bytes": 3347,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\08_t176_pair_benefit_distribution.source.csv",
+    "destination": "figures/single_figures_main_20260831/08_t176_pair_benefit_distribution.source.csv",
+    "source_sha256": "9ce51c0b37d709d4a09bee4659a580efa7b697949061f325894c9d9955acc731",
+    "packaged_sha256": "9ce51c0b37d709d4a09bee4659a580efa7b697949061f325894c9d9955acc731",
+    "bytes": 3347,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\09_t176_cumulative_ratio.source.csv",
+    "destination": "figures/single_figures_main_20260831/09_t176_cumulative_ratio.source.csv",
+    "source_sha256": "9ce51c0b37d709d4a09bee4659a580efa7b697949061f325894c9d9955acc731",
+    "packaged_sha256": "9ce51c0b37d709d4a09bee4659a580efa7b697949061f325894c9d9955acc731",
+    "bytes": 3347,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\10_t176_hardware_permutation_null.source.csv",
+    "destination": "figures/single_figures_main_20260831/10_t176_hardware_permutation_null.source.csv",
+    "source_sha256": "8fff9aa332c37941bc3da4cac83a2b32ce5730a797dc37c6cce0e319375c2228",
+    "packaged_sha256": "8fff9aa332c37941bc3da4cac83a2b32ce5730a797dc37c6cce0e319375c2228",
+    "bytes": 865506,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\10_t176_hardware_permutation_null.summary.csv",
+    "destination": "figures/single_figures_main_20260831/10_t176_hardware_permutation_null.summary.csv",
+    "source_sha256": "4c1d680821990d74c9d2b82b999af33c3d23360ff63a982fa61a65c31579c800",
+    "packaged_sha256": "4c1d680821990d74c9d2b82b999af33c3d23360ff63a982fa61a65c31579c800",
+    "bytes": 150,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\11_baseline_drift_sensitivity.source.csv",
+    "destination": "figures/single_figures_main_20260831/11_baseline_drift_sensitivity.source.csv",
+    "source_sha256": "6f4cbb935c130cf2a4e3e3d82ba43de5c83aad729a70130e4abc02de91eafdfe",
+    "packaged_sha256": "6f4cbb935c130cf2a4e3e3d82ba43de5c83aad729a70130e4abc02de91eafdfe",
+    "bytes": 556,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\12_t176_hardware_workload_flow.source.csv",
+    "destination": "figures/single_figures_main_20260831/12_t176_hardware_workload_flow.source.csv",
+    "source_sha256": "9ce443a0aae2eb13a641d89564f15aebf66871bced55ae2fb80b53679d849e48",
+    "packaged_sha256": "9ce443a0aae2eb13a641d89564f15aebf66871bced55ae2fb80b53679d849e48",
+    "bytes": 155,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\make_b4_single_figures.py",
+    "destination": "figures/single_figures_main_20260831/make_b4_single_figures.py",
+    "source_sha256": "c34d86ec6983dd4a87cf7e3ad6dc633029eac2c9a2cea0deb70e182fd556d6c6",
+    "packaged_sha256": "c34d86ec6983dd4a87cf7e3ad6dc633029eac2c9a2cea0deb70e182fd556d6c6",
+    "bytes": 32519,
+    "category": "12 包装与展示工具",
+    "what": "主图v1生成器",
+    "purpose": "从逐图source CSV生成12张独立科学图，并导出PNG/SVG/PDF/TIFF。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\QA_REPORT.md",
+    "destination": "figures/single_figures_main_20260831/QA_REPORT.md",
+    "source_sha256": "2fb6a59126975b0dfe1785a65ff2e44c839dd8738495197dee2eff94cd455600",
+    "packaged_sha256": "2fb6a59126975b0dfe1785a65ff2e44c839dd8738495197dee2eff94cd455600",
+    "bytes": 3555,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\README_主图索引.md",
+    "destination": "figures/single_figures_main_20260831/README_主图索引.md",
+    "source_sha256": "45147c7aa5417add62b353b454a70da7a0badebec96b5131670afb20c5ed98e3",
+    "packaged_sha256": "45147c7aa5417add62b353b454a70da7a0badebec96b5131670afb20c5ed98e3",
+    "bytes": 4249,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\single_figure_manifest.json",
+    "destination": "figures/single_figures_main_20260831/single_figure_manifest.json",
+    "source_sha256": "94b1af90c9a4d11282ce0fb4142e7a3d996783b96e9bc38bb06210b16cec5d7f",
+    "packaged_sha256": "94b1af90c9a4d11282ce0fb4142e7a3d996783b96e9bc38bb06210b16cec5d7f",
+    "bytes": 23032,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\single_figures_main_20260831\\逐图中文图注.md",
+    "destination": "figures/single_figures_main_20260831/逐图中文图注.md",
+    "source_sha256": "564b5145f0493c926fbcbc972ed01758786d08bbeeb3b7a913f5c74b4e764b5c",
+    "packaged_sha256": "564b5145f0493c926fbcbc972ed01758786d08bbeeb3b7a913f5c74b4e764b5c",
+    "bytes": 4655,
+    "category": "11 数据/证据",
+    "what": "数据或证据工件",
+    "purpose": "支持离线复现、结果核验或图表再生成。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\成果展示_20260829\\outputs\\01a04d7f-e622-71e2-b53b-c412b65a5b7a\\B4_主图逐图完整数据.xlsx",
+    "destination": "figures/B4_主图逐图完整数据.xlsx",
+    "source_sha256": "2efa04f15631df16a7aa1161899285daa958ae06cfb0bb44a5e2c516cf8881ba",
+    "packaged_sha256": "2efa04f15631df16a7aa1161899285daa958ae06cfb0bb44a5e2c516cf8881ba",
+    "bytes": 646602,
+    "category": "11 数据/证据",
+    "what": "12图总数据簿",
+    "purpose": "集中保存图索引、关键指标、逐图数据、字段字典和claim boundary。"
+  },
+  {
+    "source": "generated_by:C:\\Users\\Mercu\\Documents\\天衍\\build_aemtn_b4_package.py",
+    "destination": "b4ctl.py",
+    "source_sha256": "65d541a9f76eedb2b3f3597c4f4116a8bdd21826bd8a8467493f554037e0b24e",
+    "packaged_sha256": "65d541a9f76eedb2b3f3597c4f4116a8bdd21826bd8a8467493f554037e0b24e",
+    "bytes": 2840,
+    "category": "12 包装与展示工具",
+    "what": "统一控制入口",
+    "purpose": "提供清单、流程、哈希验证、最终复算、测试、训练、数据生成和受保护真机入口。"
+  },
+  {
+    "source": "C:\\Users\\Mercu\\Documents\\天衍\\build_aemtn_b4_package.py",
+    "destination": "tools/build_release.py",
+    "source_sha256": "8f2bec4419e74db864df808a62bb0a4b799705fdeba2952d7ae6793b638bb3fa",
+    "packaged_sha256": "8f2bec4419e74db864df808a62bb0a4b799705fdeba2952d7ae6793b638bb3fa",
+    "bytes": 57051,
+    "category": "12 包装与展示工具",
+    "what": "可复现发布构建器",
+    "purpose": "从原工程、冻结模型、派生证据和图表数据重建同结构审计ZIP。"
+  },
+  {
+    "source": "generated_by:C:\\Users\\Mercu\\Documents\\天衍\\build_aemtn_b4_package.py",
+    "destination": "tools/verify_package.py",
+    "source_sha256": "dc0be7b46a58e24a14202364b8ea8265f67e4a7556f3ea606d9344f62269cb5c",
+    "packaged_sha256": "dc0be7b46a58e24a14202364b8ea8265f67e4a7556f3ea606d9344f62269cb5c",
+    "bytes": 1527,
+    "category": "12 包装与展示工具",
+    "what": "包完整性校验器",
+    "purpose": "逐文件核对manifest中的大小与SHA256，发现缺失、篡改或多余内容。"
+  },
+  {
+    "source": "generated_by:C:\\Users\\Mercu\\Documents\\天衍\\build_aemtn_b4_package.py",
+    "destination": "tools/reproduce_public_final.py",
+    "source_sha256": "f65e093e0163ec28facf1c510d342269f556bc748c2a6f8d529948a9824e35a3",
+    "packaged_sha256": "f65e093e0163ec28facf1c510d342269f556bc748c2a6f8d529948a9824e35a3",
+    "bytes": 2473,
+    "category": "12 包装与展示工具",
+    "what": "公开终测复算器",
+    "purpose": "从包内冻结pair数据重算硬件Session 0、模拟Session 1和hybrid统计量。"
+  }
+]

@@ -1,0 +1,291 @@
+{
+  "schema": "b4_cadence_pair_loop_v1",
+  "status": "hardware_parameters_frozen_after_tb6",
+  "evidence_scope": "controlled_injection_cadence_economics_cycle_paired_collection_correction",
+  "simulation_days": 3,
+  "daily_window_seconds": 1200.0,
+  "block_duration_seconds": 600.0,
+  "inter_day_seconds": 86400.0,
+  "block_order_by_day": [
+    [
+      "fast",
+      "slow"
+    ],
+    [
+      "slow",
+      "fast"
+    ],
+    [
+      "fast",
+      "slow"
+    ]
+  ],
+  "collection_correction": {
+    "status": "amended_before_collection_for_the_forty_minute_machine_time_ceiling_20260815",
+    "supersedes": "config/b4_cadence_pair_loop_cycle_paired_v3.json",
+    "registered_backend_id": "tianyan176",
+    "reason": "the v3 plan needed twelve sessions and 3.8 hours of busy time to reach eighty registered pairs, because it paid the delta-method gate's small-sample anti-conservatism in pairs and re-measured the static axis bias in every cycle; the available machine time is forty minutes total, so the pair count was bought back by recalibrating the critical value instead of adding pairs, and the shot budget was bought back by amortising the zero-field baseline over the session; the amortised baseline then had to be sized against the loop's own ordering, because the compensation each cycle applies is computed online by the shield from that cycle's estimate, so a cycle can only subtract the baseline measured at session start",
+    "amendment_scope": "pre-collection only; no hardware records exist under v2, v3 or v4; the gate module, the registered endpoint, the cadence pair (90/360 s), the OU injection and the exclusion rules are unchanged",
+    "machine_time_ceiling_seconds": 2400.0,
+    "machine_time_ceiling_source": "operator constraint, 2026-08-15; forty minutes of busy time for the whole ring-four collection",
+    "block_definition": "fixed_cycle_count",
+    "sessions": 2,
+    "cycles_per_cadence_per_session": 20,
+    "session_block_order": [
+      [
+        "fast",
+        "slow"
+      ],
+      [
+        "slow",
+        "fast"
+      ]
+    ],
+    "session_block_order_note": "the frozen three-day T-B5 simulation contract in block_order_by_day is untouched; the two hardware sessions carry opposite starting cadences so that block order cannot confound the cadence contrast",
+    "session_block_order_drift_note": "the balanced starting cadence is also the baseline-drift protection, and this is measured rather than argued: a linear drift loads the first block and the second block unequally, but because session 0 runs fast first and session 1 runs slow first, the two loadings land on opposite arms and cancel to first order in the pooled statistic; injecting the same drift with both sessions in the same order raises the realized boundary size from 0.05 to 0.20",
+    "registered_cycle_pairs_total": 40,
+    "minimum_adjudicated_cycle_pairs": 30,
+    "minimum_sessions_per_block_order": 1,
+    "pair_discard_granularity": "cycle_pair",
+    "pair_discard_granularity_note": "a lost cycle discards its own registered pair, not the whole session pair block, because the shared baseline both members subtract is a separate job that survives a lost cycle; the whole session pair block is discarded only if its session-start baseline measurement is missing",
+    "pair_block_discard_condition": "missing session_start baseline measurement",
+    "pair_count_note": "the primary rule is the within-pair permutation calibration, which is exact at every pair count, so the pair count is set by power rather than by size; measured permutation power is 0.9015 at 40 pairs and 0.8046 at 30, which is why 30 is the registered minimum; the pair count itself was chosen by the registered rule 'largest pair count within two Monte Carlo standard errors of the maximum', which at 30000 replicates admits 36 and 40 and excludes 44",
+    "adjudication_rule": "run both registered sessions; adjudicate every registered cycle pair whose fast and slow members both completed inside a session whose session-start baseline exists; the endpoint is adjudicated only if the realized pair count is at least minimum_adjudicated_cycle_pairs and at least minimum_sessions_per_block_order complete sessions carry each starting cadence; otherwise INCONCLUSIVE",
+    "whole_session_loss_policy": "losing an entire session leaves 20 pairs from a single starting cadence, which is both underpowered (0.640) and block-order confounded, so it is reported INCONCLUSIVE and is not patched by re-running one session; splitting the same forty minutes into three or four sessions was evaluated and rejected because it lowers nominal power without lifting the lost-session power above 0.8",
+    "optional_stopping_permitted": false,
+    "optional_stopping_note": "the pair count is not inspected mid-collection and collection is never stopped early on the basis of accumulated data; the minimum is a tolerance for lost cycles, not a sequential test",
+    "pairing_rule": "same session_index and cycle_index across fast and slow cadence blocks",
+    "incomplete_session_pair_block_policy": "retain raw records but discard the individual cycle pair from adjudication unless both members completed; discard the whole session pair block only if its session-start baseline measurement is missing",
+    "sensing_settings_per_cycle": 2,
+    "sensing_settings_note": "injected Y and injected Z only; the zero-field baseline is measured twice per session and shared by every cycle",
+    "sensing_shots_per_setting": 6186,
+    "sensing_shots_per_cycle": 12372,
+    "baseline_measurements_per_session": 2,
+    "baseline_measurement_positions": [
+      "session_start",
+      "session_end"
+    ],
+    "baseline_settings_per_measurement": 2,
+    "baseline_shots_per_setting": 27664,
+    "baseline_end_shots_per_setting": 27664,
+    "baseline_used_by_estimate": "session_start",
+    "baseline_online_ordering_note": "the registered endpoint is |mirror_fields + compensation|**2 and the compensation is computed online by the shield from that cycle's sensed estimate, so a cycle can only subtract a baseline that already exists when it runs; the session-end measurement does not exist at cycle time, the start/end average is therefore unavailable to the estimate, and the shared variance term is 2.373/S_start with no factor of two; the closing measurement is a drift readout, not an endpoint input",
+    "baseline_end_sizing_rule": "the closing measurement carries the same shots as the opening one, which is the tightest drift upper limit obtainable without taking shots from the endpoint; reaching the drift level at which power visibly degrades would need S_end >= 3 * S_start, about 8.5 percent of the session budget, which lowers power by more than the tighter bound recovers, so it was evaluated and rejected",
+    "baseline_sharing_scope": "whole_session_both_cadence_blocks",
+    "baseline_sharing_note": "the shared baseline must span both cadence blocks, not one; a per-block baseline would put two independent residual offsets into the fast and slow arms, which destroys the within-pair exchangeability the permutation calibration rests on, whereas one baseline serving both arms of every pair puts the identical offset in both and leaves label swaps measure preserving under the boundary null",
+    "baseline_offset_direction_note": "the surviving shared offset is a common additive term on both arms, and a common additive term pushes the ratio up toward the null value of 1.0; it costs power and cannot manufacture a pass",
+    "baseline_drift_sensitivity_rule": "form the one-sided 95 percent upper confidence limit on the measured start-versus-end baseline drift, expressed as z = drift / start-baseline phase sigma, and re-run the verdict with endpoint offset D = z**2 * shared_floor distributed over the two cadence blocks under three pre-registered drift shapes: a linear ramp (block offsets D/16 and 9D/16), a step at the block boundary (0 and D) and an early-saturating transient (D and D); report the primary verdict and all three sensitivity verdicts whatever the drift turns out to be",
+    "baseline_drift_measured_effect": "measured at this design point across all three shapes and z up to 4: the realized boundary size never exceeds 0.0512 and falls to 0.0325 under the asymmetric shapes, so baseline drift cannot manufacture a pass; the cost is power, and the binding shape is the symmetric early-saturating one, which at the no-drift upper limit z = 2.326 leaves power 0.729 against the 0.902 nominal",
+    "baseline_drift_undetectable_mode": "a transient that departs and returns between the two baseline measurements is invisible to the drift readout at any shot count; it is bounded by no measurement in this design and is stated as a limitation rather than as a controlled risk",
+    "shot_allocation_rule": "minimise the total endpoint shot floor 2.373/S_injected + 2.373/S_baseline subject to the session shot budget; with pairs_per_session cycles per cadence drawing on one shared baseline this gives S_baseline = S_injected * sqrt(pairs_per_session)",
+    "mirror_repetitions_per_cycle": 1,
+    "mirror_settings_per_repetition": 2,
+    "mirror_qc_jobs_per_session": 2,
+    "mirror_qc_cycle_indices": [
+      0
+    ],
+    "mirror_qc_cycle_indices_note": "one mirror QC job at the first cycle of each cadence block, so two per session and four in total",
+    "mirror_shots_per_qc_cycle": 8192,
+    "mirror_subset_note": "the registered endpoint is the squared norm of mirror_fields + compensation, where mirror_fields is the known injected OU truth at the mirror instant and compensation comes from the sensing loop and shield; the matched mirror hardware job contributes no term to that endpoint, so restricting it to a pre-registered subset of cycle indices costs zero endpoint information; the four retained jobs cost 0.013 of power and buy the task-metric readout",
+    "raw_mirror_role": "task-metric QC and descriptive readout only; not the cadence adjudication endpoint",
+    "operational_inter_session_seconds": 86400.0,
+    "operational_session_programmed_span_seconds": 9000.0,
+    "baseline_lead_seconds": 1200.0,
+    "baseline_trail_seconds": 1200.0,
+    "baseline_scheduling_note": "the session-start baseline job is submitted at the session's operational start and the first cycle's sensing job is held until 1200 s later, so a slow baseline queue can never push a cycle off its cadence tick; the session-end baseline follows the last mirror job and has 1200 s of the completion window to itself; both allowances are wall clock only and add no busy time, no shots and no jobs beyond the two already counted in jobs_per_session",
+    "operational_session_slack_seconds": 3300.0,
+    "operational_session_wallclock_seconds": 13500.0,
+    "operational_session_completion_window_seconds": 15750.0,
+    "operational_window_note": "each cycle's sensing job costs 3.6 s of busy time against a 90 s fast cadence period and a measured 14.7 s interface P90, leaving 86.4 s of the period unused against a registered 29.4 s lower bound, so the nominal grid already absorbs per-cycle queue jitter; the two baseline jobs cost 18.7 s each and run outside the cadence grid; the session slack is wall clock only, consumes no busy time, and cannot contaminate the endpoint because the injected OU truth and the compensation are both evaluated on the nominal virtual grid rather than on the realized submission clock",
+    "wall_clock_note": "the forty minutes of busy time are spread over 2 unattended sessions of about 3.75 h of wall clock each, because 20 pairs at 90 s plus 360 s per pair is an irreducible 9000 s of nominal grid; the cadence pair is frozen and defines the endpoint, so the wall clock cannot be compressed without changing the contrast",
+    "shots_per_session": 621920,
+    "settings_per_session": 88,
+    "jobs_per_session": 44,
+    "shots_total": 1243840,
+    "modelled_busy_seconds_per_session": 647.648,
+    "modelled_busy_seconds_total": 1295.296,
+    "machine_time_ceiling_slack_seconds": 1104.704,
+    "machine_time_ceiling_slack_note": "T176 migration uses the conservative sum of queue-free per-task runtimes by role; same-job settings share exact start and finish timestamps, but summing them is the upper envelope for quota accounting until the platform billing rule is documented",
+    "machine_time_ceiling_slack_not_reclaimed_reason": "the backend migration keeps all 40 registered pairs and their frozen shot allocation; reallocating newly available timing slack would change endpoint shot floors and require new statistical registration, so no slack is reclaimed",
+    "shot_rate_per_second_used": 1414.98122405956,
+    "seconds_per_job_used": 0.0,
+    "seconds_per_setting_used": 0.0,
+    "seconds_per_job_note": "deprecated compatibility fields only; the unconstrained queue-free two-point fit has intercept -0.81578945898 s, so its nonnegative overhead is zero.  The daily and total gates must use timing_budget_model and the role envelope, not settings times this value",
+    "shot_rate_note": "queue-free BASELINE/SENSE slope from the T176 platform ledger; source E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_PLATFORM_TASK_TIME_LEDGER_20260823_r1\\platform_task_time_ledger.json sha256 d0089fe19a96dc8b0d95a07b53f4de34a64aee196bbbc21979005d9a7d673f10; mirror is excluded from this slope because circuit role/depth is confounded with shot count",
+    "registered_endpoint": "cadence_ratio_gate applied to paired per-cycle endpoint residual squared",
+    "endpoint_distribution": "two controlled field components, so the per-cycle endpoint is a sum of two squared Gaussians and is Exponential, not the scalar squared Gaussian drawn by the frozen T-B1 power simulation",
+    "primary_adjudication": "cadence_ratio_permutation_gate",
+    "primary_adjudication_note": "the point statistic is byte-identical to the frozen gate's ratio and is asserted equal in tests; only the critical value is recalibrated, by exact within-pair label swaps, so the registered endpoint is not redefined",
+    "secondary_adjudication": "cadence_ratio_gate delta-method interval, reported alongside and not used to decide the endpoint",
+    "secondary_adjudication_note": "the frozen delta-method rule is anti-conservative on the exponential endpoint law at these pair counts, with measured boundary size 0.0878 at 16 pairs, 0.0723 at 24 and 0.0524 at 56, so it cannot hold its own size criterion anywhere inside the forty-minute budget; this is why the calibration was changed instead of the pair count",
+    "gate_module_change_permitted": false,
+    "outlier_exclusion_permitted": false,
+    "expected_fast_endpoint_mean": 0.001101791041193009,
+    "expected_slow_endpoint_mean": 0.002174473622590627,
+    "expected_ratio": 0.5066932197965022,
+    "pure_drift_ratio_limit": 0.3708924335436652,
+    "endpoint_shot_floor_per_cycle": 0.00038360814742967997,
+    "endpoint_shot_floor_shared": 8.577935222672066e-05,
+    "endpoint_shot_floor_total": 0.0004693874996564006,
+    "endpoint_shot_floor_note": "2.373/6186 per cycle plus 2.373/27664 shared, the latter carrying no factor of two because the estimate uses the session-start measurement alone; the four-setting path would carry 7.6722e-04 at the same shots per setting, and a four-setting design refitted into the same session budget reaches only about 3975 shots per setting for a floor of 1.19e-3, which puts the expected ratio at 0.63 and the design far below the power bar, so amortising the baseline is what makes forty minutes reachable at all",
+    "endpoint_shot_floor_shared_fraction_note": "the Lagrange optimum sets shared/per_cycle = 1/sqrt(pairs_per_session) = 0.224, so the shared term is deliberately not negligible; forcing it smaller would raise the total floor, and it is safe to leave large because a common additive offset only dilutes the ratio toward 1.0 and the measured boundary size confirms it cannot manufacture a pass",
+    "preregistered_ratio_prediction": 0.5070213621785998,
+    "preregistered_ratio_interval": [
+      0.3260557361133296,
+      0.7884314361673062
+    ],
+    "preregistered_ratio_interval_mass": 0.95,
+    "prediction_role": "this interval is committed before the first hardware job and is adjudicated by hit or miss; it stays informative at 40 pairs in a way a p-value alone does not, and it is reported whether it hits or misses",
+    "simulation_pooling_permitted": false,
+    "simulation_pooling_note": "the full-scale simulation is reported in its own section and its pairs are never pooled into the hardware endpoint",
+    "minimum_power": 0.8,
+    "expected_power": 0.90155,
+    "expected_power_note": "nominal, at 40000 replicates and 2000 permutations, under no baseline drift; a measured drift lowers the realized power and is reported through baseline_drift_sensitivity_rule rather than absorbed",
+    "measured_boundary_size": 0.048075,
+    "maximum_boundary_size": 0.0533,
+    "maximum_boundary_size_note": "the within-pair permutation test is exact a priori, so the simulation checks the implementation rather than estimating an unknown size; at 40000 replicates the Monte Carlo standard error on a nominal 0.05 is 0.0011, and the criterion is set at three of those, so a point estimate of 0.0481 is a pass and a point estimate above 0.0533 would indicate a coding error rather than an anti-conservative rule",
+    "reachability_evidence": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_CADENCE_V4_PREREGISTRATION_20260815\\forty_minute_prediction_start_only_baseline.json",
+    "reachability_evidence_sha256": "98d4c9b923eedb14b35882086401c21ad6ecb40e4b470fe57805e5dc39f18488",
+    "reachability_evidence_note": "generated before any hardware record exists under this config; carries the endpoint means, the 40000-replicate power and boundary size, the loss-tolerance curve, the pre-registered ratio prediction interval and the three-shape baseline-drift sensitivity table",
+    "timing_migration_status": "t176_timing_only_post_registration_amendment",
+    "timing_backend_id": "tianyan176",
+    "timing_budget_model": "role_envelope_sum_task_runtime",
+    "role_task_runtime_seconds": {
+      "baseline": 18.735,
+      "sense": 3.556,
+      "mirror": 72.057
+    },
+    "role_settings_per_job": {
+      "baseline": 2,
+      "sense": 2,
+      "mirror": 2
+    },
+    "role_jobs_per_session": {
+      "baseline": 2,
+      "sense": 40,
+      "mirror": 2
+    },
+    "execution_wall_seconds_per_session": 323.824,
+    "execution_wall_seconds_total": 647.648,
+    "quota_seconds_per_session": 647.648,
+    "quota_seconds_total": 1295.296,
+    "queue_free_slope_shots_per_second": 1414.98122405956,
+    "unconstrained_intercept_seconds": -0.81578945898,
+    "nonnegative_overhead_seconds_used": 0.0,
+    "timing_source_ledger": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_PLATFORM_TASK_TIME_LEDGER_20260823_r1\\platform_task_time_ledger.json",
+    "timing_source_ledger_sha256": "d0089fe19a96dc8b0d95a07b53f4de34a64aee196bbbc21979005d9a7d673f10",
+    "floor_constant_backend_verification": {
+      "registered_constant": 2.373,
+      "measured_constant": 2.3639,
+      "ratio_to_registered": 0.996165191740413,
+      "source_artifact": "E:\\TianYan\\XA-202609\\quarantine\\tianyan176\\B4_TB5_amplified_closed_loop_20260817_run2\\amplified_closed_loop_report.json",
+      "source_artifact_sha256": "45c446463e6a77684a0e29342090d14462d83c9e13e136b4b43933bf870a9629",
+      "pooling_permitted": false,
+      "registered_endpoint_contribution": "none"
+    },
+    "timing_reachability_evidence": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_CADENCE_V4_T176_TIMING_MIGRATION_20260823\\backend_migration_timing_evidence.json",
+    "timing_reachability_evidence_sha256": "f56b8b363914c7c50ba41dacc9b5dd250ddc158f98522af554f4d6f2bc4b7f3f",
+    "timing_reachability_evidence_note": "post-registration backend-migration timing evidence only; it neither supersedes nor re-hashes the original registered statistical reachability evidence"
+  },
+  "cadence": {
+    "fast_seconds": 90.0,
+    "slow_seconds": 360.0,
+    "freeze_status": "frozen_after_tb6_interface_floor",
+    "hardware_lower_bound_rule": "T_fast >= 2 * measured interface latency P90",
+    "measured_interface_p90_seconds": 14.701512299997557,
+    "measured_interface_p50_seconds": 12.437252850002551,
+    "hardware_lower_bound_seconds": 29.403024599995113,
+    "source_artifact": "E:\\TianYan\\XA-202609\\artifacts\\hardware\\B4_TB6\\interface_floor.json"
+  },
+  "controlled_ou": {
+    "tau_seconds": 300.0,
+    "stationary_process_variance": 0.00061,
+    "hard_clip_absolute": 0.08,
+    "rng_seed": 2026080501,
+    "integration_step_seconds": 5.0,
+    "calibration_source": "T-B1 cadence endpoint",
+    "target_fast_increment_to_sensing_sigma_ratio": [
+      2.0,
+      3.0
+    ]
+  },
+  "sensing": {
+    "estimator": "session_shared_baseline_differential_two_axis_atan2_effective_field",
+    "estimator_lineage": "B1-style local Y/Z phase inverse with the zero-field condition amortised over the session; no AEMTN inference",
+    "estimator_identity_note": "src/adaptive/shared_baseline_sensing.differential_estimate reproduces run_b4_cadence_pair_hardware.estimate_fields_from_counts exactly when handed a baseline at the same shot count, which tests/test_shared_baseline_sensing.py asserts on raw counts",
+    "phase_time_seconds": 0.47,
+    "effective_shots_per_second": 490.0,
+    "settings_per_update": 2,
+    "minimum_shots_per_setting": 1024,
+    "rng_seed": 2026080502
+  },
+  "simulated_interface_latency": {
+    "distribution": "uniform",
+    "minimum_seconds": 0.4,
+    "maximum_seconds": 1.8,
+    "rng_seed": 2026080503,
+    "claim_role": "randomized simulation delay only; not hardware queue evidence"
+  },
+  "shield": {
+    "max_uncertainty": 0.025,
+    "h1_range": [
+      -1.0,
+      1.0
+    ],
+    "h2_range": [
+      -1.0,
+      1.0
+    ],
+    "max_action_amplitude": 0.1,
+    "shot_budget_cap": 100000000
+  },
+  "gate_amplitude_ladder": {
+    "amplitudes": [
+      0.05,
+      0.1,
+      0.25
+    ],
+    "expected_behaviors": [
+      "permit",
+      "downscale",
+      "abstain"
+    ],
+    "middle_gain": 0.5
+  },
+  "mirror": {
+    "depth": 2,
+    "depth_status": "frozen_after_tb6_hardware_ladder",
+    "shots_per_task": 4096,
+    "repetitions_per_block": 1,
+    "ideal_bitstring": "000000",
+    "failure_bitstring": "111111",
+    "baseline_success_probability": 0.65,
+    "residual_sensitivity": 600.0,
+    "minimum_success_probability": 0.02,
+    "rng_seed": 2026080504
+  },
+  "hardware_smoke": {
+    "status": "passed",
+    "scope": "real-queue controlled-injection closed-loop plumbing smoke only",
+    "artifact": "E:\\TianYan\\XA-202609\\artifacts\\hardware\\B4_TB5_hardware_smoke_20260805_v2\\hardware_smoke_report.json",
+    "baseline_differential_sensing": true,
+    "main_three_day_endpoint": false
+  },
+  "tb1_cadence_evidence": {
+    "path": "E:/TianYan/XA-202609/artifacts/analysis/B4_all_endpoints_timing_grid_20260804/all_endpoints_timing_grid.json",
+    "sha256": "b343c0be69ed908957cdec316f7b556709605ef9232d7928c3630adba40507e4",
+    "required_endpoint": "cadence_pair_ratio",
+    "maximum_size": 0.05,
+    "minimum_power": 0.8,
+    "transfer_status": "does_not_transfer_to_the_corrected_hardware_collection",
+    "transfer_note": "the T-B1 cell draws a scalar squared Gaussian, uses the time-average residual whose shot term scales as 1/T, and evaluates its null at fast/slow shot-variance ratio 4.0 rather than at the boundary ratio 1.0; the corrected hardware collection fixes the shots per setting, so its null sits exactly on the boundary and its size must be established separately"
+  },
+  "claim_boundary": {
+    "allowed": "controlled-injection cadence-economics validation",
+    "forbidden": [
+      "natural drift tracking",
+      "hardware queue latency",
+      "AEMTN-core necessity"
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "seed": 20260731,
+  "device": "cuda",
+  "amp_enabled": true,
+  "train_samples": 1800,
+  "validation_samples": 200,
+  "model_config": {
+    "x_dim": 6,
+    "t_dim": 1,
+    "r_dim": 320,
+    "task_dim": 6,
+    "num_subspaces": 4,
+    "dropout": 0.1,
+    "target_names": [
+      "h1",
+      "h2",
+      "Jz"
+    ],
+    "inter_adapter_alpha": 0.8,
+    "entropy_bridge_scale": 1.0,
+    "detach_entropy_bridge": true,
+    "ham_guidance_scale": 1.0
+  },
+  "normalization": {
+    "time_mean": 0.5962179733129839,
+    "time_std": 0.4429384187775817,
+    "target_mean": {
+      "h1": -0.0314490159615525,
+      "h2": -0.03767440709479464,
+      "Jz": 0.6741162652598642
+    },
+    "target_std": {
+      "h1": 1.149795155569037,
+      "h2": 1.1520810626367592,
+      "Jz": 0.6637491460333715
+    }
+  },
+  "fixed_loss_weights": {
+    "target:h1": 1.0,
+    "target:h2": 1.0,
+    "target:Jz": 80.0,
+    "aux:entropies": 0.1,
+    "aux:inter_entropies": 5.0,
+    "aux:phase_labels": 1.0,
+    "aux:target_fidelities": 1.0
+  },
+  "training_loss_weights": {
+    "target:h1": 1.0,
+    "target:h2": 1.0,
+    "target:Jz": 80.0,
+    "aux:entropies": 0.1,
+    "aux:inter_entropies": 5.0,
+    "aux:phase_labels": 1.0,
+    "aux:target_fidelities": 1.0
+  },
+  "auxiliary_names": [
+    "entropies",
+    "inter_entropies",
+    "phase_labels",
+    "target_fidelities"
+  ]
+}

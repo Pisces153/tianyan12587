@@ -1,0 +1,2 @@
+# TianYan CQlib version pinned to the reviewed upstream revision 27977cb.
+cqlib==1.3.11

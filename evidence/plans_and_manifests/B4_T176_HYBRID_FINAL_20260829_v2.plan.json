@@ -1,0 +1,206 @@
+{
+  "analysis_contract": {
+    "baseline_drift_sensitivity": {
+      "role": "reported, never adjudicative",
+      "rule": "form the one-sided 95 percent upper confidence limit on the measured start-versus-end baseline drift, expressed as z = drift / start-baseline phase sigma, and re-run the verdict with endpoint offset D = z**2 * shared_floor distributed over the two cadence blocks under three pre-registered drift shapes: a linear ramp (block offsets D/16 and 9D/16), a step at the block boundary (0 and D) and an early-saturating transient (D and D); report the primary verdict and all three sensitivity verdicts whatever the drift turns out to be",
+      "shapes": [
+        "early_saturating_transient",
+        "linear_ramp",
+        "step_at_block_boundary"
+      ]
+    },
+    "completion_rule": {
+      "registered_hardware_verdict_always": "INCONCLUSIVE_MISSING_HARDWARE_SESSION1",
+      "required": [
+        "all source and chain integrity checks pass",
+        "20 complete hardware Session 0 pairs and 20 complete simulated Session 1 pairs",
+        "hybrid within-pair permutation p <= 0.05",
+        "hybrid ratio lies inside the frozen v4 ratio-prediction interval",
+        "hardware Session 0 ratio < 1",
+        "simulated Session 1 ratio < 1",
+        "no origin-stratum direction reversal"
+      ],
+      "status_if_all_hold": "B4_PRESERVED_SIMULATION_ASSISTED"
+    },
+    "endpoint_formula": "sum((mirror_fields[0:2] + shield.compensation[0:2])**2)",
+    "hardware_session_index": 0,
+    "hybrid_statistic": "mean(fast endpoint squared residual) / mean(slow endpoint squared residual)",
+    "optional_stopping_permitted": false,
+    "origin_specific_gates": "diagnostic only; no multiplicity-adjusted claims",
+    "outlier_exclusion_permitted": false,
+    "pairing_key": "registered_pair_id/source_registered_pair_id",
+    "pairs_per_source": 20,
+    "prediction": {
+      "hybrid_role": "post-hoc consistency check; not a registered hardware prediction adjudication",
+      "interval": [
+        0.3260557361133296,
+        0.7884314361673062
+      ],
+      "mass": 0.95,
+      "point": 0.5070213621785998
+    },
+    "primary_gate": {
+      "alpha": 0.05,
+      "module": "src.adaptive.cadence_permutation.cadence_ratio_permutation_gate",
+      "permutations": 20000,
+      "seed": 20260815,
+      "within_pair_label_swaps": true
+    },
+    "secondary_gate": "frozen delta-method ratio interval returned by the primary module",
+    "simulation_pooling_registered_rule": false,
+    "simulation_session_index": 1,
+    "total_pairs": 40
+  },
+  "analysis_label": "POST_HOC_HYBRID_SIMULATION_ASSISTED",
+  "claim_boundary": {
+    "allowed": [
+      "B4 preserved in a post-hoc simulation-assisted consistency test, if the frozen rule passes",
+      "hardware Session 0 descriptive effect and exact within-pair diagnostic",
+      "counterfactual Session 1 simulation evidence reported with explicit origin"
+    ],
+    "forbidden": [
+      "registered hardware PASS",
+      "claiming Session 1 was collected on hardware",
+      "calling the hybrid p-value independent all-hardware confirmation",
+      "removing or relabelling simulation provenance",
+      "modifying the original hardware journal, plan, manifest, raw counts, or NPZ files"
+    ]
+  },
+  "erratum": {
+    "change": "normalise previous_record_sha256 only for equality comparison",
+    "decision_rule_changed": false,
+    "endpoint_changed": false,
+    "observed": "hardware journal chain fields are uppercase; simulation journal fields are lowercase",
+    "permutation_gate_changed": false,
+    "prior_failed_plan": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829.plan.json",
+    "prior_failed_plan_sha256": "fb1f2627c18c5156541e2a1fcf18c6823f07799b6572bf79bd5b07d7a6cb718d",
+    "scientific_contract_changed": false,
+    "scope": "SHA-256 hexadecimal case compatibility only"
+  },
+  "frozen_at_utc": "2026-08-29T09:04:52.925036+00:00",
+  "hardware_unseal_contract": {
+    "hardware_files_modified": false,
+    "npz_read": false,
+    "raw_counts_read": false,
+    "raw_query_results_read": false,
+    "scientific_fields_read": [
+      "cadence_cycle_completed.cycle_id",
+      "cadence_cycle_completed.session_index",
+      "cadence_cycle_completed.block_index",
+      "cadence_cycle_completed.cadence",
+      "cadence_cycle_completed.cycle_index",
+      "cadence_cycle_completed.registered_pair_id",
+      "cadence_cycle_completed.mirror_fields[0:2]",
+      "cadence_cycle_completed.shield.compensation[0:2]",
+      "cadence_cycle_completed.shield.permitted",
+      "session_baseline_measured.baseline"
+    ]
+  },
+  "information_state": {
+    "analysis_is_post_hoc": true,
+    "failed_v1_scientific_statistics_computed_or_emitted": false,
+    "failed_v1_stop_stage": "record-chain link comparison at row 1",
+    "hardware_journal_access_by_freeze_command": "SHA256 bytes only; no JSON parsing",
+    "hardware_journal_loaded_by_failed_v1_run_before_erratum": true,
+    "hardware_session0_scientific_fields_read_by_freeze_command": false,
+    "simulation_session1_results_already_known": true
+  },
+  "output_dir": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829",
+  "schema": "b4_t176_hybrid_final_plan_v2",
+  "source_schedule_validation": {
+    "sessions": [
+      {
+        "block_order": [
+          "fast",
+          "slow"
+        ],
+        "cycles": 40,
+        "pairs": 20,
+        "session_index": 0
+      },
+      {
+        "block_order": [
+          "slow",
+          "fast"
+        ],
+        "cycles": 40,
+        "pairs": 20,
+        "session_index": 1
+      }
+    ],
+    "verified": true
+  },
+  "sources": {
+    "campaign_manifest": {
+      "bytes": 3227,
+      "path": "E:\\TianYan\\XA-202609\\quarantine\\tianyan176\\B4_CADENCE_PAIR_V4_T176_REGISTERED_20260823\\campaign_manifest.json",
+      "sha256": "8f70afc806f311ebbfb3ddddf85c1a726791066bbf77753858866e17ba120641"
+    },
+    "delta_method_module": {
+      "bytes": 31754,
+      "path": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\adaptive\\sensing_economics.py",
+      "sha256": "65246859977cc8542cdb84b155e8649f13b7c1d7ad54a28aa6bb76a216ad158c"
+    },
+    "hardware_journal": {
+      "bytes": 1448454,
+      "path": "E:\\TianYan\\XA-202609\\quarantine\\tianyan176\\B4_CADENCE_PAIR_V4_T176_REGISTERED_20260823\\snapshots.jsonl",
+      "sha256": "80694168c45f3ff85f0ad7800a55e56b37c78e0c3ddb4088a2099a7ea695c4b2"
+    },
+    "hardware_plan": {
+      "bytes": 215871,
+      "path": "E:\\TianYan\\XA-202609\\quarantine\\tianyan176\\B4_CADENCE_PAIR_V4_T176_REGISTERED_20260823\\supplement_plan.json",
+      "sha256": "e604277f9ddd6daaef354e213354e4715efcafc952c09e2c8345373b6bdda231"
+    },
+    "hybrid_analyzer": {
+      "bytes": 66348,
+      "path": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\scripts\\analyze_b4_t176_hybrid_final.py",
+      "sha256": "455ccd5399c75894cfcaa6b9f8a76eec1c14a7272975a126c3ac735f1b85a801"
+    },
+    "loop_config": {
+      "bytes": 24143,
+      "path": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\b4_cadence_pair_loop_cycle_paired_v4.json",
+      "sha256": "ee4c4102dd406087c2ea54677599b146f8d464c2d22a1dcec6788745be4356e3"
+    },
+    "permutation_module": {
+      "bytes": 10792,
+      "path": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\adaptive\\cadence_permutation.py",
+      "sha256": "c6081f8d295158d08f46ba6a6046d4de5511eff1d5cc6a95145ff341b6143be8"
+    },
+    "prior_failed_v1_plan": {
+      "bytes": 8529,
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829.plan.json",
+      "sha256": "fb1f2627c18c5156541e2a1fcf18c6823f07799b6572bf79bd5b07d7a6cb718d"
+    },
+    "shared_baseline_module": {
+      "bytes": 20196,
+      "path": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\src\\adaptive\\shared_baseline_sensing.py",
+      "sha256": "844d4b3bbc20a8403b39ed021ae49ca8f648b5304e468c758729e1ae883d53e7"
+    },
+    "simulation_journal": {
+      "bytes": 129923,
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829\\session1_simulated_snapshots.jsonl",
+      "sha256": "ade5736079c315aa2ed0b22ab99490e9ff554c2f6cb4665ca4590e6ad6cd7c37"
+    },
+    "simulation_manifest": {
+      "bytes": 3415,
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829\\simulation_manifest.json",
+      "sha256": "617945144840ee5e518156b7a7ec7d94a1cc46d5322215469181ce923c2dd94c"
+    },
+    "simulation_pairs": {
+      "bytes": 3314,
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829\\session1_simulated_pair_rows.csv",
+      "sha256": "1ff1e29bdf9174f2b5656734cd442b432a4e7a4deebf1e5e36b6c51b40c9d99e"
+    },
+    "simulation_plan": {
+      "bytes": 4385,
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829.plan.json",
+      "sha256": "59f3eba344574346ffe42630a993f9c6931ccbeb35dd253df4de81434bdd0181"
+    },
+    "simulation_report": {
+      "bytes": 6858,
+      "path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_SESSION1_SIMULATION_CONTINGENCY_20260829\\session1_simulation_report.json",
+      "sha256": "80ec17e4166e14b71a79e6a7c895c3a9efaf8038ec7fef5866fcfbfbd47b4311"
+    }
+  },
+  "status": "FROZEN_AFTER_UNSEAL_CHAIN_CASE_COMPATIBILITY_ERRATUM"
+}

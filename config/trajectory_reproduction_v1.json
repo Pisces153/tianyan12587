@@ -1,0 +1,19 @@
+{
+  "profile": "paper_reproduction_no_label_leakage",
+  "purpose": "multi-time local-observable trajectory reconstruction",
+  "num_qubits": 6,
+  "initial_state": "neel_010101_v1",
+  "measurement": {
+    "basis_order": ["XX", "XY", "XZ", "YX", "YY", "YZ", "ZX", "ZY", "ZZ"],
+    "shots_per_basis": 1024,
+    "time_grid": [0.05, 0.1, 0.2, 0.4, 0.8, 1.6]
+  },
+  "inputs": {
+    "measured": "pauli15 trajectory at every time_grid point",
+    "known_controls": ["Jx", "Jy", "Jxz", "Jzx", "D", "hy1", "hy2", "hz1", "hz2"],
+    "forbidden": ["h1", "h2", "Jz", "gamma_sim", "preparation_depolarization"]
+  },
+  "targets": ["h1", "h2", "Jz"],
+  "evaluation": "predeclared sim_train/sim_holdout split; holdout labels never participate in fitting",
+  "hardware_equivalence": "one matched circuit bundle per sample_id and time_grid point"
+}

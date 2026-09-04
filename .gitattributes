@@ -1,0 +1,53 @@
+# 包装层 / 发布层代码：统一 LF，Windows 克隆转 CRLF（可读、可 diff）
+# 注意：git 属性后写的规则覆盖先写的，因此按扩展名的通用规则必须放在最前，
+# 冻结核心的 -text 规则放在最后，才能真正禁止换行转换。
+*.py text eol=lf
+*.toml text eol=lf
+*.ini text eol=lf
+*.cfg text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+.gitignore text
+
+# 模型权重与二进制：binary，禁止文本化/差异合并
+*.pt binary
+*.npz binary
+*.npy binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.zip binary
+
+# 冻结核心：保持原始字节（不做任何换行转换），确保 manifest 的 sha256 校验可复现。
+# GitHub 网页仍会按扩展名显示语法高亮；-text 只禁止 git 对 blob 做 LF<->CRLF 转换。
+# 覆盖范围 = manifest/PACKAGE_FILES.csv 列出的全部路径（目录 + 根目录单文件）。
+src/** -text
+scripts/** -text
+tools/** -text
+tests/** -text
+config/** -text
+docs/** -text
+data/** -text
+models/** -text
+figures/** -text
+evidence/** -text
+manifest/** -text
+provenance/** -text
+b4ctl.py -text
+CLAIM_BOUNDARY.md -text
+CODE_INVENTORY.md -text
+PIPELINE.md -text
+PROJECT_NOTES.md -text
+README.md -text
+SECURITY_AND_DATA_BOUNDARY.md -text
+requirements-core.txt -text
+requirements-platform.txt -text
+
+# 若接入 Git LFS 追踪模型权重（可选，见 DEPLOY.md）：
+# models/**/*.pt filter=lfs diff=lfs merge=lfs -text

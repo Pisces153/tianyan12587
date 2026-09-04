@@ -1,0 +1,169 @@
+{
+  "schema_version": "sim_v2",
+  "created_at_utc": "2026-07-27T09:28:58.492079+00:00",
+  "generator": "QuTiP local-depolarization Lindblad evolution + sampled counts",
+  "backend_role": "local_reference_for_primary_noisy_density_matrix",
+  "protocol_path": "C:\\Users\\Mercu\\Desktop\\aemtn\\competition_xa202609\\config\\protocol_v2.json",
+  "protocol_sha256": "9467b7b71acdfdca2c5a4613227ef3766099bb8d730545ea55e67da88f97ac76",
+  "samples": 2000,
+  "shots_per_basis": 1024,
+  "preparation_depolarization_range": [
+    0.0,
+    0.2
+  ],
+  "lindblad_noise_model": "local_isotropic_depolarization",
+  "basis_order": [
+    "XX",
+    "XY",
+    "XZ",
+    "YX",
+    "YY",
+    "YZ",
+    "ZX",
+    "ZY",
+    "ZZ"
+  ],
+  "bit_order": "q0_leftmost",
+  "chunks": [
+    {
+      "file": "sim_0000.npz",
+      "sha256": "76541704f976a836c8e167eb5a5120f5ddb6a812294b1d9d9ccc74af8caa0008",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-000000",
+      "last_sample_id": "XA26-SIM-000099"
+    },
+    {
+      "file": "sim_0001.npz",
+      "sha256": "3fef40e364437c838e024eb99bb8606323495135bd9231f64640e8bf43d8a5e6",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-000100",
+      "last_sample_id": "XA26-SIM-000199"
+    },
+    {
+      "file": "sim_0002.npz",
+      "sha256": "f7ac6afcadc854bb6736381449c73b313292674db61cafb030c67d888ab344af",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-000200",
+      "last_sample_id": "XA26-SIM-000299"
+    },
+    {
+      "file": "sim_0003.npz",
+      "sha256": "1113631252aab763f0fdd0d35037db6c1f313b324bd838623cf1eb4cd01621c1",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-000300",
+      "last_sample_id": "XA26-SIM-000399"
+    },
+    {
+      "file": "sim_0004.npz",
+      "sha256": "6491ad432207a56f778317a01f284bc25f2965775214ecdb9bf377831158ed8d",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-000400",
+      "last_sample_id": "XA26-SIM-000499"
+    },
+    {
+      "file": "sim_0005.npz",
+      "sha256": "04194d7e3a5af32363b3731d80e2dfd04eb2c16543a5d0457035458cfb480e66",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-000500",
+      "last_sample_id": "XA26-SIM-000599"
+    },
+    {
+      "file": "sim_0006.npz",
+      "sha256": "b9bc2e45a1ec465d944c2332eae7bcfd4e0bee6963404ec651c85ef9062c32db",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-000600",
+      "last_sample_id": "XA26-SIM-000699"
+    },
+    {
+      "file": "sim_0007.npz",
+      "sha256": "f9188be0fc8cc7e45a1053ea618d6664b40f9e51b85cfdf681936822537542e3",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-000700",
+      "last_sample_id": "XA26-SIM-000799"
+    },
+    {
+      "file": "sim_0008.npz",
+      "sha256": "30c648894f380e6426039bd433587b78e49dba4e69e472b60a8d1937e6283a7a",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-000800",
+      "last_sample_id": "XA26-SIM-000899"
+    },
+    {
+      "file": "sim_0009.npz",
+      "sha256": "380f665a1b5e057b1398a27f7b0c2ad7b3d374e0e6d862d4d820e01ccc708b3f",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-000900",
+      "last_sample_id": "XA26-SIM-000999"
+    },
+    {
+      "file": "sim_0010.npz",
+      "sha256": "90dd7150952f233a4f420d99f1fad47f21b0c2b761dd72e9a4ae504b7a8e40db",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-001000",
+      "last_sample_id": "XA26-SIM-001099"
+    },
+    {
+      "file": "sim_0011.npz",
+      "sha256": "094a6a6dcc88b21f66b443ca687ead657b2e8b25db63bd787b46a7f011b80455",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-001100",
+      "last_sample_id": "XA26-SIM-001199"
+    },
+    {
+      "file": "sim_0012.npz",
+      "sha256": "811edc27e63007ecb4196a3082715a22393e8a920a59785daa240ef5c39a93c1",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-001200",
+      "last_sample_id": "XA26-SIM-001299"
+    },
+    {
+      "file": "sim_0013.npz",
+      "sha256": "58a1f446e403511ce717ff5d0e6ef51a5f4205e67081896d54b85958cf276717",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-001300",
+      "last_sample_id": "XA26-SIM-001399"
+    },
+    {
+      "file": "sim_0014.npz",
+      "sha256": "74ce87f7c7d6049662576b79676736fa3a93fbad82837443e1714406fbeaeb06",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-001400",
+      "last_sample_id": "XA26-SIM-001499"
+    },
+    {
+      "file": "sim_0015.npz",
+      "sha256": "8d6ad548ed6ed132b061afab218bc9cbc8ebafb379fc8ca874d6ba94db659490",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-001500",
+      "last_sample_id": "XA26-SIM-001599"
+    },
+    {
+      "file": "sim_0016.npz",
+      "sha256": "9d38f22a76fa3ed55db0703a50a36f7ea6c2cd0392c68076f46449326800c4e5",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-001600",
+      "last_sample_id": "XA26-SIM-001699"
+    },
+    {
+      "file": "sim_0017.npz",
+      "sha256": "1a94bf22a4b90b109908f9c6bc321cd2a66a0085c00a5e87761ad4a8298876ec",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-001700",
+      "last_sample_id": "XA26-SIM-001799"
+    },
+    {
+      "file": "sim_0018.npz",
+      "sha256": "fa57b3f1cdde9af77510028ebfa3f1304085db15b98383ad343368da03938ceb",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-001800",
+      "last_sample_id": "XA26-SIM-001899"
+    },
+    {
+      "file": "sim_0019.npz",
+      "sha256": "07c51227ab7acb299c91250d86ef49bd5350a3434c734e409ab4addfde513c61",
+      "samples": 100,
+      "first_sample_id": "XA26-SIM-001900",
+      "last_sample_id": "XA26-SIM-001999"
+    }
+  ]
+}

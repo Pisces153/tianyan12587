@@ -1,0 +1,171 @@
+{
+  "schema": "xa202609_b4_drift_campaign_v4",
+  "status": "preregistered_not_submitted",
+  "campaign_id": "xa202609_b4_drift_campaign_v4",
+  "purpose": "B-4 single-backend cloud-user calibration-sensing protocol; no pulse calibration or execution-time claim.",
+  "campaign_end_utc": "2026-09-14T15:59:59+00:00",
+  "cadence_origin_utc": "2026-07-31T15:42:00+00:00",
+  "stage1_resource_decisions": {
+    "status": "frozen_before_tb6",
+    "t176_quota_independent_from_t287": true,
+    "backends_share_same_three_day_window": true,
+    "daily_window_minutes": 20,
+    "daily_window_continuous": true,
+    "declaration_form_primary": "prototype_system_deployment",
+    "universal_access_role": "modifier_only_not_independent_claim"
+  },
+  "stage1_endpoint_decisions": {
+    "tstar_regret_limit_c": 1.25,
+    "tstar_regret_endpoint": "conditional_primary",
+    "factor2_coordinate_recovery_role": "descriptive_secondary",
+    "map_timing_lookup": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_map_timing_lookup_frozen_20260804\\frozen_lookup.json",
+    "map_power_branch_uses_point_estimate": true,
+    "event_observations_role": "supportive_only"
+  },
+  "stage1_hardware_freeze": {
+    "status": "tb6_complete_hardware_parameters_frozen",
+    "throughput_artifact": "E:\\TianYan\\XA-202609\\artifacts\\hardware\\B4_TB6\\throughput.json",
+    "interface_floor_artifact": "E:\\TianYan\\XA-202609\\artifacts\\hardware\\B4_TB6\\interface_floor.json",
+    "interface_p50_seconds": 12.437252850002551,
+    "interface_p90_seconds": 14.701512299997557,
+    "t_fast_seconds": 90.0,
+    "t_fast_lower_bound_seconds": 29.403024599995113,
+    "t176_terminal_artifact": "E:\\TianYan\\XA-202609\\artifacts\\hardware\\B4_TB6\\t176_terminal_check_revalidated.json",
+    "t176_terminal_passed": true,
+    "mirror_depth_artifact": "E:\\TianYan\\XA-202609\\artifacts\\hardware\\B4_TB6\\mirror_depth.json",
+    "mirror_selected_depth": 2,
+    "mirror_shots_per_task": 4096,
+    "complete_mirror_pair_count": 24,
+    "minimum_actual_improvement": 0.004510548978043951,
+    "b3_hardware_smoke_status": "both_backends_collected_supportive_only",
+    "b5_hardware_smoke_artifact": "E:\\TianYan\\XA-202609\\artifacts\\hardware\\B4_TB5_hardware_smoke_20260805_v2\\hardware_smoke_report.json"
+  },
+  "backend": {
+    "backend_id": "tianyan176",
+    "physical_qubits": [42, 36, 31, 37, 44, 49],
+    "tb6_measured_timing": {
+      "effective_shots_per_second": 3792.6059369503105,
+      "fixed_overhead_seconds_per_setting": 12.951896450002824,
+      "map_lookup_status": "outside_frozen_domain_no_extrapolation"
+    },
+    "cadence_supplement_timing": {
+      "status": "timing_only_post_registration_backend_migration_20260823",
+      "source_ledger": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_PLATFORM_TASK_TIME_LEDGER_20260823_r1\\platform_task_time_ledger.json",
+      "source_ledger_sha256": "d0089fe19a96dc8b0d95a07b53f4de34a64aee196bbbc21979005d9a7d673f10",
+      "source_freeze_manifest_sha256": "8432ee328669898ea45d7958dcbd36c22c0c2b5fa2e9a96965bd4c92be1dbeec",
+      "source_timing_analysis_sha256": "66ac2730a6fc2b088aaa139698c9cf0e8ef4c7902a4eb34c2a0f47ad97a7475b",
+      "queue_free_slope_shots_per_second": 1414.98122405956,
+      "unconstrained_intercept_seconds": -0.81578945898,
+      "nonnegative_overhead_seconds_used": 0.0,
+      "sensing_fit_scope": "two-setting BASELINE+SENSE phase-sensing circuit family only; two shot levels, residual df zero, confidence interval not estimable",
+      "budget_model": "role_envelope_sum_task_runtime",
+      "role_task_runtime_seconds": {
+        "baseline": 18.735,
+        "sense": 3.556,
+        "mirror": 72.057
+      },
+      "role_settings_per_job": {
+        "baseline": 2,
+        "sense": 2,
+        "mirror": 2
+      },
+      "parallelism_evidence": "all 20 mirror tasks share exactly runStartTime=2026-08-17 19:18:32.337 and finishTime=2026-08-17 19:19:44.394; execution is parallel_or_batched",
+      "billing_basis": "unresolved; registered collection is gated by the conservative sum of each task runtime, while execution wall is reported separately",
+      "floor_constant_verification": {
+        "registered_constant": 2.373,
+        "measured_constant": 2.3639,
+        "ratio_to_registered": 0.996165191740413,
+        "source_artifact": "E:\\TianYan\\XA-202609\\quarantine\\tianyan176\\B4_TB5_amplified_closed_loop_20260817_run2\\amplified_closed_loop_report.json",
+        "source_artifact_sha256": "45c446463e6a77684a0e29342090d14462d83c9e13e136b4b43933bf870a9629",
+        "pooling_permitted": false,
+        "registered_endpoint_contribution": "none"
+      }
+    }
+  },
+  "credential_env": "B4_TIANYAN176_LOGIN_KEY",
+  "retry_policy": {
+    "max_attempts": 5,
+    "base_backoff_seconds": 30
+  },
+  "measurement": {
+    "anchor_job": {
+      "shots_per_setting": 7840,
+      "shots_per_setting_rule": "round(3072 * backend.tb6_measured_timing.effective_shots_per_second / 1486.0918995653424)",
+      "nominal_parameters": {"h1": 0.25, "h2": -0.35},
+      "times": [0.16, 0.31, 0.47],
+      "bases": ["XX", "XY", "XZ", "YX", "YY", "YZ", "ZX", "ZY", "ZZ"],
+      "reference": {
+        "time": 0.31,
+        "basis": "ZZ",
+        "fixed_positions_zero_indexed": [0, 11, 22, 32]
+      },
+      "include_legacy_readout_copies": true,
+      "legacy_readout_positions_zero_indexed": [10, 21],
+      "legacy_readout_tag": "in_job_probe",
+      "frequency": "once_per_session",
+      "v3_byte_structure_role": "retain 33-setting order and v3 corpus continuity"
+    },
+    "probe_job": {
+      "shots_per_setting": 16384,
+      "settings": [
+        {"label": "readout_all_zero", "prepared_bits": "000000"},
+        {"label": "readout_all_one", "prepared_bits": "111111"}
+      ]
+    }
+  },
+  "scheduling": {
+    "probe_target_minutes": [0, 1, 2, 4, 8, 16],
+    "lag_source": "measured platform timestamp differences only",
+    "planned_targets_role": "scheduler targets only, never analysis lag"
+  },
+  "event_policy": {
+    "trigger": "raw calibrationTime value changes",
+    "supportive_burst_target_minutes": [0, 1, 2, 4],
+    "primary_sf_eligible": false,
+    "required_fields": ["regime_id", "burst_flag"],
+    "cross_regime_pairs_primary_sf_eligible": false
+  },
+  "timestamp_policy": {
+    "platform_timestamp_only": true,
+    "synthesize_execution_timestamp": false,
+    "client_wallclock_role": "submission and retrieval audit only",
+    "missing_platform_timestamp": "store null; do not substitute client clock"
+  },
+  "lag_axis_mapping": {
+    "anchor_33": "interleaved references only: within-job short lag plus anchor-to-anchor cross-session/cross-day long lag; actual pacing calibrated in T-B6",
+    "probe_burst": "independent readout probes: measured 1-16 minute axis; event rows excluded",
+    "in_job_probe": "supportive same-channel context-effect QC against independent probe; excluded from primary SF",
+    "anti_double_counting": "each primary pair uses one job_role and one analysis_role; never pair across roles"
+  },
+  "trimming_order": {
+    "trigger": "observed throughput below 0.5 times T-B6 frozen value",
+    "probe_round_counts": [6, 5, 4],
+    "then": ["closed_loop_updates", "mirror_repetitions"],
+    "on_site_discretion": false
+  },
+  "closed_loop": {
+    "planned_updates": 4,
+    "freeze_status": "pending T-B6"
+  },
+  "mirror": {
+    "planned_repetitions": 4,
+    "freeze_status": "pending T-B6"
+  },
+  "power_rationale": {
+    "anchor_33": "Exact-anchor branch selected after controlled map A/B: T287 uses 3072 and T176 uses 7840 to preserve conditional T*/U. New-domain map loss is a high-overhead economic-separation regime effect, not a claimed map pass.",
+    "probe_burst": {
+      "p_reference": 0.086,
+      "family": 6,
+      "familywise_alpha": 0.05,
+      "power": 0.8,
+      "mdd_1024_single_two_sample": [0.031, 0.043],
+      "mdd_16384_single_two_sample": [0.0076, 0.0108],
+      "reason": "16384 reaches the preregistered 0.01 lower effect scale"
+    }
+  },
+  "claim_boundary": {
+    "event_data": "supportive only",
+    "in_job_probe": "supportive QC only",
+    "forbidden": ["pulse calibration", "complete noise-channel reconstruction", "microsecond real-time", "invented execution timestamp", "natural-drift closed-loop claim from injection"]
+  }
+}

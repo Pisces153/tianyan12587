@@ -1,0 +1,9 @@
+# Streamlit Community Cloud 部署用的最小依赖
+# 仅安装仪表盘运行所需的包；不安装 torch/qutip/cqlib（离线训练/真机对接才需要）。
+# 安装方式：pip install -r requirements.txt
+
+numpy>=1.26
+scipy>=1.11
+pandas>=2.1
+streamlit>=1.36
+plotly>=5.22

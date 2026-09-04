@@ -1,0 +1,45 @@
+{
+  "status": "preregistered_not_submitted",
+  "campaign_id": "xa202609_tianyan_h1h2_dual_backend_natural_drift_v2",
+  "purpose": "Natural-drift observation for a fixed digital h1/h2 task. This is not pulse calibration, noise-channel reconstruction, or microsecond control.",
+  "campaign_end_utc": "2026-09-14T15:59:59+00:00",
+  "cadence_minutes": 25,
+  "shot_budget_hard_cap": 250000000,
+  "retry_policy": {
+    "max_attempts": 5,
+    "base_backoff_seconds": 30
+  },
+  "measurement": {
+    "nominal_parameters": {"h1": 0.25, "h2": -0.35},
+    "times": [0.16, 0.31, 0.47],
+    "bases": ["XX", "XY", "XZ", "YX", "YY", "YZ", "ZX", "ZY", "ZZ"],
+    "shots_per_setting": 1024,
+    "reference": {"time": 0.31, "basis": "ZZ", "fixed_positions_zero_indexed": [0, 11, 22, 32]},
+    "readout_probes": [
+      {"label": "readout_all_zero", "prepared_bits": "000000", "fixed_position_zero_indexed": 10},
+      {"label": "readout_all_one", "prepared_bits": "111111", "fixed_position_zero_indexed": 21}
+    ]
+  },
+  "backends": [
+    {"backend_id": "tianyan-287", "physical_qubits": [62, 55, 61, 68, 76, 69]},
+    {"backend_id": "tianyan176", "physical_qubits": [42, 36, 31, 37, 44, 49]}
+  ],
+  "observable_environment_proxy": {
+    "permitted": ["platform_calibration_metadata", "interleaved_reference_probe", "readout_all_zero", "readout_all_one", "wallclock_submit_utc", "wallclock_retrieve_utc"],
+    "forbidden_claims": ["temperature_measurement", "electromagnetic_interference_measurement", "execution_timestamp"],
+    "execution_time_available": false
+  },
+  "power_plan": {
+    "target_effect_sizes": [0.01, 0.02, 0.05],
+    "familywise_alpha": 0.05,
+    "power": 0.8,
+    "multiplicity_families": {"pauli15": 15, "readout": 2},
+    "ar1_correlation_assumption": 0.3,
+    "required_ratio_to_shot_noise_floor": 2.0
+  },
+  "claim_boundary": {
+    "allowed": "Natural drift sensing, prediction, and safe digital effective-field response at calibration-cycle cadence over a weeks-long evidence window.",
+    "forbidden": ["pulse calibration claim", "complete noise-channel reconstruction", "microsecond real-time claim", "months-long stability claim", "deep reinforcement learning claim", "universal AI superiority over classical estimators"]
+  },
+  "preregistration_amendment": "docs/NATURAL_DRIFT_CAMPAIGN_PREREGISTRATION_v2_AMENDMENT.md"
+}

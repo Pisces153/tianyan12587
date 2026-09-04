@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "platform": {
+    "name": "TianYan Quantum Cloud",
+    "sdk_package": "cqlib",
+    "sdk_source": "https://gitee.com/cq-lib/cqlib",
+    "domain": "qc.zdxlz.com",
+    "machine_code_source": "TianYanPlatform.query_quantum_computer_list"
+  },
+  "roles": {
+    "primary_noisy_simulator": {
+      "display_name": "密度矩阵带噪声",
+      "machine_code": null,
+      "purpose": [
+        "shot-based simulation pretraining data",
+        "noise-aware digital rehearsal",
+        "pre-hardware pipeline validation"
+      ],
+      "required_capabilities": [
+        "six_qubits",
+        "arbitrary_rotation_gates",
+        "density_matrix_noise",
+        "full_counts",
+        "1024_shots_per_circuit"
+      ],
+      "submit_enabled": false
+    },
+    "ideal_reference_simulator": {
+      "display_name": "全振幅",
+      "machine_code": null,
+      "purpose": [
+        "ideal gate-level reference",
+        "Trotter error measurement",
+        "measurement sign and bit-order validation"
+      ],
+      "required_capabilities": [
+        "six_qubits",
+        "arbitrary_rotation_gates",
+        "full_counts",
+        "1024_shots_per_circuit"
+      ],
+      "submit_enabled": false
+    },
+    "hardware": {
+      "display_name": "tianyan-287",
+      "machine_code": "tianyan-287",
+      "purpose": [
+        "G1 ten-sample end-to-end validation",
+        "ADAPT fine-tuning data",
+        "frozen TEST evaluation",
+        "drift and closed-loop evidence"
+      ],
+      "noise_semantics": "native hardware noise",
+      "submit_enabled": false
+    }
+  },
+  "excluded_simulators": {
+    "单振幅": "Does not provide the complete sampled distribution required for counts-based observables.",
+    "稳定子": "The parameterized Trotter circuit contains non-Clifford arbitrary rotations.",
+    "张量网络": "Unnecessary for the fixed six-qubit system and adds approximation/configuration variables."
+  },
+  "submission_gate": {
+    "requirements": [
+      "all selected machine_code values were returned by the authenticated SDK",
+      "backend capability probe passed",
+      "protocol_v2.lock.json exists",
+      "G0 approved_by and approved_at are non-null"
+    ],
+    "default_action": "block_submission"
+  }
+}

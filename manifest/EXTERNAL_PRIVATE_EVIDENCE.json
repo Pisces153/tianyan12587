@@ -1,0 +1,12 @@
+{
+  "schema": "aemtn_b4_external_private_evidence_v1",
+  "reason_not_packaged": "contains platform query IDs, raw-result paths, or raw scientific payloads; no credentials were found, but default distributable ZIP excludes them",
+  "files": [
+    {
+      "path": "E:\\TianYan\\XA-202609\\quarantine\\tianyan176\\B4_CADENCE_PAIR_V4_T176_REGISTERED_20260823\\snapshots.jsonl",
+      "bytes": 1448454,
+      "sha256": "80694168c45f3ff85f0ad7800a55e56b37c78e0c3ddb4088a2099a7ea695c4b2",
+      "included": false
+    }
+  ]
+}

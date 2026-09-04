@@ -1,0 +1,13 @@
+{
+  "exact_match": true,
+  "fallacy_scan_coverage": "11/11 checked",
+  "hardware_npz_read": false,
+  "hardware_raw_counts_read": false,
+  "method": "deterministic analysis-core re-run from frozen hashes and source artifacts",
+  "original_analysis_signature": "1fe980cff5cb2db4be7424234f3ece18424135fa322598d850a042fd79943828",
+  "rerun_analysis_signature": "1fe980cff5cb2db4be7424234f3ece18424135fa322598d850a042fd79943828",
+  "schema": "b4_t176_hybrid_final_verification_v2",
+  "verdict": "REPRODUCIBLE",
+  "verification_status": "VERIFIED",
+  "verified_at_utc": "2026-08-29T09:05:11.030210+00:00"
+}

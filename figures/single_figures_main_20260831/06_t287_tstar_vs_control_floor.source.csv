@@ -1,0 +1,5 @@
+quantity,point_seconds,ci_lower_seconds,ci_upper_seconds,primary,origin
+interface_P50,12.437252850002551,,,False,reachable_control_floor
+interface_P90,14.701512299997557,,,False,reachable_control_floor
+protocol_reachable,60.0,,,True,reachable_control_floor
+intrinsic_T_star,134.41859244351787,101.33696625715231,4000.2099028639427,False,E1_bootstrap

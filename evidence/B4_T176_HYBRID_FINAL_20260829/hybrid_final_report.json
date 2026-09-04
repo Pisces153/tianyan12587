@@ -1,0 +1,497 @@
+{
+  "analysis_label": "POST_HOC_HYBRID_SIMULATION_ASSISTED",
+  "analysis_signature": "1fe980cff5cb2db4be7424234f3ece18424135fa322598d850a042fd79943828",
+  "baseline_drift": {
+    "hardware_session0_offsets": {
+      "confidence_z": 1.645,
+      "endpoint_offset_at_upper_limit": 0.0017308759276216225,
+      "measured_effect_note": "across all three shapes and drift levels up to z = 4 the realized boundary size never exceeds 0.0512, so drift costs power and cannot manufacture a pass",
+      "measured_worst_absolute_z": 2.165637724009291,
+      "reporting_rule": "re-run the registered verdict under every shape and report all of them alongside the primary verdict, whatever the measured drift turns out to be",
+      "role": "session_shared_baseline_drift_sensitivity_offsets",
+      "schema": "session_shared_baseline_differential_sensing_v1",
+      "session_index": 0,
+      "shapes": {
+        "early_saturating_transient": {
+          "block_one_offset": 0.0017308759276216225,
+          "block_two_offset": 0.0017308759276216225
+        },
+        "linear_ramp": {
+          "block_one_offset": 0.00010817974547635141,
+          "block_two_offset": 0.0009736177092871626
+        },
+        "step_at_block_boundary": {
+          "block_one_offset": 0.0,
+          "block_two_offset": 0.0017308759276216225
+        }
+      },
+      "upper_limit_z": 4.492019034113032,
+      "upper_limit_z_note": "the QC statistic's own sigma is sqrt(2) times the start baseline's when the closing measurement carries the same shots, which is what the sqrt(2) is"
+    },
+    "hardware_session0_qc": {
+      "fields": [
+        {
+          "field": "h1",
+          "field_units_drift": 0.020307781604764465,
+          "phase_drift": 0.019089314708478595,
+          "phase_drift_sigma": 0.00881463898455654,
+          "phase_drift_z": 2.165637724009291
+        },
+        {
+          "field": "h2",
+          "field_units_drift": 0.019041051644289007,
+          "phase_drift": 0.017898588545631665,
+          "phase_drift_sigma": 0.008602414210626436,
+          "phase_drift_z": 2.0806471424640076
+        }
+      ],
+      "interpretation": "a drift consistent with shot noise leaves the shared offset common to both cadence blocks and the permutation calibration exact; a larger drift is not a failure of the collection, it is an input to the pre-registered sensitivity re-run",
+      "role": "session_shared_baseline_drift_qc",
+      "schema": "session_shared_baseline_differential_sensing_v1",
+      "session_index": 0,
+      "sigma_threshold": 3.0,
+      "static_within_shot_noise": true,
+      "threshold_role": "sigma_threshold is a reported readout only; the sensitivity re-run is driven by the one-sided upper confidence limit in drift_sensitivity_offsets, not by this flag, because no shot count in this design can resolve the drift level at which power degrades and a threshold would only invent a criterion the design cannot meet",
+      "worst_absolute_z": 2.165637724009291
+    },
+    "hybrid_sensitivity": {
+      "all_shapes_agree_with_primary": true,
+      "available": true,
+      "registered_hardware_verdict_changed": false,
+      "role": "pre-registered-shape sensitivity carried into a post-hoc hybrid test; reported, never adjudicative",
+      "shape_verdicts": {
+        "early_saturating_transient": true,
+        "linear_ramp": true,
+        "step_at_block_boundary": true
+      },
+      "shapes": {
+        "early_saturating_transient": {
+          "mean_removed_from_fast": 0.001608775459832954,
+          "mean_removed_from_slow": 0.001608775459832954,
+          "permutation_gate": {
+            "adjudication_note": "primary endpoint; the frozen delta-method verdict is reported as the secondary readout and is not used to decide the endpoint",
+            "alpha": 0.05,
+            "critical_ratio": 0.3938352803967416,
+            "frozen_delta_method": {
+              "ci_lower": -0.04954345070512406,
+              "ci_upper": 0.33941741718631696,
+              "passed": true,
+              "ratio": 0.14493698324059645
+            },
+            "p_value": 0.0005499725013749313,
+            "pair_count": 40,
+            "passed": true,
+            "permutations": 20000,
+            "ratio": 0.14493698324059645,
+            "schema": "cadence_pair_permutation_adjudication_v1",
+            "seed": 20260815
+          }
+        },
+        "linear_ramp": {
+          "mean_removed_from_fast": 0.00047221721425063105,
+          "mean_removed_from_slow": 0.0005332674481449654,
+          "permutation_gate": {
+            "adjudication_note": "primary endpoint; the frozen delta-method verdict is reported as the secondary readout and is not used to decide the endpoint",
+            "alpha": 0.05,
+            "critical_ratio": 0.548987814286395,
+            "frozen_delta_method": {
+              "ci_lower": 0.10647110903148924,
+              "ci_upper": 0.45091686312908763,
+              "passed": true,
+              "ratio": 0.27869398608028845
+            },
+            "p_value": 0.00014999250037498125,
+            "pair_count": 40,
+            "passed": true,
+            "permutations": 20000,
+            "ratio": 0.27869398608028845,
+            "schema": "cadence_pair_permutation_adjudication_v1",
+            "seed": 20260815
+          }
+        },
+        "step_at_block_boundary": {
+          "mean_removed_from_fast": 0.000743337496022143,
+          "mean_removed_from_slow": 0.0008654379638108112,
+          "permutation_gate": {
+            "adjudication_note": "primary endpoint; the frozen delta-method verdict is reported as the secondary readout and is not used to decide the endpoint",
+            "alpha": 0.05,
+            "critical_ratio": 0.5105882557872946,
+            "frozen_delta_method": {
+              "ci_lower": 0.07572988966996197,
+              "ci_upper": 0.4378924172769406,
+              "passed": true,
+              "ratio": 0.2568111534734513
+            },
+            "p_value": 0.00034998250087495624,
+            "pair_count": 40,
+            "passed": true,
+            "permutations": 20000,
+            "ratio": 0.2568111534734513,
+            "schema": "cadence_pair_permutation_adjudication_v1",
+            "seed": 20260815
+          }
+        }
+      }
+    },
+    "simulation_session1_offsets": {
+      "confidence_z": 1.645,
+      "endpoint_offset_at_upper_limit": 0.0014866749920442858,
+      "measured_effect_note": "across all three shapes and drift levels up to z = 4 the realized boundary size never exceeds 0.0512, so drift costs power and cannot manufacture a pass",
+      "measured_worst_absolute_z": 1.836716713963336,
+      "reporting_rule": "re-run the registered verdict under every shape and report all of them alongside the primary verdict, whatever the measured drift turns out to be",
+      "role": "session_shared_baseline_drift_sensitivity_offsets",
+      "schema": "session_shared_baseline_differential_sensing_v1",
+      "session_index": 1,
+      "shapes": {
+        "early_saturating_transient": {
+          "block_one_offset": 0.0014866749920442858,
+          "block_two_offset": 0.0014866749920442858
+        },
+        "linear_ramp": {
+          "block_one_offset": 9.291718700276786e-05,
+          "block_two_offset": 0.0008362546830249108
+        },
+        "step_at_block_boundary": {
+          "block_one_offset": 0.0,
+          "block_two_offset": 0.0014866749920442858
+        }
+      },
+      "upper_limit_z": 4.163098024067077,
+      "upper_limit_z_note": "the QC statistic's own sigma is sqrt(2) times the start baseline's when the closing measurement carries the same shots, which is what the sqrt(2) is"
+    },
+    "simulation_session1_qc": {
+      "fields": [
+        {
+          "field": "h1",
+          "field_units_drift": -0.012228660566768877,
+          "phase_drift": -0.011494940932762744,
+          "phase_drift_sigma": 0.008502273351605399,
+          "phase_drift_z": -1.351984399630279
+        },
+        {
+          "field": "h2",
+          "field_units_drift": -0.016612386825051038,
+          "phase_drift": -0.015615643615547976,
+          "phase_drift_sigma": 0.00850193363888542,
+          "phase_drift_z": -1.836716713963336
+        }
+      ],
+      "interpretation": "a drift consistent with shot noise leaves the shared offset common to both cadence blocks and the permutation calibration exact; a larger drift is not a failure of the collection, it is an input to the pre-registered sensitivity re-run",
+      "role": "session_shared_baseline_drift_qc",
+      "schema": "session_shared_baseline_differential_sensing_v1",
+      "session_index": 1,
+      "sigma_threshold": 3.0,
+      "static_within_shot_noise": true,
+      "threshold_role": "sigma_threshold is a reported readout only; the sensitivity re-run is driven by the one-sided upper confidence limit in drift_sensitivity_offsets, not by this flag, because no shot count in this design can resolve the drift level at which power degrades and a threshold would only invent a criterion the design cannot meet",
+      "worst_absolute_z": 1.836716713963336
+    },
+    "undetectable_mode": "a transient that departs and returns between the two baseline measurements is invisible to the drift readout at any shot count; it is bounded by no measurement in this design and is stated as a limitation rather than as a controlled risk"
+  },
+  "claim_boundary": {
+    "allowed": [
+      "B4 preserved in a post-hoc simulation-assisted consistency test, if the frozen rule passes",
+      "hardware Session 0 descriptive effect and exact within-pair diagnostic",
+      "counterfactual Session 1 simulation evidence reported with explicit origin"
+    ],
+    "forbidden": [
+      "registered hardware PASS",
+      "claiming Session 1 was collected on hardware",
+      "calling the hybrid p-value independent all-hardware confirmation",
+      "removing or relabelling simulation provenance",
+      "modifying the original hardware journal, plan, manifest, raw counts, or NPZ files"
+    ]
+  },
+  "created_at_utc": "2026-08-29T09:05:00.888389+00:00",
+  "decision": {
+    "analysis_label": "POST_HOC_HYBRID_SIMULATION_ASSISTED",
+    "criteria": {
+      "hardware_session0_fast_better_direction": true,
+      "hybrid_permutation_gate_passed": true,
+      "hybrid_ratio_inside_frozen_prediction_interval": true,
+      "no_origin_direction_reversal": true,
+      "pair_counts_exact": true,
+      "simulation_session1_fast_better_direction": true,
+      "source_integrity_passed": true
+    },
+    "hardware_session0_evidence_grade": "HARDWARE_SESSION0_STRONG_DESCRIPTIVE_SUPPORT",
+    "registered_hardware_endpoint_passed": false,
+    "registered_hardware_endpoint_status": "INCONCLUSIVE_MISSING_HARDWARE_SESSION1",
+    "reporting_statement": "B4 is preserved only in the explicitly post-hoc, simulation-assisted consistency test. The registered all-hardware endpoint remains inconclusive because Session 1 was not collected.",
+    "simulation_assisted_passed": true,
+    "simulation_assisted_status": "B4_PRESERVED_SIMULATION_ASSISTED"
+  },
+  "material_passport": {
+    "origin_date": "2026-08-29T09:05:00.888389+00:00",
+    "origin_mode": "run",
+    "origin_skill": "experiment-agent",
+    "verification_status": "UNVERIFIED",
+    "version_label": "exp_result_v1"
+  },
+  "pair_composition": {
+    "hardware_session0_pairs": 20,
+    "hardware_session1_pairs": 0,
+    "hybrid_pairs": 40,
+    "simulation_session1_pairs": 20
+  },
+  "plan_path": "E:\\TianYan\\XA-202609\\artifacts\\analysis\\B4_T176_HYBRID_FINAL_20260829_v2.plan.json",
+  "plan_sha256": "f2f8aeb38ec2e01561691daac4a2a5f3d0aacbda9733b8d33b94b75f2fa89c7c",
+  "schema": "b4_t176_hybrid_final_report_v2",
+  "source_integrity": {
+    "hardware_journal_sha256": "80694168c45f3ff85f0ad7800a55e56b37c78e0c3ddb4088a2099a7ea695c4b2",
+    "hardware_record_chain": {
+      "first_record_sha256": "18502905c7869d6431417d7214c4566ebf6782ed25364ffac366e169bd9de51f",
+      "last_record_sha256": "012d7c98be6971b21f6ccacaef384beeadce6d1da0d4f634861465b8b52f48ec",
+      "rows": 219,
+      "verified": true
+    },
+    "hardware_session0": {
+      "baseline_measurements": 2,
+      "collected_jobs": 44,
+      "complete_pairs": 20,
+      "completed_cycles": 40,
+      "duplicate_query_ids": 0,
+      "fast_cycles": 20,
+      "forbidden_terminal_events": [],
+      "npz_read": false,
+      "raw_counts_read": false,
+      "raw_query_results_read": false,
+      "role_jobs": {
+        "baseline": 2,
+        "loop": 40,
+        "mirror": 2
+      },
+      "role_tasks": {
+        "baseline": 4,
+        "loop": 80,
+        "mirror": 4
+      },
+      "session_index": 0,
+      "shield_abstained_cycles": 0,
+      "shield_permitted_cycles": 40,
+      "slow_cycles": 20,
+      "submitted_jobs": 44,
+      "unique_query_ids": 88
+    },
+    "original_hardware_files_modified": false,
+    "passed": true,
+    "simulation_session1": {
+      "complete_pairs": 20,
+      "completed_cycles": 40,
+      "hardware_jobs_submitted": 0,
+      "hardware_results_read": false,
+      "record_chain": {
+        "first_record_sha256": "cfb370e3012f3d022e4194948cb724e8326859e5ed63a16d6c0588e5ba484d07",
+        "last_record_sha256": "fa81b6980b53232ebf9d8fa244c97d1505eaa123b0bf0f5f8808b15a7c52b569",
+        "rows": 43,
+        "verified": true
+      },
+      "registered_hardware_endpoint_contribution": "none",
+      "session_index": 1,
+      "source_trace_p_value": 0.002849857507124644,
+      "source_trace_ratio": 0.3816522955927792
+    }
+  },
+  "statistical_findings": {
+    "hardware_session0_diagnostic": {
+      "adjudication_note": "primary endpoint; the frozen delta-method verdict is reported as the secondary readout and is not used to decide the endpoint",
+      "alpha": 0.05,
+      "critical_ratio": 0.4934069336911579,
+      "effect_size_description": "large_descriptive_reduction",
+      "fast_mean": 0.0006774849128447687,
+      "frozen_delta_method": {
+        "ci_lower": 0.12970573144463218,
+        "ci_upper": 0.5935938487472492,
+        "passed": true,
+        "ratio": 0.36164979009594067
+      },
+      "p_value": 0.005249737513124344,
+      "pair_count": 20,
+      "passed": true,
+      "permutations": 20000,
+      "ratio": 0.36164979009594067,
+      "relative_reduction": 0.6383502099040593,
+      "schema": "cadence_pair_permutation_adjudication_v1",
+      "seed": 20260815,
+      "slow_mean": 0.0018733175889996824
+    },
+    "hybrid_primary": {
+      "adjudication_note": "primary endpoint; the frozen delta-method verdict is reported as the secondary readout and is not used to decide the endpoint",
+      "alpha": 0.05,
+      "critical_ratio": 0.6357598701625898,
+      "effect_size_description": "large_descriptive_reduction",
+      "fast_mean": 0.000978401813279247,
+      "frozen_delta_method": {
+        "ci_lower": 0.21090874382638786,
+        "ci_upper": 0.538053880642644,
+        "passed": true,
+        "ratio": 0.374481312234516
+      },
+      "p_value": 9.99950002499875e-05,
+      "pair_count": 40,
+      "passed": true,
+      "permutations": 20000,
+      "ratio": 0.374481312234516,
+      "relative_reduction": 0.625518687765484,
+      "schema": "cadence_pair_permutation_adjudication_v1",
+      "seed": 20260815,
+      "slow_mean": 0.0026126852831217665
+    },
+    "multiple_comparisons": {
+      "alpha_adjustment": "not applicable to the single frozen primary test",
+      "origin_specific_and_drift_tests": "secondary diagnostics; do not create additional claims",
+      "primary_test": "hybrid within-pair permutation ratio gate",
+      "primary_tests": 1
+    },
+    "prediction_check": {
+      "absolute_error_from_point": 0.13254004994408386,
+      "hit": true,
+      "hybrid_role": "post-hoc consistency check; not a registered hardware prediction adjudication",
+      "interval": [
+        0.3260557361133296,
+        0.7884314361673062
+      ],
+      "mass": 0.95,
+      "observed_hybrid_ratio": 0.374481312234516,
+      "point": 0.5070213621785998
+    },
+    "simulation_session1_diagnostic": {
+      "adjudication_note": "primary endpoint; the frozen delta-method verdict is reported as the secondary readout and is not used to decide the endpoint",
+      "alpha": 0.05,
+      "critical_ratio": 0.5509915065823202,
+      "effect_size_description": "large_descriptive_reduction",
+      "fast_mean": 0.0012793187137137257,
+      "frozen_delta_method": {
+        "ci_lower": 0.15828350957124315,
+        "ci_upper": 0.6050210816143152,
+        "passed": true,
+        "ratio": 0.3816522955927792
+      },
+      "p_value": 0.0023498825058747065,
+      "pair_count": 20,
+      "passed": true,
+      "permutations": 20000,
+      "ratio": 0.3816522955927792,
+      "relative_reduction": 0.6183477044072208,
+      "schema": "cadence_pair_permutation_adjudication_v1",
+      "seed": 20260815,
+      "slow_mean": 0.003352052977243851
+    }
+  },
+  "unseal_receipt": {
+    "hardware_scientific_fields_read": [
+      "cadence_cycle_completed.cycle_id",
+      "cadence_cycle_completed.session_index",
+      "cadence_cycle_completed.block_index",
+      "cadence_cycle_completed.cadence",
+      "cadence_cycle_completed.cycle_index",
+      "cadence_cycle_completed.registered_pair_id",
+      "cadence_cycle_completed.mirror_fields[0:2]",
+      "cadence_cycle_completed.shield.compensation[0:2]",
+      "cadence_cycle_completed.shield.permitted",
+      "session_baseline_measured.baseline"
+    ],
+    "hardware_scientific_values_written_back": false,
+    "npz_read": false,
+    "raw_counts_read": false,
+    "raw_query_results_read": false
+  },
+  "validation": {
+    "assumption_checks": {
+      "fixed_endpoint_no_outlier_exclusion": true,
+      "origin_provenance_retained": true,
+      "paired_cycle_units_complete": true,
+      "pure_hardware_block_order_balance_available": false,
+      "simulation_outcome_known_before_hybrid_plan": true,
+      "within_pair_permutation_seed_and_count_frozen": true
+    },
+    "confidence_interval_assessment": "The frozen delta-method interval is reported as a secondary readout. The hybrid ratio is also checked against the pre-existing v4 95% ratio-prediction interval; neither converts the synthetic session into hardware evidence.",
+    "effect_size_interpretation": "Hybrid mean fast/slow ratio 0.374481, equivalent to a descriptive relative reduction of 62.55%.",
+    "fallacy_scan": {
+      "cautions": 3,
+      "checked": 11,
+      "coverage": "11/11 checked",
+      "items": [
+        {
+          "detail": "Hardware Session 0, simulated Session 1, and the hybrid aggregate point in the same direction.",
+          "fallacy": "Simpson's Paradox",
+          "index": 1,
+          "severity": "NOTE",
+          "status": "not_detected"
+        },
+        {
+          "detail": "Inference stays at the registered cycle-pair level; no individual claim is inferred from session means.",
+          "fallacy": "Ecological Fallacy",
+          "index": 2,
+          "severity": "NOTE",
+          "status": "not_detected"
+        },
+        {
+          "detail": "All 20 completed hardware pairs and all 20 frozen simulated pairs are retained; no outcome-based filtering is used.",
+          "fallacy": "Berkson's Paradox",
+          "index": 3,
+          "severity": "NOTE",
+          "status": "not_detected"
+        },
+        {
+          "detail": "No post-outcome control variable is conditioned on; evidence origin is stratified and disclosed rather than adjusted away.",
+          "fallacy": "Collider Bias",
+          "index": 4,
+          "severity": "NOTE",
+          "status": "not_detected"
+        },
+        {
+          "detail": "This is not a screening/classification accuracy analysis and reports no sensitivity, specificity, PPV, or NPV.",
+          "fallacy": "Base Rate Neglect",
+          "index": 5,
+          "severity": "NOTE",
+          "status": "not_applicable"
+        },
+        {
+          "detail": "Cadence arms and pairs were frozen before outcomes; cycles were not selected for extreme prior residuals.",
+          "fallacy": "Regression to the Mean",
+          "index": 6,
+          "severity": "NOTE",
+          "status": "not_detected"
+        },
+        {
+          "detail": "The hybrid table uses the complete frozen 20+20 pair sets with zero pair attrition and reports source counts explicitly.",
+          "fallacy": "Survivorship Bias",
+          "index": 7,
+          "severity": "NOTE",
+          "status": "not_detected"
+        },
+        {
+          "detail": "One primary hybrid statistic is locked before hardware unseal, but the Session 1 simulation outcome was already known when this post-hoc hybrid analysis was planned.",
+          "fallacy": "Look-Elsewhere Effect",
+          "index": 8,
+          "severity": "CAUTION",
+          "status": "bounded_but_post_hoc"
+        },
+        {
+          "detail": "Analyzer, source hashes, endpoint, seed, permutation count, prediction interval, and decision criteria were frozen before Session 0 unseal; post-hoc creation still prevents a confirmatory all-hardware interpretation.",
+          "fallacy": "Garden of Forking Paths",
+          "index": 9,
+          "severity": "CAUTION",
+          "status": "bounded_but_post_hoc"
+        },
+        {
+          "detail": "The controlled paired hardware session supports a cadence mechanism, but replacing the balancing session with model output cannot establish a two-session hardware causal effect.",
+          "fallacy": "Correlation != Causation",
+          "index": 10,
+          "severity": "CAUTION",
+          "status": "claim_limited"
+        },
+        {
+          "detail": "Cadence timing and block order were frozen before cycle outcomes, establishing temporal precedence for the assigned condition.",
+          "fallacy": "Reverse Causality",
+          "index": 11,
+          "severity": "NOTE",
+          "status": "not_detected"
+        }
+      ],
+      "red_flags": 0,
+      "total": 11
+    },
+    "overall_confidence": "CAUTION"
+  }
+}

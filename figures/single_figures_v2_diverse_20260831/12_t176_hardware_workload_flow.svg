@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="496.512pt" height="309.7476pt" viewBox="0 0 496.512 309.7476" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-31T01:10:08.107648</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.6, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 309.7476 
+L 496.512 309.7476 
+L 496.512 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 35.162496 200.682432 
+L 104.586624 200.682432 
+Q 116.639424 200.682432 116.639424 195.358032 
+L 116.639424 151.910928 
+Q 116.639424 146.586528 104.586624 146.586528 
+L 35.162496 146.586528 
+Q 23.109696 146.586528 23.109696 151.910928 
+L 23.109696 195.358032 
+Q 23.109696 200.682432 35.162496 200.682432 
+z
+" clip-path="url(#p74251f3d89)" style="fill: #dceaf6; stroke: #202124; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 118.635198 173.63448 
+Q 125.315935 173.63448 130.766835 173.63448 
+" clip-path="url(#p74251f3d89)" style="fill: none; stroke: #697077; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 125.966835 171.23448 
+L 130.766835 173.63448 
+L 125.966835 176.03448 
+z
+" clip-path="url(#p74251f3d89)" style="fill: #697077; stroke: #697077; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 146.048256 200.682432 
+L 215.472384 200.682432 
+Q 227.525184 200.682432 227.525184 195.358032 
+L 227.525184 151.910928 
+Q 227.525184 146.586528 215.472384 146.586528 
+L 146.048256 146.586528 
+Q 133.995456 146.586528 133.995456 151.910928 
+L 133.995456 195.358032 
+Q 133.995456 200.682432 146.048256 200.682432 
+z
+" clip-path="url(#p74251f3d89)" style="fill: #d9efec; stroke: #202124; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 229.520958 173.63448 
+Q 236.201695 173.63448 241.652595 173.63448 
+" clip-path="url(#p74251f3d89)" style="fill: none; stroke: #697077; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 236.852595 171.23448 
+L 241.652595 173.63448 
+L 236.852595 176.03448 
+z
+" clip-path="url(#p74251f3d89)" style="fill: #697077; stroke: #697077; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 256.934016 200.682432 
+L 326.358144 200.682432 
+Q 338.410944 200.682432 338.410944 195.358032 
+L 338.410944 151.910928 
+Q 338.410944 146.586528 326.358144 146.586528 
+L 256.934016 146.586528 
+Q 244.881216 146.586528 244.881216 151.910928 
+L 244.881216 195.358032 
+Q 244.881216 200.682432 256.934016 200.682432 
+z
+" clip-path="url(#p74251f3d89)" style="fill: #f3ead6; stroke: #202124; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 340.406718 173.63448 
+Q 347.087455 173.63448 352.538355 173.63448 
+" clip-path="url(#p74251f3d89)" style="fill: none; stroke: #697077; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 347.738355 171.23448 
+L 352.538355 173.63448 
+L 347.738355 176.03448 
+z
+" clip-path="url(#p74251f3d89)" style="fill: #697077; stroke: #697077; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 367.819776 200.682432 
+L 437.243904 200.682432 
+Q 449.296704 200.682432 449.296704 195.358032 
+L 449.296704 151.910928 
+Q 449.296704 146.586528 437.243904 146.586528 
+L 367.819776 146.586528 
+Q 355.766976 146.586528 355.766976 151.910928 
+L 355.766976 195.358032 
+Q 355.766976 200.682432 367.819776 200.682432 
+z
+" clip-path="url(#p74251f3d89)" style="fill: #dcefe4; stroke: #202124; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 429.048 250.30584 
+L 474.84864 250.30584 
+Q 484.49088 250.30584 484.49088 246.04632 
+L 484.49088 216.22968 
+Q 484.49088 211.97016 474.84864 211.97016 
+L 429.048 211.97016 
+Q 419.40576 211.97016 419.40576 216.22968 
+L 419.40576 246.04632 
+Q 419.40576 250.30584 429.048 250.30584 
+z
+" clip-path="url(#p74251f3d89)" style="fill: #eef1f3; stroke: #697077; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 413.431182 201.808054 
+Q 420.86953 210.550626 430.962342 213.344948 
+" clip-path="url(#p74251f3d89)" style="fill: none; stroke: #697077; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 427.641011 210.350158 
+L 430.962342 213.344948 
+L 426.573712 214.205138 
+z
+" clip-path="url(#p74251f3d89)" style="fill: #697077; stroke: #697077; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'SimHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #202124" transform="translate(60.87456 170.655902)">提交</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'SimHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #202124" transform="translate(53.450263 181.526496)">44 jobs</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'SimHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #202124" transform="translate(162.76032 170.677699)">平台返回</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'SimHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #202124" transform="translate(162.281492 181.548293)">88 tasks</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'SimHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #202124" transform="translate(282.64608 170.655902)">完成</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'SimHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #202124" transform="translate(271.401002 181.526496)">40 cycles</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'SimHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #202124" transform="translate(384.53184 170.677699)">冻结分析</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'SimHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #202124" transform="translate(384.606371 181.548293)">20 pairs</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 8.2px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'SimHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #202124" transform="translate(443.74832 228.444044)">排除</text>
+    <text style="font-size: 8.2px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'SimHei', 'Arial', 'DejaVu Sans', sans-serif; fill: #202124" transform="translate(438.916086 238.348363)">0 pairs</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'SimHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #697077" x="248.256" y="265.287525" transform="rotate(-0 248.256 265.287525)">数据完整性：20/20 分析对保留；但仅有 Hardware Session 0</text>
+   </g>
+  </g>
+  <g id="text_7">
+   <text style="font-weight: 700; font-size: 12px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'SimHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #202124" x="9.792" y="17.225625" transform="rotate(-0 9.792 17.225625)">12｜T176 真机负载与 pair-complete 数据流</text>
+  </g>
+  <g id="text_8">
+   <text style="font-size: 7.8px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'SimHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #697077" x="9.792" y="34.792462" transform="rotate(-0 9.792 34.792462)">计数单位不同，因此用流程图而非伪比例 Sankey；44 jobs → 88 tasks → 40 cycles → 20 complete pairs，0 excluded pairs</text>
+  </g>
+  <g id="text_9">
+   <text style="font-size: 6.3px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'SimHei', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #697077" x="484.128" y="300.947991" transform="rotate(-0 484.128 300.947991)">v2 独立主图｜同名 source.csv 为逐点数据</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p74251f3d89">
+   <rect x="7.2" y="71.406" width="482.112" height="212.976"/>
+  </clipPath>
+ </defs>
+</svg>

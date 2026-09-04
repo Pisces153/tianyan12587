@@ -1,0 +1,53 @@
+{
+  "schema": "b4_mirror_metric_v1",
+  "hardware_anchor": {
+    "backend_id": "tianyan-287",
+    "physical_qubits_tianyan_287": [62, 55, 61, 68, 76, 69]
+  },
+  "endpoint": {
+    "primary_metric": "success_probability",
+    "primary_source": "raw_counts",
+    "contrast": "adaptive_minus_fixed",
+    "minimum_actual_improvement": 0.004510548978043951,
+    "minimum_actual_improvement_status": "frozen_after_tb6_before_stage1",
+    "minimum_actual_improvement_formula": "2 * sqrt((p_adaptive*(1-p_adaptive) + p_fixed*(1-p_fixed)) / (shots_per_task * complete_pair_count))",
+    "minimum_actual_improvement_formula_role": "relative to the analytic paired-binomial noise floor; evaluate only after T-B6 selects depth and freezes shots/pair count",
+    "minimum_actual_improvement_freeze_deadline": "T-B7 Stage-1 before collection",
+    "minimum_actual_improvement_inputs": {
+      "probability_bound_per_arm": 0.5,
+      "shots_per_task": 4096,
+      "complete_pair_count": 24,
+      "noise_floor_multiplier": 2.0,
+      "rationale": "worst-case Bernoulli variance; conservative before main collection"
+    },
+    "readout_mitigated_role": "secondary_appendix_only"
+  },
+  "pairing": {
+    "matching_fields": [
+      "backend_id",
+      "time_window_id",
+      "shots",
+      "task_family",
+      "depth",
+      "task_duration_seconds"
+      ,"total_strategy_shots_in_window"
+    ],
+    "missing_policy": "exclude incomplete pair; report; no imputation"
+  },
+  "bootstrap": {
+    "method": "paired_case_bootstrap",
+    "resamples": 10000,
+    "seed": 20260804,
+    "confidence_level": 0.95
+  },
+  "depth_selection": {
+    "target_success_probability_interval": [0.3, 0.7],
+    "selected_depth": 2,
+    "freeze_stage": "frozen by T-B6 hardware ladder before Stage-1",
+    "source_artifact": "E:\\TianYan\\XA-202609\\artifacts\\hardware\\B4_TB6\\mirror_depth.json"
+  },
+  "stopping": {
+    "efficacy_or_futility_early_stop": false,
+    "operational_stops_only": true
+  }
+}
