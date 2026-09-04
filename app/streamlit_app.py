@@ -28,18 +28,25 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+from app import theme
+
+theme.inject()
+
 
 def _heading() -> None:
-    st.title("面向量子云真机的开放量子系统辨识与人工智能自校准平台")
-    st.caption(
-        "AEMTN-B4 · 天衍超导真机 · 6 比特 · 仿真-真机混合闭环 · 冻结结果 2026-08-31"
+    theme.hero(
+        "AEMTN-B4 · 天衍超导真机 · 6 QUBITS · 仿真–真机混合闭环 · FROZEN 2026-08-31",
+        "面向量子云真机的<br>开放量子系统辨识与<br>人工智能自校准平台",
+        "量子云真机受器件无序与环境退相干影响，真实哈密顿量长期偏离设计模型。"
+        "本平台以 AI 反演与自校准闭环，从量子态测量数据学习漂移与退相干特征，"
+        "给出何时、以何种周期重标定的可执行裁决。所有数字由冻结代码与冻结证据支撑，逐条可复算。",
     )
 
 
 # 侧边栏导航
 _heading()
 with st.sidebar:
-    st.markdown("### 平台导航")
+    st.markdown("### Index")
     page = st.radio(
         "章节",
         [
@@ -54,6 +61,7 @@ with st.sidebar:
             "8. 复现与部署",
         ],
         index=0,
+        label_visibility="collapsed",
     )
     st.divider()
     st.caption(
@@ -67,39 +75,39 @@ _REPO = REPO_ROOT
 
 def main() -> None:
     if page.startswith("0."):
-        from app.pages import workbench
+        from app.sections import workbench
 
         workbench.render()
     elif page.startswith("1."):
-        from app.pages import overview
+        from app.sections import overview
 
         overview.render()
     elif page.startswith("2."):
-        from app.pages import technical_route
+        from app.sections import technical_route
 
         technical_route.render()
     elif page.startswith("3."):
-        from app.pages import drift_sensing
+        from app.sections import drift_sensing
 
         drift_sensing.render()
     elif page.startswith("4."):
-        from app.pages import calibration_shield
+        from app.sections import calibration_shield
 
         calibration_shield.render()
     elif page.startswith("5."):
-        from app.pages import closed_loop_evidence
+        from app.sections import closed_loop_evidence
 
         closed_loop_evidence.render()
     elif page.startswith("6."):
-        from app.pages import model_data
+        from app.sections import model_data
 
         model_data.render()
     elif page.startswith("7."):
-        from app.pages import boundaries
+        from app.sections import boundaries
 
         boundaries.render()
     else:
-        from app.pages import reproduce
+        from app.sections import reproduce
 
         reproduce.render()
 

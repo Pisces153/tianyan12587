@@ -110,7 +110,9 @@ def _dark(fig: go.Figure, title: str, x: str, y: str) -> go.Figure:
         paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
         font=dict(color="#e6e6e6"), margin=dict(l=40, r=20, t=50, b=40),
         legend=dict(orientation="h", y=-0.2),
+        yaxis_title_standoff=8,
     )
+    fig.update_yaxes(title_font=dict(size=12))
     fig.update_xaxes(gridcolor="#2a2a2a", zerolinecolor="#2a2a2a")
     fig.update_yaxes(gridcolor="#2a2a2a", zerolinecolor="#2a2a2a")
     return fig
@@ -228,16 +230,34 @@ def _report(res: dict, df: pd.DataFrame, params: dict, verdict: tuple[str, str, 
 
 # ---------------------------------------------------------------- 页面
 def render() -> None:
+    from app import theme
+
     st.header("漂移诊断工作台")
     st.markdown(
-        "上传**你自己的**量子端点时序（任意可重复测量的概率型观测：读出错误率、"
-        "激发布居、Ramsey 端点……），平台用**冻结核心**实时判别："
-        "是否存在超 shot-noise 的环境漂移 → 漂移相关时间 τ → 最优重标定周期 T* → 是否值得感知。"
+        '<p style="max-width:52rem;color:#bdbdbd">上传<b style="color:#fff">你自己的</b>量子端点时序'
+        "（任意可重复测量的概率型观测：读出错误率、激发布居、Ramsey 端点……），"
+        "平台用<b style=\"color:#fff\">冻结核心</b>实时判别：是否存在超 shot-noise 的环境漂移 → 漂移相关时间 τ → "
+        "最优重标定周期 T* → 是否值得感知。</p>",
+        unsafe_allow_html=True,
     )
+    st.markdown("---")
 
-    with st.expander("输入格式", expanded=False):
-        st.markdown(
-            """
+    # 01 数据
+    with theme.row("01", "数据"):
+        src = st.radio("数据来源", ["内置示例（T287 真机）", "上传 CSV"], horizontal=True, label_visibility="collapsed")
+        df: pd.DataFrame | None = None
+        if src.startswith("上传"):
+            up = st.file_uploader("选择 CSV", type=["csv"], label_visibility="collapsed")
+            if up is not None:
+                df, err = _parse_upload(up)
+                if err:
+                    st.error(err)
+                    return
+        else:
+            df = _demo_frame()
+        with st.expander("输入格式与示例文件"):
+            st.markdown(
+                """
 | 列 | 必需 | 含义 |
 |---|---|---|
 | `time_seconds` | 是 | 观测时刻（秒，任意零点） |
@@ -246,28 +266,15 @@ def render() -> None:
 | `regime_id` | 否 | 标定区段 id；跨区段不配对 |
 | `burst_flag` | 否 | 1/true 表示突发点，主估计中剔除 |
 """
-        )
-        demo = _demo_frame()
-        st.download_button("下载示例 CSV（冻结 T287 真机 78 快照）", demo.to_csv(index=False).encode("utf-8"),
-                           "aemtn_demo_t287_readout_all_one.csv", "text/csv")
-
-    src = st.radio("数据来源", ["内置示例（T287 真机）", "上传 CSV"], horizontal=True)
-    df: pd.DataFrame | None = None
-    if src.startswith("上传"):
-        up = st.file_uploader("选择 CSV", type=["csv"])
-        if up is not None:
-            df, err = _parse_upload(up)
-            if err:
-                st.error(err)
-                return
-    else:
-        df = _demo_frame()
-    if df is None:
-        st.info("请上传 CSV 或切换到内置示例。")
-        return
+            )
+            st.download_button("下载示例 CSV · 冻结 T287 真机 78 快照", _demo_frame().to_csv(index=False).encode("utf-8"),
+                               "aemtn_demo_t287_readout_all_one.csv", "text/csv")
+        if df is None:
+            st.caption("等待上传。")
+            return
 
     with st.sidebar:
-        st.markdown("### 工作台参数")
+        st.markdown("### Parameters")
         shots_default = st.number_input("默认 shots / 点", 2, 1_000_000, _DEMO_SHOTS, step=256)
         n_bins = st.slider("lag bin 数", 3, 12, 6)
         rate = st.number_input("有效吞吐 shots/s", 1.0, 1e7, 100.0, step=50.0, format="%.1f")
@@ -276,13 +283,17 @@ def render() -> None:
         window = st.number_input("最大更新周期 / s", 0.01, 1e8, max(span, 1.0), format="%.1f")
         bootstrap = st.slider("参数 bootstrap 次数", 0, 500, 0, step=50, help="0 = 不做；>0 会显著变慢")
 
-    c1, c2, c3 = st.columns(3)
-    c1.metric("观测点数", len(df))
-    c2.metric("时间跨度", f"{span:,.0f} s")
-    c3.metric("均值", f"{df['value'].mean():.4f}")
-    st.plotly_chart(_plot_series(df, int(shots_default)), width="stretch")
+    st.markdown("---")
+    # 02 时序
+    with theme.row("02", "时序"):
+        c1, c2, c3 = st.columns(3)
+        c1.metric("观测点数", len(df))
+        c2.metric("时间跨度", f"{span:,.0f} s")
+        c3.metric("均值", f"{df['value'].mean():.4f}")
+        st.plotly_chart(_plot_series(df, int(shots_default)), width="stretch")
+        go_ = st.button("▶ 执行漂移诊断", type="primary")
 
-    if not st.button("▶ 执行漂移诊断", type="primary"):
+    if not go_:
         return
 
     params = dict(shots_default=int(shots_default), n_lag_bins=int(n_bins), effective_shots_per_second=float(rate),
@@ -296,36 +307,48 @@ def render() -> None:
             return
 
     level, headline, detail = _verdict(res)
-    {"good": st.success, "warn": st.warning, "crit": st.error}[level](f"**{headline}**  \n{detail}")
-
     vg, fit = res["variance_gate"], res["ou_fit"]
-    m1, m2, m3, m4 = st.columns(4)
-    m1.metric("方差门 p 值", f"{vg['p_value']:.2e}", "通过" if vg["passed"] else "未通过")
-    m2.metric("过程方差", f"{vg['process_variance']:.3g}")
-    m3.metric("相关时间 τ", f"{fit['tau_seconds']:.3g} s" if fit["ok"] else "—")
-    m4.metric("最优周期 T*", f"{res['t_star_seconds']:.3g} s" if res["t_star_seconds"] else "—")
 
-    st.plotly_chart(_plot_sf(res), width="stretch")
-    rfig = _plot_residual(res, float(df["value"].mean()), float(rate), float(floor), float(window))
-    if rfig is not None:
-        st.plotly_chart(rfig, width="stretch")
-    if res["structure_function"]:
-        st.dataframe(pd.DataFrame(res["structure_function"]).round(9), width="stretch", hide_index=True)
+    st.markdown("---")
+    # 03 裁决
+    with theme.row("03", "裁决"):
+        {"good": st.success, "warn": st.warning, "crit": st.error}[level](f"**{headline}**  \n{detail}")
+        m1, m2, m3, m4 = st.columns(4)
+        m1.metric("方差门 p 值", f"{vg['p_value']:.2e}", "通过" if vg["passed"] else "未通过")
+        m2.metric("过程方差", f"{vg['process_variance']:.3g}")
+        m3.metric("相关时间 τ", f"{fit['tau_seconds']:.3g} s" if fit["ok"] else "—")
+        m4.metric("最优周期 T*", f"{res['t_star_seconds']:.3g} s" if res["t_star_seconds"] else "—")
 
-    st.divider()
-    st.subheader("哈密顿量 / 噪声画像 — 冻结参考（不对上传数据反演）")
-    st.caption(
-        "AEMTN 反演需 torch 网络 + 天衍真机 Pauli 探针，超出本云实例范围。"
-        "以下为冻结 T176 Session 0 参考值，见第 5 章与第 6 章。"
-    )
-    r1, r2, r3 = st.columns(3)
-    r1.metric("终测 ratio", "0.3616", "fast/slow 残差比")
-    r2.metric("置换检验 p", "0.0052", "20 000 × 3")
-    r3.metric("参考标签", "B4_PRESERVED", "SIMULATION_ASSISTED")
+    st.markdown("---")
+    # 04 结构
+    with theme.row("04", "结构函数"):
+        st.plotly_chart(_plot_sf(res), width="stretch")
+        rfig = _plot_residual(res, float(df["value"].mean()), float(rate), float(floor), float(window))
+        if rfig is not None:
+            st.plotly_chart(rfig, width="stretch")
+        if res["structure_function"]:
+            with st.expander("逐 bin 数值"):
+                st.dataframe(pd.DataFrame(res["structure_function"]).round(9), width="stretch", hide_index=True)
 
-    st.download_button(
-        "⬇ 导出诊断报告 (JSON)",
-        _report(res, df, params, (level, headline, detail)),
-        f"aemtn_drift_report_{datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}.json",
-        "application/json",
-    )
+    st.markdown("---")
+    # 05 参考
+    with theme.row("05", "冻结参考"):
+        st.markdown("**哈密顿量 / 噪声画像**（不对上传数据反演）")
+        st.caption(
+            "AEMTN 反演需 torch 网络 + 天衍真机 Pauli 探针，超出本云实例范围。"
+            "以下为冻结 T176 Session 0 参考值，见第 5 章与第 6 章。"
+        )
+        r1, r2, r3 = st.columns(3)
+        r1.metric("终测 ratio", "0.3616", "fast/slow 残差比")
+        r2.metric("置换检验 p", "0.0052", "20 000 × 3")
+        r3.metric("参考标签", "B4_PRESERVED", "SIMULATION_ASSISTED")
+
+    st.markdown("---")
+    # 06 导出
+    with theme.row("06", "导出"):
+        st.download_button(
+            "⬇ 导出诊断报告 (JSON)",
+            _report(res, df, params, (level, headline, detail)),
+            f"aemtn_drift_report_{datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}.json",
+            "application/json",
+        )
