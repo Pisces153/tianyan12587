@@ -1,4 +1,4 @@
-"""项目总览页：标题、闭环链路、核心数字、评审对照。"""
+"""项目总览页：闭环链路、核心数字、技术要点对照、证据边界。"""
 
 from __future__ import annotations
 
@@ -39,8 +39,8 @@ def render() -> None:
         st.markdown(f"`{i:02d}` {s}")
     st.caption("链路与冻结 `PIPELINE.md` 一致；每环节均有回归测试与冻结证据背书。")
 
-    # 与评审要求对照
-    st.subheader("与评审关注点的对照")
+    # 技术要点对照
+    st.subheader("技术要点对照")
     rows = [
         ("技术路线", "超导量子（天衍 T176/T287）+ 深度学习 AEMTN 网络"),
         ("AI 框架", "深度多任务学习 + 不确定性建模 + 安全 shield + 规则调度"),
@@ -48,9 +48,9 @@ def render() -> None:
         ("客观瓶颈分析", "6 比特规模、Jz 弱、T* 置信上界撞窗、硬件 Session1 缺失"),
     ]
     st.table([{"维度": a, "对应": b} for a, b in rows])
-    st.caption("全部结论均遵守 `CLAIM_BOUNDARY.md`：不可宣称在线RL/跨设备迁移已在真机完成。")
+    st.caption("全部结论遵守仓库 `CLAIM_BOUNDARY.md` 所列边界。")
 
-    st.subheader("证据边界（评审必须知晓）")
+    st.subheader("证据边界")
     st.info(
         "**项目层状态：** `B4_PRESERVED_SIMULATION_ASSISTED`\n\n"
         "**纯真机注册状态：** `INCONCLUSIVE_MISSING_HARDWARE_SESSION1`\n\n"

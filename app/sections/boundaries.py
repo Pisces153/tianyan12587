@@ -1,7 +1,7 @@
-"""第 7 章：边界与限制（诚实声明）。
+"""第 7 章：边界与限制。
 
-按竞赛「客观分析技术瓶颈」评分项组织：哪些能说、哪些必须带限定、哪些不可说，
-并逐条映射到仓库红线（CLAIM_BOUNDARY.md）。这是评审可信度的关键页。
+哪些结论有证据支持、哪些必须带限定、哪些不成立，逐条映射到仓库红线
+（CLAIM_BOUNDARY.md）与冻结报告的 claim_boundary 字段。
 """
 
 from __future__ import annotations
@@ -12,7 +12,7 @@ from app.common import CRIT, WARN, PALETTE
 
 
 def render() -> None:
-    st.header("边界与限制（诚实声明）")
+    st.header("边界与限制")
 
     st.markdown(
         "本节把项目**能主张什么、必须带什么限定、不能主张什么**逐条列明。"
@@ -53,10 +53,7 @@ def render() -> None:
     st.divider()
 
     st.subheader("技术瓶颈（客观分析）")
-    st.markdown(
-        "按竞赛「客观分析技术瓶颈」评分项，项目主动披露以下已识别的瓶颈，"
-        "而不是回避。这些是真实限制，也是后续工作的切入点。"
-    )
+    st.markdown("以下是当前工作已识别的主要限制，以及对应的判定与后续路径。")
     bottlenecks = [
         (
             "单会话过短，无法注册全真机闭环",
@@ -92,9 +89,7 @@ def render() -> None:
     st.divider()
 
     st.subheader("未部署 / 未验证项")
-    st.markdown(
-        "为避免评审误读，以下能力**没有**在真机上验证或部署，特此声明："
-    )
+    st.markdown("以下能力**未**在真机上验证或部署：")
     not_deployed = [
         "在线强化学习：当前是单步随机 bandit，simulator 冷启动，真机侧由外部安全盾约束；"
         "不等于已部署在线 RL。",
@@ -106,21 +101,11 @@ def render() -> None:
     for item in not_deployed:
         st.markdown(f"- {item}")
 
-    st.info(
-        "**为什么诚实声明重要：** 竞赛评分看重客观的技术瓶颈分析。"
-        "主动、精确地声明边界，比夸大而不实的主张更符合这一评分项。"
-    )
-
     st.divider()
 
-    st.subheader("数据与权限边界")
+    st.subheader("数据与依赖边界")
     st.markdown(
-        "平台所需的核心依赖（`cqlib`、`qutip`、`torch`）均为公开发布版本，"
-        "无私有凭据、API 密钥或 `.env` 文件随包分发。完整边界见 "
+        "核心依赖（`cqlib`、`qutip`、`torch`）均为公开发布版本；"
+        "仓库不含私有凭据、API 密钥或 `.env` 文件。完整边界见 "
         "`SECURITY_AND_DATA_BOUNDARY.md`。"
-    )
-    st.warning(
-        "**评审须知：** 若你需要在首发前用于个人机器上的真机对接，请先按 "
-        "`SECURITY_AND_DATA_BOUNDARY.md` 完成平台凭据轮换确认（状态："
-        "`ROTATION_CONFIRMATION_PENDING`）。"
     )

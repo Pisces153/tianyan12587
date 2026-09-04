@@ -103,7 +103,7 @@ def render() -> None:
         )
         st.plotly_chart(figh, width="stretch")
         st.warning(
-            "**T\* 诚实结论：** OU 点估计 T\*≈134 s，但 bootstrap 95% CI 为 101–4000 s，"
+            "**T\* 结论：** OU 点估计 T\*≈134 s，但 bootstrap 95% CI 为 101–4000 s，"
             "**上界撞到观测窗**，因此冻结裁决为 `INCONCLUSIVE`。不能把 134 s 当作已识别、"
             "可部署的唯一最优策略。"
         )

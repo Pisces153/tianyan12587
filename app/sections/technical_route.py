@@ -17,14 +17,14 @@ def render() -> None:
     st.header("技术路线与 AI 框架")
 
     st.subheader("物理模型：开放边界 DM 哈密顿量（6 比特）")
+    st.latex(
+        r"H=\sum_i \left(J_x X_iX_{i+1}+J_y Y_iY_{i+1}+J_z Z_iZ_{i+1}\right)"
+        r"+D\left(X_iY_{i+1}-Y_iX_{i+1}\right)+\sum_i h_i Z_i"
+    )
     st.markdown(
-        r"""
-$$H=\sum_i \left(J_x X_iX_{i+1}+J_y Y_iY_{i+1}+J_z Z_iZ_{i+1}\right)
-+D\left(X_iY_{i+1}-Y_iX_{i+1}\right)+\sum_i h_i Z_i$$
-
-**初态：** Néel `010101`，开放边界。**噪声：** 各向同性退极化 Lindblad 演化。
-**测量：** 9 个测量基 × 每次 1024 shots，q0-leftmost 端序，恢复为 Pauli-15 与 local6。
-"""
+        "- **初态：** Néel 态 `010101`，开放边界\n"
+        "- **噪声：** 各向同性退极化，Lindblad 主方程演化\n"
+        "- **测量：** 9 个测量基 × 1024 shots，q0 为最左比特；由计数恢复 Pauli-15 与 local6 特征"
     )
 
     st.subheader("AEMTN：多任务硬件兼容网络")
@@ -57,7 +57,7 @@ $$H=\sum_i \left(J_x X_iX_{i+1}+J_y Y_iY_{i+1}+J_z Z_iZ_{i+1}\right)
                 })
             st.table(rows)
             st.warning(
-                "**诚实的模型限制：** Jz 留出基准较弱（R²≈0.32），h2 观测性最差（R²≈0）。"
+                "**模型限制：** Jz 留出基准较弱（R²≈0.32），h2 观测性最差（R²≈0）。"
                 "这符合项目文档所述：Jz 只作为输出记录，**不进入自动补偿主张**；"
                 "h2 作为反演目标受可辨识性限制。"
             )
@@ -75,12 +75,12 @@ $$H=\sum_i \left(J_x X_iX_{i+1}+J_y Y_iY_{i+1}+J_z Z_iZ_{i+1}\right)
 """
     )
 
-    st.subheader("与评审要求的映射")
+    st.subheader("技术路线要点")
     st.markdown(
         """
 - **量子技术路线** → 超导量子（天衍 T176/T287），6 比特开放边界 DM 模型
 - **AI 技术框架** → 深度学习（AEMTN）+ 统计决策（结构函数/经济门）+ 安全 shield/规则调度
-- **选型依据** → 见上表；不做无法用数据支持的主张（在线 RL / 跨设备迁移 / 大语言模型均未部署）
+- **选型依据** → 见上表。在线 RL、跨设备迁移、大语言模型均未在真机部署，边界见第 7 章
 """
     )
 
