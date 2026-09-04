@@ -48,6 +48,11 @@ def project_root() -> Path:
 
 PROJECT_ROOT = project_root()
 
+# 冻结核心以顶层包 ``src`` 形式存在、未随 aemtn_b4 安装，因此把包根放进 sys.path，
+# 保证 ``aemtn`` 控制台入口在任意 CWD（含 CI、Streamlit Cloud）下都能 import src.*。
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 data_dir = lambda: PROJECT_ROOT / "data"  # noqa: E731
 evidence_dir = lambda: PROJECT_ROOT / "evidence"  # noqa: E731
 manifest_dir = lambda: PROJECT_ROOT / "manifest"  # noqa: E731
