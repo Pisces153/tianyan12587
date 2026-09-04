@@ -232,12 +232,11 @@ def _report(res: dict, df: pd.DataFrame, params: dict, verdict: tuple[str, str, 
 def render() -> None:
     from app import theme
 
-    st.header("漂移诊断工作台")
     st.markdown(
-        '<p style="max-width:52rem;color:#bdbdbd">上传<b style="color:#fff">你自己的</b>量子端点时序'
+        '<p style="max-width:52rem">上传<b style="color:#fff">你自己的</b>量子端点时序'
         "（任意可重复测量的概率型观测：读出错误率、激发布居、Ramsey 端点……），"
-        "平台用<b style=\"color:#fff\">冻结核心</b>实时判别：是否存在超 shot-noise 的环境漂移 → 漂移相关时间 τ → "
-        "最优重标定周期 T* → 是否值得感知。</p>",
+        "平台用<b style=\"color:#fff\">冻结核心</b>实时判别：是否存在超 shot-noise 的环境漂移、"
+        "漂移相关时间 τ、最优重标定周期 T*、是否值得感知。</p>",
         unsafe_allow_html=True,
     )
     st.markdown("---")
@@ -262,7 +261,7 @@ def render() -> None:
 |---|---|---|
 | `time_seconds` | 是 | 观测时刻（秒，任意零点） |
 | `value` | 是 | 概率型观测值 ∈ [0,1] |
-| `shots` | 否 | 每点 shot 数（缺省用侧栏默认） |
+| `shots` | 否 | 每点 shot 数（缺省用参数区默认值） |
 | `regime_id` | 否 | 标定区段 id；跨区段不配对 |
 | `burst_flag` | 否 | 1/true 表示突发点，主估计中剔除 |
 """
@@ -273,19 +272,24 @@ def render() -> None:
             st.caption("等待上传。")
             return
 
-    with st.sidebar:
-        st.markdown("### Parameters")
-        shots_default = st.number_input("默认 shots / 点", 2, 1_000_000, _DEMO_SHOTS, step=256)
-        n_bins = st.slider("lag bin 数", 3, 12, 6)
-        rate = st.number_input("有效吞吐 shots/s", 1.0, 1e7, 100.0, step=50.0, format="%.1f")
-        floor = st.number_input("接口下限 T_floor / s", 0.001, 1e6, 60.0, format="%.3f")
+    st.markdown("---")
+    # 02 参数
+    with theme.row("02", "参数"):
         span = float(df["time_seconds"].iloc[-1]) if len(df) else 3600.0
-        window = st.number_input("最大更新周期 / s", 0.01, 1e8, max(span, 1.0), format="%.1f")
-        bootstrap = st.slider("参数 bootstrap 次数", 0, 500, 0, step=50, help="0 = 不做；>0 会显著变慢")
+        p1, p2, p3 = st.columns(3)
+        with p1:
+            shots_default = st.number_input("默认 shots / 点", 2, 1_000_000, _DEMO_SHOTS, step=256)
+            n_bins = st.slider("lag bin 数", 3, 12, 6)
+        with p2:
+            rate = st.number_input("有效吞吐 shots/s", 1.0, 1e7, 100.0, step=50.0, format="%.1f")
+            floor = st.number_input("接口下限 T_floor / s", 0.001, 1e6, 60.0, format="%.3f")
+        with p3:
+            window = st.number_input("最大更新周期 / s", 0.01, 1e8, max(span, 1.0), format="%.1f")
+            bootstrap = st.slider("参数 bootstrap 次数", 0, 500, 0, step=50, help="0 = 不做；>0 会显著变慢")
 
     st.markdown("---")
-    # 02 时序
-    with theme.row("02", "时序"):
+    # 03 时序
+    with theme.row("03", "时序"):
         c1, c2, c3 = st.columns(3)
         c1.metric("观测点数", len(df))
         c2.metric("时间跨度", f"{span:,.0f} s")
@@ -310,8 +314,8 @@ def render() -> None:
     vg, fit = res["variance_gate"], res["ou_fit"]
 
     st.markdown("---")
-    # 03 裁决
-    with theme.row("03", "裁决"):
+    # 04 裁决
+    with theme.row("04", "裁决"):
         {"good": st.success, "warn": st.warning, "crit": st.error}[level](f"**{headline}**  \n{detail}")
         m1, m2, m3, m4 = st.columns(4)
         m1.metric("方差门 p 值", f"{vg['p_value']:.2e}", "通过" if vg["passed"] else "未通过")
@@ -320,8 +324,8 @@ def render() -> None:
         m4.metric("最优周期 T*", f"{res['t_star_seconds']:.3g} s" if res["t_star_seconds"] else "—")
 
     st.markdown("---")
-    # 04 结构
-    with theme.row("04", "结构函数"):
+    # 05 结构
+    with theme.row("05", "结构函数"):
         st.plotly_chart(_plot_sf(res), width="stretch")
         rfig = _plot_residual(res, float(df["value"].mean()), float(rate), float(floor), float(window))
         if rfig is not None:
@@ -331,12 +335,12 @@ def render() -> None:
                 st.dataframe(pd.DataFrame(res["structure_function"]).round(9), width="stretch", hide_index=True)
 
     st.markdown("---")
-    # 05 参考
-    with theme.row("05", "冻结参考"):
+    # 06 参考
+    with theme.row("06", "冻结参考"):
         st.markdown("**哈密顿量 / 噪声画像**（不对上传数据反演）")
         st.caption(
             "AEMTN 反演需 torch 网络 + 天衍真机 Pauli 探针，超出本云实例范围。"
-            "以下为冻结 T176 Session 0 参考值，见第 5 章与第 6 章。"
+            "以下为冻结 T176 Session 0 参考值，详见「证据」与「方法」页。"
         )
         r1, r2, r3 = st.columns(3)
         r1.metric("终测 ratio", "0.3616", "fast/slow 残差比")
@@ -344,8 +348,8 @@ def render() -> None:
         r3.metric("参考标签", "B4_PRESERVED", "SIMULATION_ASSISTED")
 
     st.markdown("---")
-    # 06 导出
-    with theme.row("06", "导出"):
+    # 07 导出
+    with theme.row("07", "导出"):
         st.download_button(
             "⬇ 导出诊断报告 (JSON)",
             _report(res, df, params, (level, headline, detail)),

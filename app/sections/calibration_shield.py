@@ -9,7 +9,6 @@ from app.common import CRIT, GOOD, PALETTE, WARN
 
 
 def render() -> None:
-    st.header("校准决策与安全 shield")
 
     st.subheader("校准更新周期：go/no-go 经济门")
     st.markdown(

@@ -1,8 +1,8 @@
-"""AEMTN-B4 在线仪表盘（Streamlit 多页应用）。
+"""AEMTN-B4 在线平台（Streamlit，顶部导航多页应用）。
 
-第 0 章为在线工作台（上传数据 → 冻结核心实时漂移诊断 → 导出报告），
-其余章节为冻结结果展示 + 两项轻量在线交互（终测复算、安全盾演示）。
-不触碰任何私有证据；仅渲染随包分发的冻结图与公开派生 CSV。
+平台 / 工作台 / 证据 / 方法 / 边界与复现 五个产品区。工作台对上传数据调用
+冻结核心实时诊断；其余页面渲染随包分发的冻结图与公开派生 CSV，并提供
+两项轻量在线交互（终测复算、安全盾演示）。不触碰任何私有证据。
 
 运行:
     本地:  streamlit run app/streamlit_app.py
@@ -25,92 +25,14 @@ st.set_page_config(
     page_title="AEMTN-B4 · 开放量子系统辨识与 AI 自校准平台",
     page_icon="⚛️",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="collapsed",
 )
 
-from app import theme
+from app import router, theme
 
 theme.inject()
+st.logo(str(APP_DIR / "assets" / "logo.svg"), size="medium")
 
-
-def _heading() -> None:
-    theme.hero(
-        "AEMTN-B4 · 天衍超导真机 · 6 QUBITS · 仿真–真机混合闭环 · FROZEN 2026-08-31",
-        "面向量子云真机的<br>开放量子系统辨识与<br>人工智能自校准平台",
-        "量子云真机受器件无序与环境退相干影响，真实哈密顿量长期偏离设计模型。"
-        "本平台以 AI 反演与自校准闭环，从量子态测量数据学习漂移与退相干特征，"
-        "给出何时、以何种周期重标定的可执行裁决。所有数字由冻结代码与冻结证据支撑，逐条可复算。",
-    )
-
-
-# 侧边栏导航
-_heading()
-with st.sidebar:
-    st.markdown("### Index")
-    page = st.radio(
-        "章节",
-        [
-            "0. 漂移诊断工作台",
-            "1. 项目总览",
-            "2. 技术路线与 AI 框架",
-            "3. 环境漂移感知与判别",
-            "4. 校准决策与安全 shield",
-            "5. 真机闭环终测证据",
-            "6. 模型与数据",
-            "7. 边界与限制",
-            "8. 复现与部署",
-        ],
-        index=0,
-        label_visibility="collapsed",
-    )
-    st.divider()
-    st.caption(
-        "报告状态：`B4_PRESERVED_SIMULATION_ASSISTED`\n\n"
-        "纯真机注册：`INCONCLUSIVE_MISSING_HARDWARE_SESSION1`"
-    )
-
-
-_REPO = REPO_ROOT
-
-
-def main() -> None:
-    if page.startswith("0."):
-        from app.sections import workbench
-
-        workbench.render()
-    elif page.startswith("1."):
-        from app.sections import overview
-
-        overview.render()
-    elif page.startswith("2."):
-        from app.sections import technical_route
-
-        technical_route.render()
-    elif page.startswith("3."):
-        from app.sections import drift_sensing
-
-        drift_sensing.render()
-    elif page.startswith("4."):
-        from app.sections import calibration_shield
-
-        calibration_shield.render()
-    elif page.startswith("5."):
-        from app.sections import closed_loop_evidence
-
-        closed_loop_evidence.render()
-    elif page.startswith("6."):
-        from app.sections import model_data
-
-        model_data.render()
-    elif page.startswith("7."):
-        from app.sections import boundaries
-
-        boundaries.render()
-    else:
-        from app.sections import reproduce
-
-        reproduce.render()
-
-
-if __name__ == "__main__":
-    main()
+pages = router.build_pages()
+nav = st.navigation(list(pages.values()), position="top")
+nav.run()

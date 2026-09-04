@@ -1,4 +1,4 @@
-"""第 8 章：复现与部署。如何在本地复现冻结结果、校验完整性；在线部署说明。"""
+"""复现与部署。如何在本地复现冻结结果、校验完整性；在线部署说明。"""
 
 from __future__ import annotations
 
@@ -6,7 +6,6 @@ import streamlit as st
 
 
 def render() -> None:
-    st.header("复现与部署")
 
     st.subheader("本地复现")
     st.markdown(

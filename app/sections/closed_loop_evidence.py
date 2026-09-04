@@ -1,4 +1,4 @@
-"""第 5 章：真机闭环终测证据。
+"""真机闭环终测证据。
 
 展示冻结的 T176 hybrid final（Session 0 诊断 + 混合闭环 primary + 反事实
 Session 1），以及 12 张成果图里直接相关的 07–10/11。提供一个**在线复算**按钮：
@@ -14,7 +14,6 @@ from app.common import CRIT, GOOD, PALETTE, WARN, load_source_csv
 
 
 def render() -> None:
-    st.header("真机闭环终测证据")
 
     from aemtn_b4 import load_final_report
 

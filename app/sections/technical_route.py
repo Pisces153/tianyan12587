@@ -14,7 +14,6 @@ RepoRoot = Path(__file__).resolve().parents[2]
 
 def render() -> None:
     root = RepoRoot
-    st.header("技术路线与 AI 框架")
 
     st.subheader("物理模型：开放边界 DM 哈密顿量（6 比特）")
     st.latex(
@@ -93,7 +92,7 @@ H &= \sum_{i=1}^{N-1}\Big[\,J_x\,\sigma_i^{x}\sigma_{i+1}^{x}
         """
 - **量子技术路线** → 超导量子（天衍 T176/T287），6 比特开放边界 DM 模型
 - **AI 技术框架** → 深度学习（AEMTN）+ 统计决策（结构函数/经济门）+ 安全 shield/规则调度
-- **选型依据** → 见上表。在线 RL、跨设备迁移、大语言模型均未在真机部署，边界见第 7 章
+- **选型依据** → 见上表。在线 RL、跨设备迁移、大语言模型均未在真机部署，边界见「边界与复现」页
 """
     )
 

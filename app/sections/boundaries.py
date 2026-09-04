@@ -1,4 +1,4 @@
-"""第 7 章：边界与限制。
+"""边界与限制。
 
 哪些结论有证据支持、哪些必须带限定、哪些不成立，逐条映射到仓库红线
 （CLAIM_BOUNDARY.md）与冻结报告的 claim_boundary 字段。
@@ -12,7 +12,6 @@ from app.common import CRIT, WARN, PALETTE
 
 
 def render() -> None:
-    st.header("边界与限制")
 
     st.markdown(
         "本节把项目**能主张什么、必须带什么限定、不能主张什么**逐条列明。"

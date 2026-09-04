@@ -10,7 +10,6 @@ from app.common import PALETTE, FIG_DIR, load_source_csv
 
 
 def render() -> None:
-    st.header("环境漂移感知与判别")
 
     st.subheader("第 1 层：环境状态可观测")
     st.markdown(

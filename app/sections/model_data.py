@@ -1,4 +1,4 @@
-"""第 6 章：模型与数据契约。
+"""模型与数据契约。
 
 只读展示随包分发的冻结资产生成契约：数据集 schema、配置、特征契约与三 seed
 模型权重文件。不触碰任何私有 raw counts / NPZ；仅依赖随包公开的部分。
@@ -16,7 +16,6 @@ from app.common import PALETTE, read_json
 
 
 def render() -> None:
-    st.header("模型与数据")
 
     st.subheader("数据集契约")
     st.markdown(
@@ -104,7 +103,7 @@ def render() -> None:
     )
     st.info(
         "**模型限制：** h2 的 R²≈0、Jz 的 R²≈0.32，这两个目标在当前数据上"
-        "学习信号弱，属已识别瓶颈；详见第 7 章。"
+        "学习信号弱，属已识别瓶颈；详见「边界与复现」页。"
     )
 
 
